@@ -42,7 +42,6 @@ export {default as NotFound } from '../components/NotFound'
 
 export { default as mapsenegal } from '../components/.images/map_senegal.jpg'
 export { default as mapafrica } from '../components/.images/mapafrica.jpg'
-// export { default as flag } from '../components/.images/flag.jpg'
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
 export { default as abssit } from '../components/.photos/abs_sit.png'

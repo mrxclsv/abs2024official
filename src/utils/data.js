@@ -144,7 +144,7 @@ export const navbar = [
   { name: "Son of Senegal", 
     // icon: 'projects.svg', 
     link:'/son-of-senegal',
-    image: abssuit1,
+    // image: abssuit1,
     position:"object-center object-contain",
     views:"440k" 
 
@@ -152,7 +152,7 @@ export const navbar = [
   { name: "the leader", 
     // icon: 'events.svg', 
     link:'/the-leader',
-    image: abssuit1,
+    // image: abssuit1,
     position:"object-top",
     views:"229k" 
 
@@ -160,7 +160,7 @@ export const navbar = [
   { name: "the philanthropist", 
     // icon: 'tutorials.svg', 
     link:'/the-philanthropist',
-    image: abshero,
+    // image: abshero,
     position:"object-top",
     views:"420k" 
 
@@ -168,7 +168,7 @@ export const navbar = [
   { name: "the visionary", 
     // icon: 'settings.svg', 
     link:'/the-visionary',
-    image: abssit,
+    // image: abssit,
     position:"object-top",
     views:"266k"
   },
