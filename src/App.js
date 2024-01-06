@@ -75,9 +75,9 @@ function App() {
 
         <Route exact path="/"                     element={<Home /* navTrigger={navTrigger} */ />}  />:
         <Route exact path="/son-of-senegal"       element={<SonOfSenegal />}  />
-        {/* <Route exact path="/the-leader"           element={<TheLeader />}  /> */}
-        {/* <Route exact path="/the-philanthropist"   element={<ThePhilanthropist />}  /> */}
-        {/* <Route exact path="/the-visionary"        element={<TheVisionary />}  /> */}
+        <Route exact path="/the-leader"           element={<TheLeader />}  />
+        <Route exact path="/the-philanthropist"   element={<ThePhilanthropist />}  />
+        <Route exact path="/the-visionary"        element={<TheVisionary />}  />
         <Route exact path="/*"                    element={<NotFound />}  />
         
       </Routes>

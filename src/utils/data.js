@@ -1,4 +1,4 @@
-import { flagsenegal, abssit, abssuit1, abshero } from './components'
+import { abssit, abssuit1, abshero } from './components'
 
 
 export const website = "abs2024.com"
@@ -144,7 +144,7 @@ export const navbar = [
   { name: "Son of Senegal", 
     // icon: 'projects.svg', 
     link:'/son-of-senegal',
-    image: flagsenegal,
+    image: abssuit1,
     position:"object-center object-contain",
     views:"440k" 
 
