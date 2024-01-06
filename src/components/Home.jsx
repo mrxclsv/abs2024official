@@ -1,5 +1,5 @@
 import React from 'react'
-import { SplitDiv, Stat, mapafrica, mapsenegal, flagsenegal, abssuit1, abswhite, abshero, abssit2 } from '../utils/components'
+import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2 } from '../utils/components'
 import { contributions, project } from '../utils/data'
 import { allTransitions } from '../utils/style'
 
@@ -67,7 +67,7 @@ const Home = () => {
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
           wrapperCSS = "w-full max-h-[800px] overflow-hidden aspect-square lg:rounded-full lg:rounded-l-none mt-14 "
-          image={flagsenegal} 
+          image={mapafrica} 
           imageCSS="object-cover  origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
 
