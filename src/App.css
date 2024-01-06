@@ -1,38 +1,425 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  
+  /* // eslint-disable-next-line */
+  .button {
+    @apply px-2 py-1 font-bold text-primary rounded-2xl
+  }
+
+
+
+  .absoluteAll {
+    @apply top-0 bottom-0 left-0 right-0 
+  }
+  .shadowb {
+    @apply bg-gradient-to-t from-black/70 to-transparent
+  }
+  .fit {
+    @apply h-fit w-fit
+  }
+  .screen {
+    @apply h-screen w-screen
+  }
+  .center {
+    @apply items-center justify-center
+  }
+  .full {
+    @apply h-full w-full
+  }
+  .start {
+    @apply items-start justify-start
+  }
+  .flexV {
+    @apply flex flex-col
+  }
+  .flexCenter {
+    @apply flex items-center justify-center
+  }
+  .gridCenter {
+    @apply grid items-center justify-center
+  }
+  .flexVStart {
+    @apply flexV items-start justify-center
+  }
+
+
+  
+  .hideTillHover {
+    @apply hidden group-hover:flex
+  }
+  .printBtnP {
+    @apply text-base relative translate-y-[120%] lg:inline lg:translate-y-0 lg:opacity-100 active:scale-[105%]
+  }
+  .printBtn {
+    @apply flex text-gray-500 hover:text-black text-xl items-center justify-center space-x-2 mx-3 h-full  
+  }
+  .controlIcon {
+    @apply hover:bg-white/20 bg-black/10 border-[1px] border-gray-500/20 flex center p-4 py-1 text-base cursor-pointer rounded aspect-square mx-auto
+  }
+  .projectDate {
+    @apply  px-2 py-[.4rem] bg-white/0 hover:bg-white/10 text-sm rounded cursor-pointer
+  }
+  .formLabel {
+    @apply flex flex-col w-full items-start justify-center 
+  }
+  .CTABtn {
+    @apply z-[450] bg-white/10 text-white  hover:bg-white/100 hover:text-black text-sm md:text-lg items-center flex p-2 md:py-4 md:px-3 right-4 text-center justify-center md:bottom-[30vh] mx-auto md:left-0 md:right-0 w-fit md:w-[30vw] rounded-2xl space-x-2 transition-all duration-700
+  }
+  .MENUBtn {
+    @apply  aspect-square flex items-center w-10 h-10 justify-center bg-white/0 rounded-md border-[1px] border-white/25 active:bg-white/10 text-white z-[1000]
+  }
+  .MOBNavList {
+    @apply absolute top-0 left-0 lg:hidden h-screen  text-center p-6 pt-24 bg-blakk/90  text-white space-y-2 mx-auto  
+    /* md:col-span-3 */
+  }
+  .DESKNavList {
+    @apply space-x-2 hidden md:flex mx-auto items-center 
+  }
+  .activemob {
+    @apply p-4 w-full mx-auto flex text-sm items-center py-2 relative  hover:text-primary text-primary font-bold duration-300
+  }
+  .activeMOB {
+    @apply navlinkMOB font-bold mx-auto text-primary 
+  }
+  .navlinkMOB {
+    @apply p-4 flex text-2xl gap-2 items-center text-white border-white outline-white w-full 
+    hover:text-primary cursor-pointer duration-200
+  }
+
+  .formInput {
+    @apply w-full py-2 px-4 rounded-md bg-white/10 text-white group-hover:bg-white/20 duration-300 block flex-wrap
+  }
+  .notifCount {
+    @apply bg-red-700 absolute top-0 text-white font-medium px-[.3rem] py-[.15rem] ml-4 rounded-xl  text-xs
+  }
+  .navlink {
+    @apply p-4 flex gap-2 items-center text-white border-white outline-white w-full 
+    hover:text-primary cursor-pointer  duration-200
+  }
+  .active {
+    @apply p-4 w-fit flex text-sm items-center py-2 relative min-w-fit hover:text-primary text-primary font-bold duration-300
+  }
+  .activeHOVER {
+    @apply p-4 w-fit flex text-lg items-center py-2 relative min-w-fit hover:text-primary text-primary font-bold duration-300
+  }
+  .activeSegment {
+    @apply  flex text-sm items-center justify-center relative  w-full  hover:text-primary text-primary
+  }
+  .activeSegment2 {
+    @apply   hover:text-primary text-primary
+  }
+  .idleSegment {
+    @apply activeSegment hover:text-gray-400 text-gray-200
+  }
+  .navlinkLG {
+    @apply p-4 text-white w-fit flex text-sm items-center py-2  
+    relative  min-w-fit  hover:text-primary duration-200
+  }  
+  .navlinkLGHOVER {
+    @apply p-4 
+  }
+  .BioSECOND {
+    @apply mx-auto w-full flex flex-col md:grid md:grid-cols-2 overflow-hidden  md:space-x-10 md:px-10 text-left items-start justify-start h-[60vh] hover:h-[70vh] transition-all duration-500 ease-in-out
+  }
+  /* close */
+  .lineClose {
+    @apply w-4
+  }
+  .prSection {
+    @apply flex items-center mx-auto w-fit justify-center px-5 text-center capitalize buttonHover2 cursor-pointer
+  }
+  .page {
+    @apply mx-auto w-full min-h-screen flex center overflow-y-auto center
+  }
+  .withgradient {
+    @apply bg-gradient-to-tr from-slate-600 to-gray-900
+  }
+  .gradientType {
+    @apply bg-gradient-to-t from-primary to-pink-500
+  }
+  .segmentIcons {
+    @apply text-3xl md:text-2xl p-2 px-6 lg:buttonHover transition-all duration-500
+  }
+  .segmentText {
+    @apply opacity-0 flex self-start text-sm group-hover:opacity-100 group-hover:inline text-left transition-transform text-gray-500 group-hover:text-white duration-500 ease-out absolute group-hover:transform translate-x-[60px]  group-hover:-translate-x-[-70px] my-[10%] translate-y-2 
+  }
+  .segmentTextV {
+    @apply flex text-xs text-left transition-transform text-gray-500 group-hover:text-white duration-500 ease-out absolute my-[10%] 
+  }
+  .respContainer {
+    @apply px-10  md:px-14 lg:px-16 smooth
+  }d
+  .smooth {
+    @apply transition-all duration-300
+  }
+  .settingsOpened {
+    @apply z-[300] w-[70vw] bg-blakk/90 text-white  backdrop-blur-lg h-[100vh] absolute top-0 bottom-0 -right-6  items-center justify-center   flex flex-col  transition-all duration-300 ease-in-out
+  }
+  .settingsClosed {
+    @apply settingsOpened right-[-105vw]
+  }
+  .icon {
+    @apply  text-xl
+  }
+  .socialIcon {
+    @apply flex w-fit p-1 text-2xl text-gray-400 hover:text-primary duration-300
+  }
+  .buttonHover {
+    @apply text-gray-400  hover:text-white 
+  }
+  .buttonHover2 {
+    @apply text-white  hover:text-primary
+  }
+  .footerLink {
+    @apply text-white hover:text-primary font-light capitalize text-sm block text-ellipsis
+  }
+  .dispIconsOff {
+    @apply w-6 lg:w-6 duration-300 text-gray-400 hover:text-gray-100
+  }  
+  .dispIconsOn {
+    @apply w-6 lg:w-6 duration-200 text-white
+  }
+  .arrowIcons {
+    @apply text-white  hover:bg-white/10
+  }
+
+  .divshadow-t {
+    @apply text-sm bg-gradient-to-b from-black/80 to-transparent
+  }  
+  .divshadow-b {
+    @apply text-sm bg-gradient-to-t from-black/80 to-transparent
+  }
+  .mydiv {
+    @apply py-4 px-10 w-full items-center
+  }
+  .section {
+    @apply max-w-[1240px] mx-auto items-center justify-center px-4 md:px-10
+  }
+  .sectionTitle {
+    @apply text-2xl font-bold md:text-3xl
+  }
+  .sectionSub {
+    @apply text-xl text-primary
+  }
+  .sectionP {
+    @apply text-sm text-gray-600
+  }
+  .CTAbtn {
+    @apply bg-primary text-blakk  w-[200px] px-6 py-3  rounded-md mx-auto md:mx-0 outline-none border-none font-medium
+  }
+  .underLine {
+    @apply inline-flex h-[2px] w-[50px] p-1 bg-white text-white 
+  }
+  .GRADIENT_shadow {
+    @apply absolute w-full  bottom-0 rotate-180 flex bg-gradient-to-b from-black to-transparent
+  }
+  .bgGradient__blue {
+    @apply absolute w-full  flex bg-gradient-to-b from-cyan-400 to-blue-900
+  }
+  .borderDiv {
+    @apply bg-gray-500/50 h-[2px] rounded
+  }
+  .sideZero {
+    @apply left-0 right-0 mx-auto
+  }
+  .borderTop {
+    @apply border-t-gray-500/50 border-t
+  }
+  .link {
+    @apply underline underline-offset-2
+  }
+
+  /* TYPOGRAPHY */
+  
+  .textOnHover {
+    @apply text-gray-400 group-hover:text-white
+  }
+  .h1 {
+    @apply text-2xl md:text-5xl font-bold leading-loose gap-2 
+  }
+  .h2 {
+    @apply text-3xl font-semibold
+  }
+  .h3 {
+    @apply text-lg md:text-xl
+  }
+  .h4 {
+    @apply text-sm
+  }
+  .h5 {
+    @apply text-sm
+  }
+  .h6 {
+    @apply text-xl
+  }
+  .muted {
+    @apply text-neutral-600
+  }
+  .TitleSection {
+    @apply flexV center h-[30vh] py-10 my-10
+  }
+  .gradientDefault {
+    @apply bg-gradient-to-tr from-neutral-800 to-blakk
+  }
+  .content_img {
+    @apply hover:scale-105 object-cover  duration-700 
+  }
+  .imgSmall {
+    @apply w-full h-full object-cover hover:scale-110 duration-700 ease-out
+  }
+  .smallImgContainer {
+    @apply w-[10] overflow-hidden 
+  }
+
+
+  .hashtag {
+    @apply cursor-pointer px-2 py-1 hover:font-semibold transition
+  }
+
+  /* ACTION BUTTONS */
+
+  .purchaseButton {
+    @apply px-6 max-w-[300px] text-center min-w-fit py-[9px] rounded-xl bg-white 
+  }
+  .transparentGrad {
+    @apply w-full z-[1] flex select-none h-[60px] from-black/60 to-transparent absolute
+  }
+
+
+
+  /* PADDING MARGIN */
+
+  .paddingX {
+    @apply lg:px-10 md:px-8 px-4
+  }
+  .borderBottom {
+    @apply border-b-2 border-gray-500/20
+  }
+  .borderTop {
+    @apply border-t-2 border-gray-500/20
+  }
+  .sectionIcon {
+    @apply w-[40px] h-[40px]
+  }
+
+  /* APP LEVEL */
+
+  .sectionDiv {
+    @apply flexV center relative h-screen min-h-[100vh] w-screen border-y-[1px] border-gray-500/50
+  }
+  .line {
+    @apply h-[2px] rounded-2xl bg-white w-[18px] absolute my-auto
+  }
+
+  .contentWrapper {
+    @apply flex max-w-screen-2xl center 
+  }
+
+  .title_small {
+    @apply tracking-[.3rem] md:tracking-[.4rem]
+  }
+  .imageWrapper {
+    @apply flexV center overflow-hidden
+  }
+  .imageWrapped {
+    @apply w-full min-h-[400px] flex object-cover 
+  }
+
+  .paddingMRX {
+    @apply p-6 md:p-10
+  }
+
+}
+
+body {
+  text-align: center;
+  background-color: #0f0f0f;
+  color: white;
+  line-height: 180%;
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  display: inline;
+}
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  display: flex;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+h4 {
+  font-size: .95rem;
+  font-weight: 300;
+  display: block;
+}
+
+
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.textStroke {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #ffff;
+  color: transparent!important;
 }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.939" height="30.939" viewBox="0 0 30.939 30.939">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.839" y1="-0.272" x2="-0.233" y2="2.463" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a79d"/>
+      <stop offset="1" stop-color="#262262"/>
+    </linearGradient>
+  </defs>
+  <g id="TT_Logo_Symbol_Color" transform="translate(0)">
+    <path id="TT_Logo_Symbol_Color-2" data-name="TT_Logo_Symbol_Color" d="M-1262.317,2136.778l-1.935,4.255h-13.536v-4.255Zm-1.935-26.68h-13.536v4.255h15.471Zm-13.536,13.339v4.253h13.536l1.935-4.253Zm-15.469-13.343v.425a1.694,1.694,0,0,1,1.7,1.694,1.7,1.7,0,0,1-1.7,1.7v.423a1.7,1.7,0,0,1,1.7,1.694,1.7,1.7,0,0,1-1.7,1.7v.423a1.7,1.7,0,0,1,1.7,1.695,1.7,1.7,0,0,1-1.7,1.7v.422a1.7,1.7,0,0,1,1.7,1.7,1.7,1.7,0,0,1-1.7,1.695v.422a1.7,1.7,0,0,1,1.7,1.7,1.694,1.694,0,0,1-1.7,1.694v.425a1.694,1.694,0,0,1,1.7,1.695,1.694,1.694,0,0,1-1.7,1.7v.425a1.694,1.694,0,0,1,1.7,1.694,1.694,1.694,0,0,1-1.7,1.7v.425a1.693,1.693,0,0,1,1.7,1.694,1.694,1.694,0,0,1-1.7,1.695v.425h13.774v-30.939Z" transform="translate(1293.256 -2110.094)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

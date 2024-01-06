@@ -1,0 +1,18 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Contact = ({
+  title, contact, action
+
+}) => {
+
+  return (
+    <Link to={action} className='flexV md:flex-row items-start text-left md:gap-2 py-1 relative w-full px-4 '>
+      <h5 className='capitalize font-bold w-1/4 max-w-[80px]'>{title || "2000"}</h5>
+      <span className='-translate-x-[150%] hidden md:inline'>:</span>
+      <h4 className='h4 w-full -translate-y-1 md:translate-y-1 pr-14= lg:pr-4'>{contact || "2000"}</h4>
+    </Link>
+  )
+}
+
+export default Contact
