@@ -7,13 +7,13 @@ import { journey, project } from '../../utils/data'
 const ThePhilanthropist = () => {
 
   const location = useLocation()
-  const page = location.pathname.substring(1).replace('-', " ").toUpperCase()
-  const thisPage = `${project.name} — ${page}`
+  const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
+  const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
   document.title = thisPage
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[location])
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
   
   return (
     <div className='min-h-screen h-full= w-screen center flexV bg-white text-black gap-10 relative' >

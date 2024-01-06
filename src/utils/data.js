@@ -1,4 +1,4 @@
-import { abssit, abssuit1, flagsenegal, abshero } from './components'
+// import { abssit, abssuit1, flagsenegal, abshero } from './components'
 
 
 export const website = "abs2024.com"
@@ -290,23 +290,28 @@ export const contributions = [
   { title: "jobs",  
     value:1300, 
     added:"", 
-    link:"#" 
+    link:"#" ,
+    position:"left-[5%] top-[47%]"
   },
   { title: "industries",  
     value:5, 
     added:"", 
-    link:"#" 
+    link:"#" ,
+    position:"left-[60%] top-[50%]"
   },
-  { title: "annual donations (CFA)",  
+  { title: "annual donations",  
     value:"2 Billion ", 
-    added:"milliards", 
-    link:"#" 
+    added:"cfa", 
+    link:"#" ,
+    position:"left-[20%] top-[75%]"
   },
   { title: "partners",  
     value:326, 
     added:"", 
-    link:"#" 
+    link:"#" ,
+    position:"left-[30%] top-[25%]"
   },
+
 ]
 
 export const project = {

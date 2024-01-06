@@ -42,7 +42,7 @@ const SplitDiv = ({
           <Link to={`/${link}`} onMouseEnter={handleToggle} 
                 className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700 
                 ${color === "white" && "text-black border-blakk" }
-                ${color === "black" && "text-white border-white" }
+                ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-blakk transition-colors duration-1000" }
                           `}><p>Read more</p> 
           </Link>
         }

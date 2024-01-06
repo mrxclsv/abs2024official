@@ -1,14 +1,19 @@
 import React from 'react'
 
-const About = () => {
+const News = () => {
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[])
+  const location = useLocation()
+  const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
+  const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
+  document.title = thisPage
+
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
   
   return (
-    <div>About</div>
+    <div>News</div>
   )
 }
 
-export default About
+export default News

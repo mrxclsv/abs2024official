@@ -11,6 +11,7 @@ const TextLayout = ({
     <div className={`flexVStart p-6 lg:p-10 pb-0 lg:pb-0 mb-6 z-[1] relative ${showLines && "border-l border-neutral-500/60"} 
       ${color === "black" && "text-white"} 
       ${color === "white" && "text-black"} 
+      ${css}
       `}>
 
     {hasTitle && <h4 className='h4 tracking-[.3rem] text-left mb-4 relative uppercase'>{ title ||'Headline'}</h4>}

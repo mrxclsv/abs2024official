@@ -29,7 +29,6 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 
-
         <div className={`flex= gap-6 z-[300] animate-slidedown h-full hidden md:flex  `}>
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({isActive}) => isActive ? activeCSS : notActiveCSS }>
@@ -48,10 +47,11 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
 
       </div>
 
-      <div className={`flexV absolute inset-0 screen center bg-gray-100 z-[299] gap-10 ${menu ? '' : 'opacity-80 translate-x-[120%]'} ${allTransitions} duration-[1s] `}>
+      <div className={`flexV absolute inset-0 screen center bg-gray-100 z-[299] gap-10 
+                      ${menu ? '' : 'opacity-80 translate-x-[120%]'} ${allTransitions} duration-[1s] `}>
           {headers.map((item, index) => (
-            <NavLink key={index} to={item.link} onClick={() => setMenu(false)} className={`flex center group gap-8 w-[60vw] py-4 ml-[30vw] mr-24 h-fit relative ${allTransitions} `} >
-                <h1 className={`h2 md:h1 text-gray-700 whitespace-nowrap h-10 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
+            <NavLink key={index} to={item.link} onClick={() => setMenu(false)} className={`flex center group gap-8 w-[60vw] ml-[30vw] mr-24 h-fit relative ${allTransitions} `} >
+                <h1 className={`h2 md:h1 text-gray-700 whitespace-nowrap h-10 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
                 <div className={`w-full h-full flex text-gray-400 object-center text-left opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
                     <p className={`flex absolute translate-y-[-50%] h-fit inset-0 my-auto w-full group-hover:translate-y-[0px] ${allTransitions} duration-[.5s]`}>{item.descr}</p>
                 </div>

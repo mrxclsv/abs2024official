@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom"
 import { SplitDiv, TextLayout } from '../../utils/components'
 import { project } from '../../utils/data'
@@ -9,6 +9,10 @@ const TheLeader = () => {
   const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
   const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
   document.title = thisPage
+
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
 
   return (
     <div className='min-h-screen w-screen flexV bg-white text-black'>
@@ -38,7 +42,7 @@ const TheLeader = () => {
         <div className='contentWrapper md:gap-10'>
           <TextLayout title=""
             text="A leader by example"
-            descr="In the modern world, diversity and inclusivity are the foundations of successful organizations, Abdoulaye Sylla's Ecotra stands as an example of how a company can leverage the strengths of both local and foreign talent to create, innovate, and build the nation . With a workforce of 1300 people, including 800 Senegalese, representatives from 20 nations around the world, and 6% disabled individuals."
+            descr="In the modern world, diversity and inclusivity are the foundations of successful organizations, Abdoulaye Sylla's Ecotra stands as an example of how a company can leverage the strengths of both local and foreign talent to create, innovate, and build the nation. With a workforce of 1300 people, including 800 Senegalese, representatives from 20 nations around the world, and 6% disabled individuals."
             hasTitle={false}
             hasText={true}
             hasDescr={true}
