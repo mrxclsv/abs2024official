@@ -1,15 +1,19 @@
-import React from 'react'
-import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2 } from '../utils/components'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal } from '../utils/components'
 import { contributions, project } from '../utils/data'
 import { allTransitions } from '../utils/style'
 
 const Home = () => {
 
-  document.title= "ABS2024 — Yoon Wi Ubbi Buntu Koom"
+  const location = useLocation()
+  const page = location.pathname.substring(1).replace('-', " ").toUpperCase()
+  const thisPage = `${project.name} — ${location ==! "/" ? page : project.tagline}`
+  document.title = thisPage
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[])
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
   
 
   return (
@@ -32,12 +36,12 @@ const Home = () => {
 
         <SplitDiv title="The Leader" color="black" link=""
           hasTitle={true} hasText={true}  hasDescr
+          hasLink
           layout={1} 
           showLines={true}
           text={project.tagline_long}
           descr="In the archives of Senegalese history, there are extraordinary visionaries whose unwavering dedication to their nation’s prosperity sparks transformation, leaving an indelible legacy. Among these luminaries is Abdoulaye Sylla."
           image={abssuit1}
-          hasLink
         />
 
         <SplitDiv title="The Visionary" color="white" link=""
@@ -49,9 +53,9 @@ const Home = () => {
           descr="When speaking of national development and visionary leadership, Abdoulaye Sylla has no equal. Abdoulaye Sylla (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
 
           His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
-          wrapperCSS='h-full min-h-[900px] md:min-h-[600px] w-screen px-0  w-full md:max-w-4xl md:w-full !overflow-hidden ' 
+          wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0  w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
           image={abswhite} 
-          imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-top  md:object-contain scale-[105%= pt-4 md:translate-y-20'
+          imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-bottom md:origin-top  md:object-contain scale-[105%= pt-4 md:translate-y-20'
           hasLink
         />
 
@@ -67,7 +71,7 @@ const Home = () => {
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
           wrapperCSS = "w-full max-h-[800px] overflow-hidden aspect-square lg:rounded-full lg:rounded-l-none mt-14 "
-          image={mapafrica} 
+          image={flagsenegal} 
           imageCSS="object-cover  origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
 

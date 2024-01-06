@@ -1,4 +1,4 @@
-import { abssit, abssuit1, abshero } from './components'
+import { abssit, abssuit1, flagsenegal, abshero } from './components'
 
 
 export const website = "abs2024.com"
@@ -231,6 +231,55 @@ export const timeline = [
     title:"School acquisition", 
     descr:'Abdoulaye Sylla financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA..'},
 ]
+
+export const journey = [
+  {
+    date:"Since 2017", 
+    position:"left", 
+    title:"Magal Touba", 
+    descr:'Abdoulaye Sylla has contributed over 1 billion CFA annually to the Magal de Touba for sanitation work before and after the event and donations.'},
+  {
+    date:"2019", 
+    position:"right", 
+    title:"First steps", 
+    descr:'Abdoulaye Sylla financed sanitation work at the Ocass market in Touba, amounting to 200 million CFA..'},
+  {
+    date:"2022", 
+    position:"left", 
+    title:"Mausoleums of Serigne Fallou MACKE", 
+    descr:'Abdoulaye Sylla renovated the Mausoleums of Serigne Fallou Mbacke and Serigne Sidy Moctar Mbacke in Touba at a cost of over 2 billion CFA, free of charge.'},
+  {
+    date:"2022", 
+    position:"right", 
+    title:"Yeba school", 
+    descr:'Abdoulaye Sylla renovated the Yeba School in Sebikotane for an amount of 30 million CFA, along with donations exceeding 3 million CFA.'},
+  {
+    date:"2022 - 2023", 
+    position:"left", 
+    title:"Hemodialysis Center", 
+    descr:'Abdoulaye Sylla financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA.'},
+  {
+    date:"2023", 
+    position:"right", 
+    title:"Mawa Sylla mosque", 
+    descr:'Abdoulaye Sylla is building the Mawa Sylla Mosque and Islamic Institute in Saint Louis, for a total cost of 1.5 billion CFA.'},
+  {
+    date:"2023", 
+    position:"left", 
+    title:"fighting immagration through sports", 
+    descr:'Abdoulaye Sylla sponsored a football tournament for the youth of Keur Massar, costing 100 million.'},
+  {
+    date:"2023", 
+    position:"right", 
+    title:"Electrify keur massar sotrac market", 
+    descr:'Abdoulaye Sylla He financed the electrification of the Sotrac market in Keur Massar for an amount of 30 million.'},
+  {
+    date:"2023", 
+    position:"left", 
+    title:"aiding the community", 
+    descr:'Abdoulaye Sylla is passionate about aiding the community, he has made donations totaling around 2 billion in Touba.'},
+]
+
 
 export const lawwd = {
   logo: "abs.ico",

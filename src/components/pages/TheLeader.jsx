@@ -1,12 +1,14 @@
 import React from 'react'
+import { useLocation } from "react-router-dom"
 import { SplitDiv, TextLayout } from '../../utils/components'
+import { project } from '../../utils/data'
 
 const TheLeader = () => {
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[])
-  
+  const location = useLocation()
+  const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
+  const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
+  document.title = thisPage
 
   return (
     <div className='min-h-screen w-screen flexV bg-white text-black'>

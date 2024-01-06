@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { project } from '../../utils/data'
 import { Timeline } from '../../utils/components'
 
 const TheVisionary = () => {
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[])
+  const location = useLocation()
+  const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
+  const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
+  document.title = thisPage
+
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
   
   return (
     <div className='min-h-screen h-full= w-screen flexV bg-blakk text-black gap-10 relative' >

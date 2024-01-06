@@ -24,26 +24,31 @@ export { default as Button } from '../components/Button'
 
 export {default as NotFound } from '../components/NotFound'
 
-// COMPONENTS
-// import Navbar from '../components/Navbar'
-// import Headers from '../components/Headers'
-// import Contact from '../components/Contact'
-// import Home from '../components/Home'
-// import Partners from '../components/Partners'
-// import Performances from '../components/Performances'
-// import Projects from '../components/Projects'
-// import Tutorials from '../components/Tutorials'
 
-// export const exports = (  Navbar, Headers, Contact, Home, Partners, Performances, Projects, Tutorials )
-// export const exports = ([
-//   Navbar, Headers, Contact, Home, Partners, Performances, Projects, Tutorials 
-// ]  
-//   )
+
+// IMAGES
 
 export { default as mapsenegal } from '../components/.images/map_senegal.jpg'
+export { default as mapsenegaldark } from '../components/.images/map_senegal_dark.jpg'
 export { default as mapafrica } from '../components/.images/mapafrica.jpg'
+export { default as flagsenegal } from '../components/.images/flagsenegal.png'
+export { default as mausoleHero } from '../components/.images/mausoleHero.png'
+export { default as c50 } from '../components/.images/c50.png'
+export { default as daara } from '../components/.images/daara.jpg'
+export { default as leket } from '../components/.images/leket.png'
+export { default as leket2 } from '../components/.images/leket2.jpg'
+export { default as water } from '../components/.images/water.jpg'
+
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
 export { default as abssit } from '../components/.photos/abs_sit.png'
 export { default as abssit2 } from '../components/.photos/abs_sit_.png'
 export { default as abshero } from '../components/.photos/abs_blue_.jpg'
+
+export { default as fam1 } from '../components/.photos/family/fam1.jpg'
+export { default as fam2 } from '../components/.photos/family/fam2.jpg'
+export { default as fam3 } from '../components/.photos/family/fam3.jpg'
+export { default as couple1 } from '../components/.photos/family/couple1.jpg'
+export { default as couple2 } from '../components/.photos/family/couple2.jpg'
+export { default as jumeaux } from '../components/.photos/family/jumeaux.jpg'
+export { default as jumeaux_ } from '../components/.photos/family/jumeaux.png'
