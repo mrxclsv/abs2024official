@@ -36,11 +36,11 @@ const SplitDiv = ({
           hasDescr={hasDescr}
           showLines={showLines}
           color={color}
-          css=""
+          css={title !== "black" | "white" && "!border-gray-200/50" }
         />
         {hasLink && 
           <Link to={`/${link}`} onMouseEnter={handleToggle} 
-                className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700 
+                className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700  z-[5]
                 ${color === "white" && "text-black border-blakk" }
                 ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-blakk transition-colors duration-1000" }
                           `}><p>Read more</p> 
@@ -49,7 +49,12 @@ const SplitDiv = ({
       </Link>
 
       <div className={`imageWrapper right md:w-full lg:w-1/2 h-full lg:max-h-[1900px]= ${wrapperCSS} my-0 py-0`}>
-        <img className={`group-hover:scale-[105%] object-cover ${imageCSS} ${allTransitions} !duration-[3s] `} src={image || '/default.jpg'} alt={short || "this content"} />
+        
+        {/* ONLY FOR BUSINESS MAN */}
+        {title === "the business man" && 
+          <div className='light w-[200px] h-auto aspect-square rounded-full z-[1] bg-white absolute right-[30%] blur-[100px] top-[50%]' />
+        }
+        <img className={`group-hover:scale-[105%] object-cover ${imageCSS} ${allTransitions} z-[2] !duration-[3s] `} src={image || '/default.jpg'} alt={short || "this content"} />
       </div>
 
       </div>

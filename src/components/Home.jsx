@@ -88,43 +88,43 @@ const Home = () => {
           imageCSS={`!h-full== !w-auto saturate-0 transition-colors duration-400 p-6 !object-contain transition-transform duration-1000 mix-blend-multiply h-fit group-hover:saturate-100  ${allTransitions}`}
           image={mapafrica} wrapperCSS="md:object-right center object-center h-full !max-h-[500px] overflow-visible pr-3 md:pr-0 md:scale-80 mb-20"
         />
+        <div className='relative'>
+          <SplitDiv title="the business man" color="black" link="/" 
+            hasTitle={true} hasText={true}  hasDescr={true}
+            showLines={true}
+            layout={1} 
+            mainCSS="w-screen"
+            css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[75vh] overflow-hidden   '
+            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full "
+            hasLink
+            text='A different approach to entrepreneurship' 
+            image={abssit2} 
+            imageCSS={`object-contain h-full pt-3 md:h-full md:w-screen object-top w-full md:origin-top-right hover:scale-90 group-hover:scale-[100%] md:pl-10= group-hover:pl-0== group-hover:brightness-[.9] lg:object-top lg:mt-2 md:pr-0 lg:px-10= translate-y-[.4rem] bg-gradient-to-t= from-black/80= to-transparent duration-2000`}
+            wrapperCSS={`full !h-[75vh] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-hidden  `} 
+            descr="
+            Abdoulaye SYLLA is not your typical business man. He is a visionary business leader with a potent plan to tackle Senegal’s most pressing challenges. His leadership is distinguished by his 20 years of dedication to his nation. His vision is not a mere abstraction but a clear and purposeful plan for national development. All his endeavors are infused with a purpose that transcends profit margins, seeking to address issues ranging from education and healthcare to sustainable agriculture, infrastructure, and economic empowerment.
+            "
+          />
+        </div>
 
-        <SplitDiv title="The business man" color="black" link="/" 
-          hasTitle={true} hasText={true}  hasDescr={true}
-          showLines={true}
-          layout={1} 
-          mainCSS="w-screen"
-          css='group bg-gradient-to-t from-gray-800 to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[75vh] overflow-hidden   '
-          blockCSS="lg:bg-gradient-to-r from-black to-black/20=== pl-4 lg:absolute left-0  lg:justify-center lg:full "
-          hasLink
-          text='A different approach to entrepreneurship' 
-          descr="
-          Abdoulaye SYLLA is not your typical business man. He is a visionary business leader with a potent plan to tackle Senegal’s most pressing challenges. His leadership is distinguished by his 20 years of dedication to his nation. His vision is not a mere abstraction but a clear and purposeful plan for national development. All his endeavors are infused with a purpose that transcends profit margins, seeking to address issues ranging from education and healthcare to sustainable agriculture, infrastructure, and economic empowerment.
-          "
-          image={abssit2} 
-          wrapperCSS={`full !h-[75vh] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-hidden  `} 
-          imageCSS={`object-contain h-full pt-3 md:h-full md:w-screen object-top w-full md:origin-top-right group-hover:scale-[100%] md:pl-10= group-hover:pl-0 lg:object-top lg:mt-2 md:pr-0 lg:px-10 translate-y-[.4rem]
-                    bg-gradient-to-t= from-black/80= to-transparent`}
-        />
-
-        <div className='contributions flexV w-full center bg-gray-100 relative '>
+        <div className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
           <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
               {contributions?.map((item, index) => (
                 <div key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full animate-pulse absolute absoluteAll flex center my-auto= ${item.position} `}>
                     <p className='h5 text-white absolute z-[3]'>{index+1}</p>
-                    <div className='bg-purple-800/80 full p-2 z-[2] rounded-full absolute' />
-                    <div className='bg-purple-800/50 full p-6 opacity-50 rounded-full absolute' />
+                    <div className='bg-black/90 full p-2 z-[2] rounded-full absolute' />
+                    <div className='bg-black/60 full p-6 opacity-50 rounded-full absolute' />
                 </div>
               ))}
               <img className='h-full lg:w-full object-contain mix-blend-multiply p-5' src={mapsenegal} alt="senegal" />
             </div>
 
-            <div className='text-black group center md:start center w-full bg-gray-100== gap-10 paddingMRX relative'>
+            <div className='contributionsMOB text-black group center md:start center w-full gap-10 paddingMRX relative'>
               
               <div className='relative flexV w-full '>
-                <div className='translate-x-4 lg:translate-x-10 w-16 translate-y-1 rounded h-[4px] z-[1] bg-blakk' />
+                <div className='translate-x-4 lg:translate-x-10 w-16 z-[3] translate-y-[65%] rounded h-[3px] bg-blakk' />
                 <TextLayout title="Homme Social 2023"  /* &#127942; */
                   text="Contributions "
                   descr="Président Abdoulaye Sylla a été nommé Homme Social de l'année aux Jambaar Awards 2023. Sa contribution exceptionnelle à l'éducation et au développement économique du Sénégal est saluée. Félicitations à un leader visionnaire !"
@@ -138,7 +138,7 @@ const Home = () => {
               </div>
 
               <Link to='/the-philanthropist' onMouseEnter={handleToggle} 
-                className={`border rounded w-fit ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700 whitespace-nowrap absolute -bottom-8 left-10  `}><p className='whitespace-nowrap w-fit'>Read more</p> 
+                className={`border hidden lg:flex rounded w-fit ml-6 lg:ml-10 py-2 bg-blakk text-white px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700 whitespace-nowrap absolute -bottom-0 left-10  `}><p className='whitespace-nowrap w-fit'>Read more</p> 
               </Link>
               
               <div className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
@@ -151,11 +151,13 @@ const Home = () => {
                   />
                 ))}
               </div>
+
             </div>
+
           </div>
         </div> 
         
-        <div className='contributionsLAPTOP hidden lg:flex center w-screen gap-8 py-8 -translate-y-1/3 bg-gray-100 text-black justify-around px-20'>
+        <div className='contributionsLAPTOP hidden lg:flex border-t border-white/70 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
           {contributions?.map((item, index) => (
             <Stat key={index} 
             title={item.title} 
