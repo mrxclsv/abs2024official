@@ -3,7 +3,6 @@ import { /* Navigate, */ Routes, Route } from 'react-router-dom';
 import './App.css';
 import 
 { 
-  /* Headers, */ 
   Navbar, Footer,
   Home, SonOfSenegal, TheLeader, TheVisionary, ThePhilanthropist,
   NotFound,
@@ -16,22 +15,20 @@ function App() {
 
 
   // ! TODAY AND TIME
-  function getTime() {
-    const currentHour = new Date.getHours();
-    // const currentDay = new Date.getDays();
-    // console.log(currentHour /* + currentDay */);
-    return {
-      currentHour: currentHour
-    }
-  }
+  // function getTime() {
+  //   const currentHour = new Date.getHours();
+  //   // const currentDay = new Date.getDays();
+  //   // console.log(currentHour /* + currentDay */);
+  //   return {
+  //     currentHour: currentHour
+  //   }
+  // }
 
-  const [navTrigger, setNavTrigger] = useState(false);
+  // const [navTrigger, setNavTrigger] = useState(false);
   // const toggleNavTrigger = () => setNavTrigger(!true)
 
 
   const [menu, setMenu] = useState(false)
-
-  const navHeight = 75
 
   function toggleMenu() {
     if (menu === true ) {
@@ -41,7 +38,6 @@ function App() {
     };
   };
   
-
   const [navW, setNavW] = useState(false)
   const toggleNav = () => setNavW(!navW)
   // const screenW = window.innerWidth
@@ -68,8 +64,8 @@ function App() {
     <div className="APP flexV h-screen= relative overflow-x-hidden overflow-y-auto== ==scrollbar-hide scroll-smooth">
 
       <Navbar nawW={navW} menu={menu} setMenu={setMenu} 
-              toggleNav={toggleNav} toggleMenu={toggleMenu} getTime={getTime} 
-              navTrigger={navTrigger}  navHeight={navHeight}
+              toggleNav={toggleNav} toggleMenu={toggleMenu} 
+              // getTime={getTime} navTrigger={navTrigger}  navHeight={navHeight}
           />
       
 
@@ -77,12 +73,12 @@ function App() {
 
       <Routes>
 
-        <Route exact path="/"                     element={<Home navTrigger={navTrigger} />}  />:
-        <Route exact path="/son-of-senegal"       element={<SonOfSenegal navHeight={navHeight} />}  />
-        <Route exact path="/the-leader"           element={<TheLeader navHeight={navHeight} />}  />
-        <Route exact path="/the-philanthropist"   element={<ThePhilanthropist navHeight={navHeight} />}  />
-        <Route exact path="/the-visionary"        element={<TheVisionary navHeight={navHeight} />}  />
-        <Route exact path="/*"                    element={<NotFound navHeight={navHeight} />}  />
+        <Route exact path="/"                     element={<Home /* navTrigger={navTrigger} */ />}  />:
+        <Route exact path="/son-of-senegal"       element={<SonOfSenegal />}  />
+        {/* <Route exact path="/the-leader"           element={<TheLeader />}  /> */}
+        {/* <Route exact path="/the-philanthropist"   element={<ThePhilanthropist />}  /> */}
+        {/* <Route exact path="/the-visionary"        element={<TheVisionary />}  /> */}
+        <Route exact path="/*"                    element={<NotFound />}  />
         
       </Routes>
 
