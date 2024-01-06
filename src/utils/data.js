@@ -1,6 +1,3 @@
-import { 
-} from "./assets"
-
 import { flagsenegal, abssit, abssuit1, abshero } from './components'
 
 
