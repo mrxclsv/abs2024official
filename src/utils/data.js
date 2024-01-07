@@ -114,22 +114,26 @@ export const headers = [
   { name: 'son of senegal', 
     descr:'the lab for content in Branding Media Production, 3D & Dev', 
     link:'son-of-senegal', 
-    icon:'' 
+    icon:'',
+    image: 'menu1', 
   },
   { name: 'the leader', 
     descr:'won ñu yoon bi', 
     link:'the-leader', 
-    icon:'' 
+    icon:'',
+    image: 'menu2', 
   },
   { name: 'the visionary', 
     descr:'#YoonWi the blueprint for national progress', 
     link:'the-visionary', 
-    icon:'' 
+    icon:'',
+    image: 'menu3', 
   },
   { name: 'the philanthropist', 
     descr:'Abdoulaye Sylla, a man for the people', 
     link:'the-philanthropist', 
-    icon:'' 
+    icon:'',
+    image: 'menu4', 
   },
 ]
 

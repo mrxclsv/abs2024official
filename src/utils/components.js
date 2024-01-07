@@ -24,6 +24,7 @@ export { default as ProjectCard } from '../components/Projects/ProjectCard'
 export { default as Button } from '../components/Button'
 
 export {default as NotFound } from '../components/NotFound'
+export { default as Socials } from '../components/Socials'
 
 
 
@@ -33,18 +34,22 @@ export { default as mapsenegal } from '../components/.images/map_senegal.jpg'
 export { default as mapsenegaldark } from '../components/.images/map_senegal_dark.jpg'
 export { default as mapafrica } from '../components/.images/mapafrica.jpg'
 export { default as flagsenegal } from '../components/.images/flagsenegal.png'
+export { default as senegalHero } from '../components/.images/senegalHero.jpg'
 export { default as mausoleHero } from '../components/.images/mausoleHero.png'
 export { default as c50 } from '../components/.images/c50.png'
 export { default as daara } from '../components/.images/daara.jpg'
 export { default as leket } from '../components/.images/leket.png'
 export { default as leket2 } from '../components/.images/leket2.jpg'
 export { default as water } from '../components/.images/water.jpg'
+export { default as workforce } from '../components/.images/workforce.jpg'
 
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
 export { default as abssit } from '../components/.photos/abs_sit.png'
 export { default as abssit2 } from '../components/.photos/abs_sit_.png'
 export { default as abshero } from '../components/.photos/abs_blue_.jpg'
+export { default as absstand } from '../components/.photos/abs_white_wall.jpg'
+export { default as absyellowfit } from '../components/.photos/abs_yellow_fit.PNG'
 
 export { default as fam1 } from '../components/.photos/family/fam1.jpg'
 export { default as fam2 } from '../components/.photos/family/fam2.jpg'

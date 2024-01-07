@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { SplitDiv, TextLayout } from '../../utils/components'
+import { SplitDiv, TextLayout, absyellowfit, fam1, jumeaux, senegalHero } from '../../utils/components'
 import { project } from '../../utils/data'
 
 const SonOfSenegal = () => {
@@ -16,11 +16,11 @@ const SonOfSenegal = () => {
   
 
   return (
-    <div className='min-h-screen w-screen flexV bg-white text-black'>
+    <div className='min-h-screen w-screen flexV bg-white text-black pt-[75px]'>
 
       <div className='hero w-full h-[70vh] min-h-[400px] flex center relative bg-gray-100'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
-          <img className='full object-cover origin-top opacity-60' src="/default.jpg" alt="beloved son" />
+          <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
         </div>
         <div className='absolute absoluteAll flex center  '>
         <h1 className='h1 text-white drop-shadow-lg'>Senegal beloved son</h1>
@@ -28,49 +28,57 @@ const SonOfSenegal = () => {
 
       </div>
 
-      <div className='contentWrapper flexV center mx-auto'>
+      <div className='contentWrapper= flexV relative center mx-auto'>
 
         <SplitDiv title="The Family man" 
-          hasTitle={true} hasText={true}  hasDescr={true}
+          hasTitle={true} hasText={true}  hasDescr={false}
           layout={1} 
           showLines={true}
+          image={absyellowfit}
+          mainCSS="lg:max-h-[1080px] overflow-hidden "
+          css="max-w-7xl relative lg:flex-col "
+          blockCSS="fixed my-auto lg:mt-20 top-24 mt-10"
+          wrapperCSS="flexV center overflow-hidden mt-20="
+          imageCSS="object-top origin-top full object-cover"
           text="Fétë fétë biiy xaalë yoonu sopi, Yoonu koom"
           descr=""
-          color="white" 
+          color="black" 
         />
 
-        <div className='splitText flex px-10 py-10'>
-
-        <TextLayout title="roots"
-          text=""
-          descr="Born and raised in Senegal, ABS takes immense pride in his roots. His journey from a humble beginning to becoming a national leader is a testament to the hard work, determination, and the values instilled in him by his Senegalese upbringing. He often speaks of how his Senegalese heritage has shaped his character, instilling in him a deep sense of community, respect for tradition, and the importance of family."
+        <div className='splitText flexV md:flex-row px-10 max-w-7xl py-10'>
+          <TextLayout title="Roots"
+            text="His senegalese heritage"
+            descr="Born and raised in Senegal, ABS takes immense pride in his roots. His journey from a humble beginning to becoming a national leader is a testament to the hard work, determination, and the values instilled in him by his Senegalese upbringing. He often speaks of how his Senegalese heritage has shaped his character, instilling in him a deep sense of community, respect for tradition, and the importance of family."
+            hasTitle={true}
+            hasText={true}
+            hasDescr={true}
+            showLines={true}
+            color="white"
+            css="max-w-7xl"
+            />
+          <TextLayout title="values"
+          text="The family man"
           hasTitle={true}
-          hasText={false}
           hasDescr={true}
-          />
-          <TextLayout title="family man"
-          text=""
-          descr="ABS's journey as a family man, son of Senegal, and a successful professional sets a remarkable example for aspiring individuals in Senegal and beyond. He showcases that it is possible to soar to great heights without compromising 
-
-          family values. ABS's story is an inspiration for the youth of Senegal, demonstrating that with dedication, resilience, and a strong support system, one can excel both in all spheres of life."
-          hasTitle={true}
-          hasText={false}
-          hasDescr={true}
+          hasText={true}
+          color="white"
+          showLines={false}
+          descr="ABS's journey as a family man, son of Senegal, and a successful professional sets a remarkable example for aspiring individuals in Senegal and beyond. He showcases that it is possible to soar to great heights without compromising  family values. ABS's story is an inspiration for the youth of Senegal, demonstrating that with dedication, resilience, and a strong support system, one can excel both in all spheres of life."
           />
         </div>
 
-        <div className='hashtags bg-gray-100 flexCenter relative'>
-          <h5 className='grid grid-cols-2 gap-6 justify-around max-w-2xl py-6' >
-            <span className='hashtag'>#ABS2024</span>
-            <span className='hashtag'>#LeguiFiftyFiftyLeu</span>
-            <span className='hashtag'>#YoonWi</span>
-            <span className='hashtag'>#BoromTerangaYi</span>
-          </h5>
+        <div className='hashtags bg-gray-100 flexV center relative w-full '>
+          <div className='grid grid-cols-2 lg:grid-cols-4 items-center justify-between max-w-7xl lg:w-full py-6' >
+            <button onClick={() => {}} className='hashtag'>#ABS2024</button>
+            <button onClick={() => {}} className='hashtag'>#LeguiFiftyFiftyLeu</button>
+            <button onClick={() => {}} className='hashtag'>#YoonWi</button>
+            <button onClick={() => {}} className='hashtag'>#BoromTerangaYi</button>
+          </div>
         </div>
 
-        <div className='w-full flexV md:flex-row center pt-10 '>
+        <div className='w-full flexV md:flex-row center pt-10 max-w-7xl '>
           <div className='left relative overflow-hidden w-full md:w-1/2'>
-            <img className='full oject-contain' src="/default.jpg" alt="photos" />
+            <img className='full oject-contain' src={fam1} alt="photos" />
             <div className="descrBox absolute bottom-0 left-0 right-0 flexV py-2 bg-gray-200/70">
               <p>Portrait de famille ABS</p>
             </div>
@@ -85,7 +93,8 @@ const SonOfSenegal = () => {
               hasTitle
               hasText={false}
               hasDescr
-              showLines={false}
+              showLines={true}
+              color="white"
             />
 
           </div>
@@ -93,8 +102,8 @@ const SonOfSenegal = () => {
 
         </div>
 
-        <div className='flex w-screen relative overflow-hiddenf'>
-          <img className='full object-cover' src="/default.jpg" alt="beloved son" />
+        <div className='flex w-screen relative overflow-hidden center my-20 px-10 lg:px-0 '>
+          <img className='full object-cover max-w-7xl self-center rounded-lg' src={jumeaux} alt="beloved son" />
         </div>
 
       </div>

@@ -277,7 +277,7 @@
 
 
   .hashtag {
-    @apply cursor-pointer px-2 py-1 hover:font-semibold transition
+    @apply cursor-pointer px-2 py-1 hover:font-semibold w-fit transition-all duration-700 text-center
   }
 
   /* ACTION BUTTONS */
@@ -331,6 +331,9 @@
 
   .paddingMRX {
     @apply p-6 md:p-10
+  }
+  .signal {
+    @apply bg-red-100/50
   }
 
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout } from '../utils/components'
+import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, Socials } from '../utils/components'
 import { contributions, project, social } from '../utils/data'
 import { allTransitions } from '../utils/style'
 
@@ -66,16 +66,17 @@ const Home = () => {
           hasLink
           hasTitle={true} hasText={true}  hasDescr={true}
           showLines={true}
+          mainCSS="lg:min-w-screen lg:items-between"
           layout={2} 
-          css="!flex-col= center gap-0 md:w-screen  "
-          blockCSS="md:w-screen md:self-start lg:h-full lg:items-center"
+          css="!flex-col= center gap-0 w-full=  "
+          blockCSS="md:w-screen= w-full md:self-start= lg:h-full lg:items-center"
           text='A bold blueprint for national progress' 
           descr="
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
-          wrapperCSS="w-full max-h-[800px] overflow-hidden aspect-square lg:rounded-full lg:rounded-l-none mt-14 "
+          wrapperCSS="lg:w-1/2 max-h-[800px] overflow-hidden aspect-square lg:rounded-full lg:rounded-l-none== mt-14 "
           image={flagsenegal} 
-          imageCSS="object-cover  origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
+          imageCSS="object-cover origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
 
         <SplitDiv title="Ci La Bokk" color="white" link="" 
@@ -99,7 +100,7 @@ const Home = () => {
             layout={1} 
             mainCSS="w-screen"
             css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
-            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full "
+            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full 2xl:ml-[15vw] "
             hasLink
             text='A different approach to entrepreneurship' 
             image={abssit2} 
@@ -190,16 +191,7 @@ const Home = () => {
               image={abswhite}
               hasLink
             />
-            <div className='grid grid-cols-3 w-full h-fit p-10 gap-10= lg:gap-0 bg-blakk full z-[1] text-white center'>
-              {social?.map((item, index) => (
-                <button key={index} className='min-w-[150px] h-fit lg:py-6 min-h-[150px] lg:min-h-[80px] flexV border-none hover:border-l-[3px] border-gray-400/60 flexV center group gap-2'>
-                  <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center rounded-full p-3 w-16 h-16 text-[3rem] z-[3] text-white group-hover:opacity-100`} />
-                  <h4 className='h4 mt-2 tracking-widest font-semibold uppercase'>{item.title}</h4>
-
-
-                </button>
-              ))}
-            </div>
+            <Socials css="" />
 
           </div>
           
