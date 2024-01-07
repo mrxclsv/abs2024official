@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout } from '../utils/components'
-import { contributions, project } from '../utils/data'
+import { contributions, project, social } from '../utils/data'
 import { allTransitions } from '../utils/style'
 
 const Home = () => {
@@ -14,6 +14,7 @@ const Home = () => {
   // useEffect(() => {
   //   window.scroll(0,0)
   // },[location])
+
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
 
@@ -82,6 +83,7 @@ const Home = () => {
           showLines={true}
           layout={1} 
           mainCSS="overflow-hidden min-h-[50vh] lg:max-h-[800px]"
+          blockCSS="h-full"
           css="group "
           text='Ci La Bokk' 
           descr="What further distinguishes ABS is his unique blend of diligence and visionary thinking. He has founded numerous initiatives and companies, each meticulously designed to confront the socio-economic obstacles that have historically hindered Senegal’s progress. These initiatives serve as pathways, embodying ABS’s conviction that economic growth and social advancement are intertwined.
@@ -90,7 +92,7 @@ const Home = () => {
           image={mapafrica} wrapperCSS="md:object-right  center object-center h-full !max-h-[500px]== overflow-visible pr-3 md:pr-0 md:scale-80 mb-20"
         />
 
-        <div className='TheBusinessMan relative '>
+        <div className='TheBusinessMan relative'>
           <SplitDiv title="the business man" color="black" link="/" 
             hasTitle={true} hasText={true}  hasDescr={true}
             showLines={true}
@@ -170,7 +172,43 @@ const Home = () => {
           ))}
         </div>
 
+        <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
+
+          <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-7xl'>
+
+            <SplitDiv title="The philanthropist" color="black" link="/the-philanthropist"
+              hasTitle={true} hasText={true}  hasDescr={true}
+              showLines={true}
+              mainCSS="lg:w-full"
+              css="w-full pr-0"
+              blockCSS="!h-fit w-full min-w-full lg:pr-0"
+              layout={1} 
+              text='& the community' 
+              descr="Abdoulaye’s vision extends far beyond the economic realm; it encompasses a holistic approach to societal well-being. His commitment to social equity, environmental sustainability, and overall quality of life for his fellow Senegalese showcases the depth of his vision. ABS is not just a leader driven by numbers and statistics; he is a champion of comprehensive progress."
+              wrapperCSS='h-fit w-1/2== hidden=' 
+              imageCSS='hidden'
+              image={abswhite}
+              hasLink
+            />
+            <div className='grid grid-cols-3 w-full h-fit p-10 gap-10= lg:gap-0 bg-blakk full z-[1] text-white center'>
+              {social?.map((item, index) => (
+                <button key={index} className='min-w-[150px] h-fit lg:py-6 min-h-[150px] lg:min-h-[80px] flexV border-none hover:border-l-[3px] border-gray-400/60 flexV center group gap-2'>
+                  <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center rounded-full p-3 w-16 h-16 text-[3rem] z-[3] text-white group-hover:opacity-100`} />
+                  <h4 className='h4 mt-2 tracking-widest font-semibold uppercase'>{item.title}</h4>
+
+
+                </button>
+              ))}
+            </div>
+
+          </div>
+          
+        </div>
+
+
       </div>
+
+
 
 
       

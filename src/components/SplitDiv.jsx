@@ -16,17 +16,16 @@ const SplitDiv = ({
   
 
   return (
-    <div className={`full max-w-6xl= flexV lg:flex-row center  pb-0  z-[1] group ${mainCSS}
-                    
+    <div className={`full max-w-6xl= flexV lg:flex-row center pb-0 z-[1] group ${mainCSS}
                     ${color === "white" ? "bg-white text-gray-900 z-[1]" : "bg-blakk z-[1] text-white" }`} >
       
-      <div className={`contentWrapper== flex center 
+      <div className={`contentWrapper== flex center h-full
                     ${layout === 1 && "flexV lg:flex-row "}
                     ${layout === 2 && "flexV lg:flex-row-reverse   "} 
                     ${css}
                     `}>
 
-      <Link to={link} className={`left w-full lg:w-1/2 flexV p-6 ${blockCSS} md:p-10 start max-w-3xl group`}>
+      <Link to={link} className={`left w-full lg:w-1/2 h-full flexV p-6 ${blockCSS} md:p-10 start max-w-3xl group`}>
         <TextLayout
           title={title}
           text={text}
@@ -36,7 +35,7 @@ const SplitDiv = ({
           hasDescr={hasDescr}
           showLines={showLines}
           color={color}
-          css={title !== "black" | "white" && "!border-gray-200/50" }
+          css={title !== "black" | "white" && "!border-gray-400/40" }
         />
         {hasLink && 
           <Link to={`/${link}`} onMouseEnter={handleToggle} 

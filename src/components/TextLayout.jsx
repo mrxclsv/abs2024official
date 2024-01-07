@@ -8,7 +8,7 @@ const TextLayout = ({
 
   // ${color === "white" && "border-gray-500/50"} ${css}`
   return (
-    <div className={`flexVStart p-6 lg:p-10 pb-0 lg:pb-0 mb-6 z-[1] relative ${showLines && "border-l border-neutral-500/60"} 
+    <div className={`flexVStart p-6 lg:p-10 pb-0 lg:pb-0 mb-6 z-[1] relative h-full ${showLines && "border-l border-neutral-500/60"} 
       ${color === "black" && "text-white"} 
       ${color === "white" && "text-black"} 
       ${css}

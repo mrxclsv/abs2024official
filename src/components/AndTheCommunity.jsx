@@ -1,10 +1,9 @@
 import React from 'react'
 import { navbar } from '../utils/data'
 import { Link } from 'react-router-dom'
-// import { flagsenegal, abssit, abswhite, abssuit1} from '../utils/components'
 
 
-const GoTo = () => {
+const AndTheCommunity = () => {
   return (
     <div className='w-full h-full max-w-7xl grid grid-cols-2 lg:grid-cols-4 center justify-around gap-6 lg:gap-20 mt-20 p-6 lg:p-10'>
     {navbar?.map((item, index) => (
@@ -24,4 +23,4 @@ const GoTo = () => {
   )
 }
 
-export default GoTo
+export default AndTheCommunity

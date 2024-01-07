@@ -280,6 +280,15 @@ export const journey = [
     descr:'Abdoulaye Sylla is passionate about aiding the community, he has made donations totaling around 2 billion in Touba.'},
 ]
 
+export const social = [
+  {title:"instagram", icon:"instagram", link:"bit.ly/ABS"},
+  {title:"tik tok", icon:"tiktok", link:"bit.ly/ABS"},
+  {title:"youtube", icon:"youtube", link:"bit.ly/ABS"},
+  {title:"twitter", icon:"instagram", link:"bit.ly/ABS"},
+  {title:"facebook", icon:"facebook", link:"bit.ly/ABS"},
+  {title:"snapchat", icon:"snapchat", link:"bit.ly/ABS"},
+]
+
 
 export const lawwd = {
   logo: "abs.ico",
