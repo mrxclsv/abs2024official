@@ -25,7 +25,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
 
       <div className='flex relative w-full max-w-7xl items-center justify-between'>
 
-        <Link to='/' onClick={() => setMenu(false)} className='absLOGO absolute--- left-10 z-[300] p-6--- animate-slideleft group '>
+        <Link to='/' onClick={() => setMenu(false)} className='absLOGO ml-8 absolute--- left-10 z-[300] p-6--- animate-slideleft group '>
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 

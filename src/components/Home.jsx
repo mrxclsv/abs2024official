@@ -81,26 +81,28 @@ const Home = () => {
           hasTitle={false} hasText={true}  hasDescr={true}
           showLines={true}
           layout={1} 
-          css="group min-h-[85vh]"
+          mainCSS="overflow-hidden min-h-[50vh] lg:max-h-[800px]"
+          css="group "
           text='Ci La Bokk' 
           descr="What further distinguishes ABS is his unique blend of diligence and visionary thinking. He has founded numerous initiatives and companies, each meticulously designed to confront the socio-economic obstacles that have historically hindered Senegal’s progress. These initiatives serve as pathways, embodying ABS’s conviction that economic growth and social advancement are intertwined.
           "
-          imageCSS={`!h-full== !w-auto saturate-0 transition-colors duration-400 p-6 !object-contain transition-transform duration-1000 mix-blend-multiply h-fit group-hover:saturate-100  ${allTransitions}`}
-          image={mapafrica} wrapperCSS="md:object-right center object-center h-full !max-h-[500px] overflow-visible pr-3 md:pr-0 md:scale-80 mb-20"
+          imageCSS={`!h-full== !w-auto== saturate-0 transition-colors object-contain duration-400 px-6 !object-contain transition-transform duration-1000 mix-blend-multiply =h-fit group-hover:saturate-100  ${allTransitions}`}
+          image={mapafrica} wrapperCSS="md:object-right  center object-center h-full !max-h-[500px]== overflow-visible pr-3 md:pr-0 md:scale-80 mb-20"
         />
-        <div className='relative'>
+
+        <div className='TheBusinessMan relative '>
           <SplitDiv title="the business man" color="black" link="/" 
             hasTitle={true} hasText={true}  hasDescr={true}
             showLines={true}
             layout={1} 
             mainCSS="w-screen"
-            css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[75vh] overflow-hidden   '
+            css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
             blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full "
             hasLink
             text='A different approach to entrepreneurship' 
             image={abssit2} 
             imageCSS={`object-contain h-full pt-3 md:h-full md:w-screen object-top w-full md:origin-top-right hover:scale-90 group-hover:scale-[100%] md:pl-10= group-hover:pl-0== group-hover:brightness-[.9] lg:object-top lg:mt-2 md:pr-0 lg:px-10= translate-y-[.4rem] bg-gradient-to-t= from-black/80= to-transparent duration-2000`}
-            wrapperCSS={`full !h-[75vh] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-hidden  `} 
+            wrapperCSS={`full !h-[85vh] lg:min-h-[800px] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-visible lg:overflow-hidden  `} 
             descr="
             Abdoulaye SYLLA is not your typical business man. He is a visionary business leader with a potent plan to tackle Senegal’s most pressing challenges. His leadership is distinguished by his 20 years of dedication to his nation. His vision is not a mere abstraction but a clear and purposeful plan for national development. All his endeavors are infused with a purpose that transcends profit margins, seeking to address issues ranging from education and healthcare to sustainable agriculture, infrastructure, and economic empowerment.
             "
@@ -112,10 +114,10 @@ const Home = () => {
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
               {contributions?.map((item, index) => (
-                <div key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full animate-pulse absolute absoluteAll flex center my-auto= ${item.position} `}>
+                <div key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full absolute absoluteAll flex center my-auto= ${item.position} `}>
                     <p className='h5 text-white absolute z-[3]'>{index+1}</p>
-                    <div className='bg-black/90 full p-2 z-[2] rounded-full absolute' />
-                    <div className='bg-black/60 full p-6 opacity-50 rounded-full absolute' />
+                    <div className='bg-black/90 full p-2 z-[2] rounded-full absolute animate-pulse delay-75' />
+                    <div className='bg-black/60 full p-6 opacity-50 rounded-full absolute animate-pulse delay-200' />
                 </div>
               ))}
               <img className='h-full lg:w-full object-contain mix-blend-multiply p-5' src={mapsenegal} alt="senegal" />

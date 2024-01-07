@@ -2,9 +2,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     // textStrokeWidth: theme => theme('borderWidth'),
-    fontFamily : {
-      "montserrat" : "montserrat",
-    },
+    // },
     paintOrder: {
       'fsm': { paintOrder: 'fill stroke markers' },
       'fms': { paintOrder: 'fill markers stroke' },
@@ -14,14 +12,14 @@ module.exports = {
       'msf': { paintOrder: 'markers stroke fill' },
     },
     extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat']
+      },
       colors: {
         blakk : "#000300",
         primary : "#F7A927",
         secondary : "#262262",
         accent : "#262262",
-      },
-      fontFamily: {
-        'Montserrat': ['Montserrat']
       },
       aspectRatio: {
         '1/1': '1 / 1',
@@ -71,7 +69,6 @@ module.exports = {
 
   },
   plugins: [
-    // require('@tailwindcss/line-clamp'),
     require('tailwind-scrollbar-hide'),   
   ],
 }
