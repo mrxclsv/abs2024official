@@ -3,9 +3,9 @@ import { /* Navigate, */ Routes, Route } from 'react-router-dom';
 import './App.css';
 import 
 { 
-  Navbar, Footer,
+  Navbar, Footer, NotFound,
   Home, SonOfSenegal, TheLeader, TheVisionary, ThePhilanthropist,
-  NotFound,
+  Projects,
 }  
 from './utils/components';
 
@@ -69,7 +69,7 @@ function App() {
           />
       
 
-      <main className='flex w-screen overflow-x-hidden center relative scrollbar-hide== overflow-y-scroll== scroll-smooth'>
+      <main className='flex w-screen overflow-x-hidden center relative scrollbar-hide scroll-smooth'>
 
       <Routes>
 
@@ -78,6 +78,7 @@ function App() {
         <Route exact path="/the-leader"           element={<TheLeader />}  />
         <Route exact path="/the-philanthropist"   element={<ThePhilanthropist />}  />
         <Route exact path="/the-visionary"        element={<TheVisionary />}  />
+        <Route exact path="/projects"             element={<Projects />}  />
         <Route exact path="/*"                    element={<NotFound />}  />
         
       </Routes>

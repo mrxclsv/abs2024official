@@ -42,22 +42,21 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
 
       <div className='flex relative w-full max-w-7xl items-center justify-between'>
 
-        <Link to='/' onClick={() => setMenu(false)} className='absLOGO ml-8 absolute--- left-10 z-[300] p-6--- animate-slideleft group '>
+        <Link to='/' onClick={() => setMenu(false)} className='absLOGO ml-6 absolute--- left-10 z-[300] p-6--- animate-slideleft group '>
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 
-        <div className={`flex= center gap-6 z-[300] animate-slidedown h-full hidden md:flex  `}>
+        <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden md:flex  `}>
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({isActive}) => isActive ? activeCSS : notActiveCSS }>
               <p className='whitespace-nowrap'>{item.name}</p>
             </NavLink>
           ))}
 
-          <Link className='bg-black text-white text-xs px-3 py-3 rounded-lg'>Subscribe
-          </Link>
+          <Link className='bg-black text-white text-xs px-6 tracking-widest py-3 rounded-lg ml-10 whitespace-nowrap'>Subscribe</Link>
         </div>
 
-        <p className=''>{currentHour}</p>
+        <p className=''>{/* {currentHour} */}</p>
 
         <button id="menuBtn" onClick={toggleMenu} className={`menuBtn z-[300] h-full aspect-square flexV center absolute right-10 animate-slideright duration-700 ease-out 
         ${menu && "bg-gray-100 rounded-full scale-75 "} `}>
@@ -101,7 +100,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
               </div>
             </NavLink>
           ))}
-          <Link className='bg-black absolute bottom-36 left-10 right-10 text-white text-sm px-3 py-4 rounded-lg'>Become a member today!
+          <Link className='bg-black absolute bottom-36 left-10 w-24 right-10 text-white text-sm px-3 py-4 rounded-lg'>Become a member today!
           </Link>
         </div>
 

@@ -14,14 +14,14 @@ const TextLayout = ({
       ${css}
       `}>
 
-    {hasTitle && <h4 className='h4 tracking-[.3rem] leading-[200%] text-left mb-4 relative uppercase'>{ title ||'Headline'}</h4>}
+    {hasTitle && <h4 className='h4 tracking-[.3rem] !leading-[200%] text-left mb-4 relative uppercase'>{ title ||'Headline'}</h4>}
 
     {hasText && 
-      <h2 className='h3 lg:h2 text-left flexV relative leading-[150%] inline-flex'>
+      <h2 className='h3= lg:h2= text-left flexV relative leading-[130%] inline-flex='>
         {hasQuote && <img className='w-10 h-10 -translate-x-2 md:translate-x-0  fill-primary opacity-50 scale-50 md:scale-100 self-start mix-blend-exclusion mt-10 brightness-[.1]' src="/icons/quote.svg" alt="quote"  />}
         {text || "This is text for this section"}
-        {hasQuote && <img className='w-10 h-10 scale-50 md:scale-100 self-start inline mix-blend-exclusion fill-primary opacity-50 mt-2 rotate-180 brightness-[.1] =absolute bottom-4 md:right-8 right-0 ' src="/icons/quote.svg" alt="quote"  />
-        }
+        {/* {hasQuote && <img className='w-10 h-10 scale-50 md:scale-100 self-start inline mix-blend-exclusion fill-primary opacity-50 mt-2 rotate-180 brightness-[.1] =absolute bottom-4 md:right-8 right-0 ' src="/icons/quote.svg" alt="quote"  />
+        } */}
         {hasQuote && <span className=''>— ABS</span>}
 
       {showLines && 

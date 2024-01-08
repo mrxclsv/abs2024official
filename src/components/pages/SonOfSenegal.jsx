@@ -34,32 +34,32 @@ const SonOfSenegal = () => {
           layout={1} 
           showLines={true}
           image={absyellowfit}
-          mainCSS="lg:max-h-[1080px] overflow-hidden "
-          css="max-w-7xl relative lg:flex-col "
+          mainCSS="lg:max-h-[900px] overflow-hidden lg:h-[80vh]  "
+          css="max-w-7xl relative lg:flex-row "
           blockCSS="fixed my-auto lg:mt-20 top-24 mt-10"
           wrapperCSS="flexV center overflow-hidden mt-20="
           imageCSS="object-top origin-top full object-cover"
           text="Fétë fétë biiy xaalë yoonu sopi, Yoonu koom"
           descr=""
-          color="black" 
+          color="white" 
         />
 
-        <div className='splitText flexV md:flex-row px-10 max-w-7xl py-10'>
+        <div className='splitText bg-white flexV md:flex-row px-10 max-w-7xl py-10'>
           <TextLayout title="Roots"
             text="His senegalese heritage"
             descr="Born and raised in Senegal, ABS takes immense pride in his roots. His journey from a humble beginning to becoming a national leader is a testament to the hard work, determination, and the values instilled in him by his Senegalese upbringing. He often speaks of how his Senegalese heritage has shaped his character, instilling in him a deep sense of community, respect for tradition, and the importance of family."
             hasTitle={true}
-            hasText={true}
+            hasText={false}
             hasDescr={true}
-            showLines={true}
+            showLines={false}
             color="white"
             css="max-w-7xl"
-            />
+          />
           <TextLayout title="values"
           text="The family man"
           hasTitle={true}
+          hasText={false}
           hasDescr={true}
-          hasText={true}
           color="white"
           showLines={false}
           descr="ABS's journey as a family man, son of Senegal, and a successful professional sets a remarkable example for aspiring individuals in Senegal and beyond. He showcases that it is possible to soar to great heights without compromising  family values. ABS's story is an inspiration for the youth of Senegal, demonstrating that with dedication, resilience, and a strong support system, one can excel both in all spheres of life."
@@ -67,11 +67,11 @@ const SonOfSenegal = () => {
         </div>
 
         <div className='hashtags bg-gray-100 flexV center relative w-full '>
-          <div className='grid grid-cols-2 lg:grid-cols-4 justify-center items-center mc-auto max-w-7xl lg:w-full py-6' >
-            <button onClick={() => {}} className='hashtag'>#ABS2024</button>
-            <button onClick={() => {}} className='hashtag'>#LeguiFiftyFiftyLeu</button>
-            <button onClick={() => {}} className='hashtag'>#YoonWi</button>
-            <button onClick={() => {}} className='hashtag'>#BoromTerangaYi</button>
+          <div className='grid grid-cols-2 lg:grid-cols-4 justify-evenly items-center mx-auto max-w-7xl lg:w-full py-6' >
+            <button onClick={() => {}} className='hashtag self-center w-full'>#ABS2024</button>
+            <button onClick={() => {}} className='hashtag self-center w-full'>#LeguiFiftyFiftyLeu</button>
+            <button onClick={() => {}} className='hashtag self-center w-full'>#YoonWi</button>
+            <button onClick={() => {}} className='hashtag self-center w-full'>#BoromTerangaYi</button>
           </div>
         </div>
 

@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { 
   SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity,
   ContactForm
-} from '../utils/components';
+} from '../../utils/components';
 import { Link, useLocation } from 'react-router-dom';
-import { contributions, movementSlides, project } from '../utils/data';
-import { allTransitions } from '../utils/style';
+import { contributions, movementSlides, project } from '../../utils/data';
+import { allTransitions } from '../../utils/style';
 import ScrollTrigger from 'react-scroll-trigger'
 
 const Home = () => {
@@ -39,7 +39,7 @@ const Home = () => {
     };
   }, [slide]);
   
-  // const [counterOn, setCounterOn] = useState(false)
+  const [counterOn, setCounterOn] = useState(false)
 
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
 
@@ -62,7 +62,7 @@ const Home = () => {
 
       <div id="Slides" className='flexV center overflow-hidden bg-gray-100 w-full'>
 
-        <SplitDiv title="The Leader" color="black" link=""
+        <SplitDiv title="The Leader" color="black" link="/the-leader"
           hasQuote={false}
           hasTitle={true} hasText={true}  hasDescr
           hasLink
@@ -73,11 +73,12 @@ const Home = () => {
           descr="In the archives of Senegalese history, there are extraordinary visionaries whose unwavering dedication to their nation’s prosperity sparks transformation, leaving an indelible legacy. Among these luminaries is Abdoulaye Sylla."
         />
 
-        <SplitDiv title="The Visionary" color="white" link=""
+        <SplitDiv title="The Visionary" color="white" link="/the-visionary"
           hasQuote={true}
           hasTitle={true} hasText={true}  hasDescr={true}
           showLines={true}
-          css="w-screen h-full bg-gradient-to-t from-gray-200 to-white"
+          mainCSS='bg-gradient-to-t from-gray-200 to-white'
+          css="w-screen lg:max-w-7xl h-full "
           layout={1} 
           text='I strive to create Senegalese national champions in this generation and the next.
           ' 
@@ -90,7 +91,7 @@ const Home = () => {
           hasLink
         />
 
-        <SplitDiv title="Yoon Wi" color="white" link="" 
+        <SplitDiv title="Yoon Wi" color="white" link="/the-leader" 
           hasQuote={false}
           hasLink
           hasTitle={false} hasText={true}  hasDescr={true}
@@ -103,12 +104,12 @@ const Home = () => {
           descr="
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
-          wrapperCSS="lg:w-1/2 max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== mt-14 "
+          wrapperCSS="lg:w-1/2 h-fit lg:max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== pt-14 "
           image={flagsenegal} 
-          imageCSS="object-cover origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
+          imageCSS="object-contain origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
 
-        <SplitDiv title="Ci La Bokk" color="white" link="" 
+        <SplitDiv title="Ci La Bokk" color="white" link="/the-visionary" 
           hasQuote={false}
           hasTitle={false} hasText={true}  hasDescr={true}
           showLines={true}
@@ -124,7 +125,7 @@ const Home = () => {
         />
 
         <div className='TheBusinessMan relative'>
-          <SplitDiv title="the business man" color="black" link="/" 
+          <SplitDiv title="the business man" color="black" link="/projects" 
             hasQuote={false}
             hasTitle={true} hasText={true}  hasDescr={true}
             showLines={true}
@@ -144,29 +145,29 @@ const Home = () => {
         </div>
 
         
-        <ScrollTrigger /* onEnter={() => setCounterOn(true)} onExit={setCounterOn(false)} */
+        <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}
 
         className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
           <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
               {contributions?.map((item, index) => (
-                <div key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full absolute absoluteAll flex center my-auto= ${item.position} `}>
+                <Link to="/projects" key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full absolute absoluteAll flex center my-auto= ${item.position} `}>
                     <p className='h5 text-white absolute z-[3]'>{index+1}</p>
                     <div className='bg-black/90 full p-2 z-[2] rounded-full absolute animate-pulse delay-75' />
                     <div className='bg-black/60 full p-6 opacity-50 rounded-full absolute animate-pulse delay-200' />
-                </div>
+                </Link>
               ))}
               <img className='h-full lg:w-full object-contain mix-blend-multiply p-5' src={mapsenegal} alt="senegal" />
             </div>
 
-            <div className='contributionsMOB text-black group center md:start center w-full gap-10 paddingMRX relative'>
+            <div className='contributionsMOB text-black group center md:start center w-full gap-8 paddingMRX relative'>
               
               <div className='relative flexV w-full '>
                 <div className='translate-x-4 lg:translate-x-10 w-16 z-[3] translate-y-[65%] rounded h-[3px] bg-blakk' />
                 <TextLayout title="Homme Social 2023"  /* &#127942; */
                   text="Contributions "
-                  descr="Président Abdoulaye Sylla a été nommé Homme Social de l'année aux Jambaar Awards 2023. Sa contribution exceptionnelle à l'éducation et au développement économique du Sénégal est saluée. Félicitations à un leader visionnaire !"
+                  descr="Président Abdoulaye Sylla a été nommé Homme Social de l'année aux Jambaar Awards 2023. Sa contribution exceptionnelle à l'éducation et au développement économique du Sénégal y a été saluée. Félicitations à un leader visionnaire !"
                   hasTitle
                   hasText={true}
                   hasDescr={true}
@@ -177,37 +178,45 @@ const Home = () => {
               </div>
 
               <Link to='/the-philanthropist' onMouseEnter={handleToggle} 
-                className={`border hidden lg:flex rounded w-fit ml-6 lg:ml-10 py-2 bg-blakk text-white px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm lg:opacity-0  group-hover:opacity-100 transition-opacity duration-700 whitespace-nowrap absolute -bottom-0 left-10  `}><p className='whitespace-nowrap w-fit'>Read more</p> 
+                className={`border-[1px] rounded-lg ml-6 lg:ml-10 w-fit border-blakk text-blakk lg:hover:bg-neutral-800 lg:hover:text-white lg:hover:text-white= text-sm group-hover:opacity-100 transition-opacity duration-700 z-[5] self-start flex center
+                `}>
+              {/* ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-black transition-colors duration-1000" }
+              ${color === "white" && "text-black border-blakk" } */}
+              <p className='px-4 py-2 font-[500]'>Read more</p>
+              <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[1px] border-blakk/30 text-xl' />
               </Link>
               
-              {/* <div className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
+
+              <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
                 {contributions?.map((item, index) => (
                   <Stat key={index} 
                   title={item.title} 
                   value={item.value}
                   hasAdded={item.hasAdded}
                   added={item.added}
-                  // counterOn={counterOn}
-                  // setCounterOn={setCounterOn}
+                  counterOn={counterOn}
+                  setCounterOn={setCounterOn}
                   />
                 ))}
-              </div> */}
+              </ScrollTrigger>
 
             </div>
 
           </div>
-        </ScrollTrigger> 
-        
-        <div className='contributionsLAPTOP hidden ===lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
+        <div className='contributionsLAPTOP hidden lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
           {contributions?.map((item, index) => (
             <Stat key={index} 
             title={item.title} 
             value={item.value}
             hasAdded={item.hasAdded}
             added={item.added}
+            counterOn={counterOn}
+            setCounterOn={setCounterOn}
             />
           ))}
         </div>
+        </ScrollTrigger> 
+        
 
         <AndTheCommunity />
 

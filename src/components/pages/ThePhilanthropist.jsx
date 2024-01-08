@@ -38,7 +38,8 @@ const ThePhilanthropist = () => {
           />
         </div>
         
-        <div className='TheJourney flex w-full relative overflow-y-hidden overflow-x-scroll===== bg-blakk pt-10 md:p-[200px] h-[80vh]'>
+        <div className='TheJourney flexV w-full relative overflow-y-hidden overflow-x-scroll===== bg-blakk pt-10 md:p-[200px] h-[80vh]'>
+
           <SplitDiv title="#ABS2024 #BoromTerangaYi" color="black" link=""
             hasTitle={true} hasText={true}  hasDescr={false}
             layout={1} 
@@ -50,13 +51,13 @@ const ThePhilanthropist = () => {
             css="mt-0 mx-auto"
             hasLink={false}
           />
-          <i className='ri-arrow-right-fill text-white absoluteAll left-0 bottom-0 z-[1] opacity-5 animate-pulse aspect-square absolute  m-auto' src='' alt="" />
+          {/* <i className='ri-arrow-right-fill text-white absoluteAll left-0 bottom-0 z-[1] opacity-5 animate-pulse aspect-square absolute  m-auto' src='' alt="" /> */}
 
-          <div id="journey" className='flex start w-screen relative'>
+          <div id="journey" className='flex start w-screen h-[80vh] relative overflow-x-hidden'>
+              {/* <div className='w-[200px] absolute left-0 top-0 bottom-0 my-auto z-[2] bg-gradient-to-r from-black to-transparent' /> */}
             <div className='flex scrollbar-hide pr-[15vw] h-full gap-8 px-10 pl-[15vw] overflow-x-auto relative'>
-              <div className='w-[200px] absolute left-0 top-0 bottom-0 my-auto z-[2] bg-gradient-to-r from-black to-transparent' />
               {journey?.map((item, index) => (
-                <div key={index} className='flexV min-w-[300px] md:min-w-[400px] rounded-lg border border-white/40 max-h-[500px] bg-gradient-to-t from-neutral-900/50 to-gray-900 h-full relative pt-6 md:pt-2'>
+                <div key={index} className='flexV min-w-[300px] md:min-w-[400px] hidden rounded-lg border border-white/40 max-h-[500px] bg-gradient-to-t from-neutral-900/50 to-gray-900 h-full relative pt-6 md:pt-2'>
                   {/* <p className='text-primary mix-blend-difference absolute right-6 md:right-10 tracking-wide top-4 opacity-50 '>{`0${index + 1}`}</p> */}
                   <p className='text-primary font-semibold absolute left-6 md:left-10 tracking-wide  top-4 '>{item.date}</p>
                   <TextLayout
