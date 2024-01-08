@@ -24,15 +24,13 @@ const Home = () => {
 
   const a = 0
   const b = 1
-  const c = 2
+  const c = 3
 
-  const slicedSlide = movementSlides.slice(0,1)
-  const slicedSlide2 = movementSlides.slice(1,2)
-  const [slide, setSlide] = useState(slicedSlide);
+  const [slide, setSlide] = useState()
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setSlide(slide === slicedSlide ?  slicedSlide2 : slicedSlide);
+      setSlide(slide === '0,1' ?  "1,2" : '0,1');
     }, 4000);
 
     return () => {
@@ -218,7 +216,7 @@ const Home = () => {
 
           <div className='w-[50vw] text-black z-[2] lg:absolute right-0 flexV gap-2 center h-[400px] top-0 bottom-0 my-auto px-10 relative'>
               <div className='border flexV justify-between p-8 bg-gray-100 w-full h-full max-h-[400px] rounded-lg start relative'>
-                {slide?.map((item, index) => (
+                {movementSlides.slice(slide).map((item, index) => (
                   <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative'>
                     <div className='flexV w-full'>
                       <h4 className='title_small uppercase'>{item.small}</h4>
@@ -231,8 +229,8 @@ const Home = () => {
               </div>
 
               <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
-                <button onClick={() => setSlide(slicedSlide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-                <button onClick={() => setSlide(slicedSlide2)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+                <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+                <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
               </div>
 
           </div>
