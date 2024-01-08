@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import { 
-  SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity
+  SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity,
+  ContactForm
 } from '../utils/components'
 import { Link, useLocation } from 'react-router-dom'
 import { contributions, movementSlides, project } from '../utils/data'
@@ -12,12 +13,12 @@ const Home = () => {
 
   const location = useLocation()
   const page = location.pathname.substring(1).replace('-', " ").toUpperCase()
-  const thisPage = `${project.name} — ${location === "/" ? project.tagline : page}`
-  document.title = thisPage
+  // const thisPage = `${project.name} — ${location === "/" ? project.tagline : page}`
+  document.title = `${project.name} — ${project.tagline}`
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[location])
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
 
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
@@ -39,6 +40,18 @@ const Home = () => {
   }, [slide]);
   
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("gmail", "llnnDefault", e.target, "ztvAQibgnrlgOuXBq")
+    .then((result) => {
+      console.log(result.text); 
+    }, (error) => { 
+      console.log(error.text)
+    });
+    e.target.reset();
+  }
 
   return (
 
@@ -122,7 +135,7 @@ const Home = () => {
             layout={1} 
             mainCSS="w-screen"
             css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
-            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full 2xl:ml-[15vw] "
+            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full 3xl:ml-[15vw] "
             hasLink
             text='A different approach to entrepreneurship' 
             image={abssit2} 
@@ -197,57 +210,52 @@ const Home = () => {
 
         <AndTheCommunity />
 
-        <div className="JoinTheMovement flexV center w-full h-full max-h-[900px] relative">
+        <div className='JoinTheMovement w-full h-[50vh] min-h-[600px] max-h-[900px] flexV center bg-white relative overflow-hidden '>
+          <div className="flexV center w-full max-w-7xl h-full relative overflow-hidden">
 
-          <SplitDiv title="Join The Movement" color="white" link=""
-            hasTitle={true} hasText={true}  hasDescr={true}
-            showLines={true}
-            css="w-screen h-fit"
-            layout={1} 
-            text='ABS2024' 
-            descr="Join us in supporting the ABS2024 campaign Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
-            // hashtags={("abs2024", "C50pn", "fifty50leu")}
-            hashtags={hashtagsArray}
-            wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0 w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
-            imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-bottom md:origin-top md:object-contain scale-[105%= pt-4 md:translate-y-20 hidden'
-            image={abswhite} 
-            hasLink action="Become a member"
-          />
+            <SplitDiv title="Join The Movement" color="white" link=""
+              hasTitle={true} hasText={true}  hasDescr={true}
+              showLines={true}
+              mainCSS="center"
+              css="w-screen h-fit center"
+              blockCSS="self-center center"
+              layout={1} 
+              text='ABS2024' 
+              descr="Join us in supporting the ABS2024 campaign Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
+              hashtags={hashtagsArray}
+              wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0 w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
+              imageCSS='hidden'
+              image={abswhite} 
+              hasLink action="Become a member"
+            />
 
-          <div className='w-[50vw] text-black z-[2] lg:absolute right-0 flexV gap-2 center h-[400px] top-0 bottom-0 my-auto px-10 relative'>
-              <div className='border flexV justify-between p-8 bg-gray-100 w-full h-full max-h-[400px] rounded-lg start relative'>
-                {movementSlides.slice(slide).map((item, index) => (
-                  <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative'>
-                    <div className='flexV w-full'>
-                      <h4 className='title_small uppercase'>{item.small}</h4>
-                      <p className='text-2xl'>{item.title}</p>
-                      <h5 className='mt-4'>{item.descr}</h5>
+            <div className='w-full lg:w-[50%] text-black h-full min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
+                <div className='border flexV justify-between p-8 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
+                  {movementSlides.slice(1).map((item, index) => (
+                    <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative '>
+                      <div className='flexV start w-full h-full'>
+                        <h4 className='title_small uppercase'>{item.small}</h4>
+                        <p className='text-2xl'>{item.title}</p>
+                        <h5 className='mt-4'>{item.descr}</h5>
+                      </div>
+                      <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-fit text-sm mt-8'>{item.action}</Link>
                     </div>
-                    <Link /* to={} */ className='bg-black leading-8 tracking-widest uppercase transition group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-fit text-sm'>{item.action}</Link>
-                  </div>
-                  ))}
-              </div>
+                    ))}
+                </div>
 
-              <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
-                <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-                <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-              </div>
+                {/* <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
+                  <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+                  <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+                </div> */}
+
+            </div>
 
           </div>
-
         </div>
 
-
-
-      </div>
-      
-      {/* ENTER SUBMIT FORM */}
-      <div className='flexV center w-full py-20 px-10 bg-blakk'>
-
+        <ContactForm />
 
       </div>
-
-
 
       
     </div>

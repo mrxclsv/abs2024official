@@ -139,7 +139,7 @@ export const headers = [
 
 export const movementSlides = [
   {title:"Join the movement", small:"this text", action:"register now!", descr:"Join us in supporting the ABS2024 campaign"},
-  {title:"slide 2", small:"this text", action:"register now!", descr:"This is a descriptoin for slide 2. It could be this long. We'll for sure translate it to french."},
+  {title:"slide", small:"this text", action:"register now!", descr:"This is a description for slide. It could be this long. We'll for sure translate it to french."},
 ]
 
 export const contactInfo = [

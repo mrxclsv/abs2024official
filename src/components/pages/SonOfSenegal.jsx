@@ -68,7 +68,7 @@ const SonOfSenegal = () => {
         </div>
 
         <div className='hashtags bg-gray-100 flexV center relative w-full '>
-          <div className='grid grid-cols-2 lg:grid-cols-4 items-center justify-between max-w-7xl lg:w-full py-6' >
+          <div className='grid grid-cols-2 lg:grid-cols-4 justify-center items-center mc-auto max-w-7xl lg:w-full py-6' >
             <button onClick={() => {}} className='hashtag'>#ABS2024</button>
             <button onClick={() => {}} className='hashtag'>#LeguiFiftyFiftyLeu</button>
             <button onClick={() => {}} className='hashtag'>#YoonWi</button>

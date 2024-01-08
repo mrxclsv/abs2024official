@@ -16,9 +16,9 @@ const ThePhilanthropist = () => {
   },[location])
   
   return (
-    <div className='min-h-screen h-full= w-screen center flexV bg-white text-black gap-10 relative' >
+    <div className='min-h-screen= h-full w-screen center flexV bg-white text-black gap-10 relative' >
 
-      <div id='hero' className='screen relative bg-gray-100 flexCenter'>
+      <div id='hero' className='screen relative bg-gray-100 flexCenter z-[1]'>
         <img className='screen flex object-cover object-bottom opacity-100' src={leket} alt={thisPage} />
         <div className='flexV center absolute absoluteAll m-auto gap-4 '>
           <h1 className='h1 font-light uppercase'>{page}</h1>
@@ -42,11 +42,12 @@ const ThePhilanthropist = () => {
             hasLink
           />
         </div>
-        <div className='flex w-full relative overflow-x-scroll bg-blakk pt-10 md:p-[200px]'>
+        
+        <div className='flex w-full relative overflow-y-hidden overflow-x-scroll bg-blakk pt-10 md:p-[200px] h-[80vh}'>
 
-          <img className='mix-blend-screen animate-pulse aspect-square max-w-[800px] fixed m-auto absoluteAll opacity-100 brightness-[.1]' src={mapsenegaldark} alt="senegal" />
+          <img className='mix-blend-screen z-[0] animate-pulse aspect-square max-w-[800px] fixed m-auto absoluteAll opacity-100 brightness-[.1]' src={mapsenegaldark} alt="senegal" />
 
-          <div id="journey" className='flex start w-full gap-8 px-10 translate-x-[15vw]'>
+          <div id="journey" className='flex start w-full gap-8 px-10  ml-[15vw]'>
             {journey?.map((item, index) => (
               <div key={index} className='flexV min-w-[300px] md:min-w-[400px] rounded-lg border border-white/40 max-h-[500px] bg-blakk/50 h-full relative pt-6 md:pt-2'>
                 {/* <p className='text-primary mix-blend-difference absolute right-6 md:right-10 tracking-wide top-4 opacity-50 '>{`0${index + 1}`}</p> */}

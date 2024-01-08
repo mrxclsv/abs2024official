@@ -49,6 +49,7 @@ export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
 export { default as abssit } from '../components/.photos/abs_sit.png'
 export { default as abssit2 } from '../components/.photos/abs_sit_.png'
 export { default as abshero } from '../components/.photos/abs_blue_.jpg'
+export { default as absleader } from '../components/.photos/abs_blue.JPG'
 export { default as absstand } from '../components/.photos/abs_white_wall.jpg'
 export { default as absyellowfit } from '../components/.photos/abs_yellow_fit.PNG'
 

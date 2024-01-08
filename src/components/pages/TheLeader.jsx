@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom"
-import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, } from '../../utils/components'
+import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, } from '../../utils/components'
 import { project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
 
@@ -11,16 +11,16 @@ const TheLeader = () => {
   const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
   document.title = thisPage
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[location])
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
 
   return (
     <div className='min-h-screen w-screen flexV bg-white text-black'>
 
-      <div className='hero w-full h-[110vh] min-h-[400px] flex center relative bg-gray-100 z-[0]'>
+      <div className='hero w-screen h-[110vh] min-h-[400px] flex center relative bg-gray-100 z-[0] pt-[75px]'>
         <div className='full flex center overflow-hidden relative bg-white text-white'>
-          <img className='full object-cover object-top pointer-events-none  opacity-100 fixed hover:scale-110' src="/abs/abs_blue_3.PNG" alt="xam sa bopp" />
+          <img className='screen object-cover object-top pointer-events-none origin-top opacity-100 fixed hover:scale-110' src={absleader} alt="xam sa bopp" />
         </div>
         <div className='absolute absoluteAll flex center -translate-y-20  '>
         <h1 className='h1 leading-[100%] font-normal text-left text-[100px] uppercase text-black drop-shadow-lg line md:absolute md:left-20 md:my-auto'>Xam sa bopp</h1>
@@ -28,7 +28,7 @@ const TheLeader = () => {
 
       </div>
 
-      <div id="Slides" className='flexV center overflow-hidden bg-gray-100 w-full'>
+      <div id="Slides" className='flexV center overflow-hidden bg-gray-100 z-[1] w-full'>
 
         <div className='TheWorkforce relative'>
           <SplitDiv title="Yoon Wi" color="black" link="/" 
@@ -81,8 +81,8 @@ const TheLeader = () => {
           text='policy of inclusivity' 
           descr="As part of Abdoulaye's plan to elevate the nation, he employs 6% disabled individuals as part of his workforce. His approach serves as a model for the nation. By creating an inclusive environment, he demonstrates that disabilities are no barrier to success
           "
-          imageCSS={`object-contain duration-400 !object-contain transition-transform duration-1000  ${allTransitions}`}
-          image={absstand} wrapperCSS="md:object-right  center object-center h-full overflow-hidden  md:scale-80 mb-20"
+          imageCSS={`object-contain duration-400 !object-contain w-full transition-transform duration-1000  ${allTransitions}`}
+          image={absstand} wrapperCSS="md:object-right center object-center h-full overflow-hidden  md:scale-80 mb-20"
         />
 
         <div className='splitText flexV lg:flex-row px-10 max-w-7xl py-10'>
@@ -107,24 +107,6 @@ const TheLeader = () => {
             descr="Abdoulaye Sylla's life is a testament of how one man can build a better future for his country. From constructing schools and hospitals to sustainable infrastructure and everything in between, his 20 years has created a lasting impact on the Senegal he serves. ABS is a leader and a model of how a man of vision can transform a society. "
           />
         </div>        
-
-        {/*<SplitDiv title="The Visionary" color="white" link=""
-          hasTitle={true} hasText={true}  hasDescr={true}
-          showLines={true}
-          css="w-screen h-full bg-gradient-to-t from-gray-200 to-white"
-          layout={1} 
-          text='Abdoulaye SYLLA "ABS"' 
-          descr="When speaking of national development and visionary leadership, Abdoulaye Sylla has no equal. Abdoulaye Sylla (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
-
-          His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
-          wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0  w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
-          image={abswhite} 
-          imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-bottom md:origin-top  md:object-contain scale-[105%= pt-4 md:translate-y-20'
-          hasLink
-        /> */}
-
-
-
 
         <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
 

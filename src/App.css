@@ -335,6 +335,9 @@
   .signal {
     @apply bg-red-100/50
   }
+  .formDiv {
+    @apply bg-white text-blakk placeholder-black
+  }
 
 }
 
