@@ -49,7 +49,7 @@ const SplitDiv = ({
             ${color === "black" && "text-white border-white lg:hover:bg-white lg: hover:text-black transition-colors duration-1000" }
             `}>
               <p className='px-4 py-2 font-[500]'>{action || 'Read more'}</p>
-              <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[2px] text-xl' />
+              <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[3px] text-xl' />
           </Link>
           }
 

@@ -45,6 +45,7 @@ export { default as leket } from '../components/.images/leket.png'
 export { default as leket2 } from '../components/.images/leket2.jpg'
 export { default as water } from '../components/.images/water.jpg'
 export { default as workforce } from '../components/.images/workforce.jpg'
+export { default as daara2 } from '../components/.images/daara.png'
 
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'

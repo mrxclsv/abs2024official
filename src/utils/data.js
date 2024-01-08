@@ -112,7 +112,7 @@ export const website = "abs2024.com"
 
 export const headers = [
   { name: 'son of senegal', 
-    descr:' journey from a humble beginning to becoming a national leader', 
+    descr:'journey from a humble beginning to becoming a national leader', 
     link:'son-of-senegal', 
     icon:'',
     image: 'menu1', 

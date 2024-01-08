@@ -11,7 +11,7 @@ import Socials from './Socials'
 // CONSOLE LOGS
 // console.log(navbar.length)
 
-const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navHeight  }) => {
+const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
   
 
   const notActiveCSS = 'flexV center text-xs font-semibold text-neutral-700 hover:text-black cursor-pointer w-full h-full rounded-lg capitalize px-3 relative z-[2] duration-500'
@@ -46,12 +46,15 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 
-        <div className={`flex= gap-6 z-[300] animate-slidedown h-full hidden md:flex  `}>
+        <div className={`flex= center gap-6 z-[300] animate-slidedown h-full hidden md:flex  `}>
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({isActive}) => isActive ? activeCSS : notActiveCSS }>
               <p className='whitespace-nowrap'>{item.name}</p>
             </NavLink>
           ))}
+
+          <Link className='bg-black text-white text-xs px-3 py-3 rounded-lg'>Subscribe
+          </Link>
         </div>
 
         <p className=''>{currentHour}</p>
@@ -82,7 +85,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
           </div>
         </div>
 
-        <div className="flexV h-full justify-center items-end mx-auto lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
+        <div className="headersBIGMENU flexV h-full justify-center items-end mx-auto lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
           {headers.map((item, index) => (
             <NavLink 
               key={index} 
@@ -94,10 +97,12 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
               <h1 className={`h2 md:h1 text-gray-700 =mr-10 lg:pl-10 text-right self-start w-full whitespace-nowrap h-10 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
 
               <div className={`w-fit -translate-y-2 h-full flex center text-center text-gray-400 object-center opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
-                  <p className={`flex whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} duration-[.5s]`}>{item.descr}</p>
+                  <p className={`hidden lg:flex text-right lg:whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} duration-[.5s]`}>{item.descr}</p>
               </div>
             </NavLink>
           ))}
+          <Link className='bg-black absolute bottom-36 left-10 right-10 text-white text-sm px-3 py-4 rounded-lg'>Become a member today!
+          </Link>
         </div>
 
         <Socials simplified 

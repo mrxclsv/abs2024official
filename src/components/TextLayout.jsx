@@ -35,7 +35,7 @@ const TextLayout = ({
       </h2>
     }
 
-    {hasDescr && <h4 className='text-left mt-10 font-[400] leading-[230%]'>
+    {hasDescr && <h4 className='text-left mt-10 font-[400] leading-[230%] w-full'>
                     {descr || "Add the corresponding description and keep it aesthetically correct" }
                 </h4>}
     {/* {hashtags !== "" && 
