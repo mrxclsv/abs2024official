@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import emailjs from '@emailjs/browser';
 
 import { 
   SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity,
@@ -12,9 +11,10 @@ import { allTransitions } from '../utils/style'
 const Home = () => {
 
   const location = useLocation()
-  const page = location.pathname.substring(1).replace('-', " ").toUpperCase()
-  // const thisPage = `${project.name} — ${location === "/" ? project.tagline : page}`
-  document.title = `${project.name} — ${project.tagline}`
+  const page = location.pathname.substring(0)
+  const thisPage = `${project.name} — ${location === "" ? page : project.tagline }`
+  // document.title = `${project.name} — ${project.tagline}`
+  document.title = thisPage
 
   useEffect(() => {
     window.scroll(0,0)
@@ -23,10 +23,9 @@ const Home = () => {
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
 
-  const a = 0
-  const b = 1
-  const c = 3
-
+  // const a = 0
+  // const b = 1
+  // const c = 3
   const [slide, setSlide] = useState()
 
   useEffect(() => {
@@ -40,18 +39,6 @@ const Home = () => {
   }, [slide]);
   
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
-
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs.sendForm("gmail", "llnnDefault", e.target, "ztvAQibgnrlgOuXBq")
-    .then((result) => {
-      console.log(result.text); 
-    }, (error) => { 
-      console.log(error.text)
-    });
-    e.target.reset();
-  }
 
   return (
 

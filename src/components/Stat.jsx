@@ -7,9 +7,9 @@ const Stat = ({
 }) => {
 
   return (
-    <Link className={`flexV md:start ==center relative w-fit px-4 md:pl-10 ${added != "" && "md:col-span-2 w-full max-w-[300px]"} `}>
+    <Link className={`flexV md:start ==center relative w-fit px-4 md:pl-10 ${added !== "" && "md:col-span-2 w-full max-w-[300px]"} `}>
         <h2 className=' !md:h4= whitespace-nowrap items-center mb-4 tracking-wide'>{value || "2000"}
-        {added != "" && 
+        {added !== "" && 
           <span className='h3 md:h4 ml-2 capitalize whitespace-nowrap w-fit text-gray-500 font-normal mt-2 opacity-80 text-left'>
             {added}
           </span>}

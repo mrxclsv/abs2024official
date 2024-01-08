@@ -1,9 +1,9 @@
 // import { useEffect, useState } from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Link, NavLink, /* useLocation */ } from 'react-router-dom'
 import { headers, navbar } from '../utils/data'
 import { allTransitions } from '../utils/style'
-import { abshero, abssit, abssuit1, flagsenegal, mapafrica } from '../utils/components'
+// import { abshero, abssit, abssuit1, flagsenegal, mapafrica } from '../utils/components'
 
 
 
@@ -20,15 +20,13 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
   const headerNotActiveCSS = `flexV w-full start group h-fit relative ${allTransitions}`
   const headerActiveCSS = `${headerNotActiveCSS} border-l-[4px]=== border-black=== font-semibold text-black z-[2] md:text-black ${allTransitions} ` 
 
-  const menu0 = abssuit1
-  const menu1 = mapafrica
-  const menu2 = flagsenegal
-  const menu3 = abshero
-  const menu4 = abssit
+  // const menu0 = abssuit1
+  // const menu1 = mapafrica
+  // const menu2 = flagsenegal
+  // const menu3 = abshero
+  // const menu4 = abssit
 
-  const [menuImage, setMenuImage] = useState(
-    // menu0 && abssuit1
-  )
+  // const [menuImage, setMenuImage] = useState(// menu0 && abssuit1 // )
 
   // console.log(menuImage)
 
@@ -69,14 +67,14 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
       <div className={`flexV lg:flex-row absolute inset-0 screen center bg-white z-[299] gap-10 
                       ${menu ? '' : 'opacity-80 translate-x-[120%]'} ${allTransitions} duration-[1s] `}>
 
-        <div className='hidden lg:flex w-2/4 h-full opacity-0 overflow-hidden'>
+        <div className='hidden =============lg:flex w-2/4 h-full opacity-0 overflow-hidden'>
           <div className={`w-full flex center
-                  ${menuImage === menu0 && 'translate-x-[25%]=='}
+                `}>
+                  {/* ${menuImage === menu0 && 'translate-x-[25%]=='}
                   ${menuImage === menu1 && 'translate-x-[25%]=='}
                   ${menuImage === menu2 && 'translate-x-[25%]=='}
                   ${menuImage === menu3 && 'translate-x-[-75%]=='}
-                  ${menuImage === menu4 && 'translate-x-[-100%]=='}
-                `}>
+                  ${menuImage === menu4 && 'translate-x-[-100%]=='} */}
             {headers?.slice(1).map((item, index) => (
               <img key={index} className='min-w-full w-full h-full object-contain' src={item.image} alt={item.name} />
             ))}
