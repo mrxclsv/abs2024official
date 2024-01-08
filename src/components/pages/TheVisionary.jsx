@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { project } from '../../utils/data'
-import { Timeline } from '../../utils/components'
+import { Timeline, abssit } from '../../utils/components'
 
 const TheVisionary = () => {
 
@@ -21,7 +21,7 @@ const TheVisionary = () => {
 
 
         <div className='full flex center overflow-hidden relative bg-black text-white'>
-          <img className='full object-cover object-top origin-top opacity-60 group-hover:opacity-100 transition duration-1000 ' src="/abs/abs_sit.png" alt="ABS The Business Man" />
+          <img className='full object-cover object-top origin-top opacity-60 group-hover:opacity-100 transition duration-1000 ' src={abssit} alt="ABS The Visionary" />
         </div>
         <div className='absolute absoluteAll flex center  '>
         <h1 className='h1 text-white drop-shadow-lg translate-y-20'>I'm Abdoulaye SYLLA #ABS2024</h1>

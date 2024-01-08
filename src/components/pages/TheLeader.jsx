@@ -59,15 +59,15 @@ const TheLeader = () => {
             showLines={true}
             color="white"
             css="max-w-7xl"
-            />
+          />
           <TextLayout title="Fostering economic growth"
-          text="Senegalese workforce"
-          hasTitle={true}
-          hasDescr={true}
-          hasText={true}
-          color="white"
-          showLines={false}
-          descr="Founded on the principle of supporting local communities and fostering economic development, Abdoulaye Sylla plays a pivotal role in the growth of Senegal's engineering, architectural, technology, and infrastructure sectors. His commitment to hiring local young engineers and architects has provided jobs and also transferred knowledge, skills, and technology to the local workforce. "
+            text="Senegalese workforce"
+            hasTitle={true}
+            hasDescr={true}
+            hasText={true}
+            color="white"
+            showLines={false}
+            descr="Founded on the principle of supporting local communities and fostering economic development, Abdoulaye Sylla plays a pivotal role in the growth of Senegal's engineering, architectural, technology, and infrastructure sectors. His commitment to hiring local young engineers and architects has provided jobs and also transferred knowledge, skills, and technology to the local workforce. "
           />
         </div>
 

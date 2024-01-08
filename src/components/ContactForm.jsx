@@ -20,10 +20,10 @@ const ContactForm = ({css, }) => {
 
 
   return (
-    <div className={`w-full flex center bg-gray-100 p-8`}>
+    <div className={`w-full h-[90vh] lg:h-[75vh] max-w-[1024px] flex center bg-gray-100 lg:p-8`}>
         
         <form 
-          className="Form flexV fit items-start justify-center bg-gray-100 shrink-0 max-w-[600px] text-black lg:max-w-7xl rounded-lg p-10 m-auto gap-4" 
+          className="Form flexV fit items-start justify-center bg-gray-100 shrink-0 max-w-[600px] text-black lg:max-w-7xl rounded-lg p-8 m-auto gap-4" 
           onSubmit={sendEmail}>
         
         <h2 className='lg:pl-6=== text-black mb-8'>Get in touch</h2>

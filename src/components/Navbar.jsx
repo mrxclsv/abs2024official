@@ -3,6 +3,7 @@
 import { Link, NavLink, /* useLocation */ } from 'react-router-dom'
 import { headers, navbar } from '../utils/data'
 import { allTransitions } from '../utils/style'
+import Socials from './Socials'
 // import { abshero, abssit, abssuit1, flagsenegal, mapafrica } from '../utils/components'
 
 
@@ -17,7 +18,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
   const activeCSS = `${notActiveCSS} font-bold underline text-black z-[2] md:text-black ${allTransitions} ` 
 
   // const linkCSS = `${isActive && ""}`
-  const headerNotActiveCSS = `flexV w-full start group h-fit relative ${allTransitions}`
+  const headerNotActiveCSS = `flexV justify-end items-end w-full end group h-fit relative ${allTransitions}`
   const headerActiveCSS = `${headerNotActiveCSS} border-l-[4px]=== border-black=== font-semibold text-black z-[2] md:text-black ${allTransitions} ` 
 
   // const menu0 = abssuit1
@@ -64,7 +65,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
       </div>
 
 
-      <div className={`flexV lg:flex-row absolute inset-0 screen center bg-white z-[299] gap-10 
+      <div className={`flexV lg:flex-row absolute inset-0 screen items-end bg-white z-[299] gap-10 
                       ${menu ? '' : 'opacity-80 translate-x-[120%]'} ${allTransitions} duration-[1s] `}>
 
         <div className='hidden =============lg:flex w-2/4 h-full opacity-0 overflow-hidden'>
@@ -81,8 +82,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
           </div>
         </div>
 
-        <div className="flexV h-full justify-center items-start lg:max-w-7xl w-full relative gap-8 ml-20">
-
+        <div className="flexV h-full justify-center items-end mx-auto lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
           {headers.map((item, index) => (
             <NavLink 
               key={index} 
@@ -91,7 +91,7 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
               onClick={() => setMenu(false)} 
               className={({isActive}) => isActive ? headerActiveCSS: headerNotActiveCSS} 
             >
-              <h1 className={`h2 md:h1 text-gray-700 pl-10 whitespace-nowrap h-10 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
+              <h1 className={`h2 md:h1 text-gray-700 =mr-10 lg:pl-10 text-right self-start w-full whitespace-nowrap h-10 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
 
               <div className={`w-fit -translate-y-2 h-full flex center text-center text-gray-400 object-center opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
                   <p className={`flex whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} duration-[.5s]`}>{item.descr}</p>
@@ -99,6 +99,11 @@ const Navbar = ({ navW, navTrigger, menu, setMenu, toggleMenu, currentHour, navH
             </NavLink>
           ))}
         </div>
+
+        <Socials simplified 
+        overrideCSS="bg-transparent !text-black absolute bottom-8 w-fit !flex justify-end scale-[50%] lg:translate-x-[-12%] !right-0 !origin-bottom-right mr-4 lg:mr-0 lg:origin-center"
+        />
+        
       </div>
 
     </header>

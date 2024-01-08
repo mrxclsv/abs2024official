@@ -23,9 +23,8 @@ const SonOfSenegal = () => {
           <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
         </div>
         <div className='absolute absoluteAll flex center  '>
-        <h1 className='h1 text-white drop-shadow-lg'>Senegal beloved son</h1>
+        <h1 className='h1 text-white drop-shadow-lg'>Senegal's beloved son</h1>
         </div>
-
       </div>
 
       <div className='contentWrapper= flexV relative center mx-auto'>

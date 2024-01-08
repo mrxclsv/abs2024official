@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { 
   SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity,
   ContactForm
-} from '../utils/components'
-import { Link, useLocation } from 'react-router-dom'
-import { contributions, movementSlides, project } from '../utils/data'
-import { allTransitions } from '../utils/style'
+} from '../utils/components';
+import { Link, useLocation } from 'react-router-dom';
+import { contributions, movementSlides, project } from '../utils/data';
+import { allTransitions } from '../utils/style';
+import ScrollTrigger from 'react-scroll-trigger'
 
 const Home = () => {
 
@@ -16,9 +17,9 @@ const Home = () => {
   // document.title = `${project.name} — ${project.tagline}`
   document.title = thisPage
 
-  useEffect(() => {
-    window.scroll(0,0)
-  },[location])
+  // useEffect(() => {
+  //   window.scroll(0,0)
+  // },[location])
 
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
@@ -38,28 +39,31 @@ const Home = () => {
     };
   }, [slide]);
   
+  // const [counterOn, setCounterOn] = useState(false)
+
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
 
   return (
 
     <div className='flexVStart w-screen overflow-x-hidden overflow-y-auto scrollbar-hide items-center justify-start relative pt-[75px]=='>
 
-      <div id='FutureOfSenegal' className='screen relative bg-gray-800 flexCenter'>
-        <div className='w-full h-3/4 absolute -top-20 left-0 right-0 bg-gradient-to-b from-black/60 -to-transparent z-[1]' />
-          <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-60 md:opacity-100' src={abshero} alt="The Future of Senegal Is Here" />
+      <div id='FutureOfSenegal' className='screen relative md:bg-gray-800 flexCenter bg-black md:bg-transpaprent'>
+        <div className='w-full h-3/4 absolute -top-20 left-0 right-0 bg-gradient-to-b from-black/60 -to-transparent  z-[1]' />
+          <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-80  md:opacity-100 transition duration-700' src={abshero} alt="The Future of Senegal Is Here" />
 
           <div className='flexV center absolute absoluteAll sm:max-w-3/4 lg:max-w-[1024px] mx-auto gap-4 text-white z-[2]'>
-            <h1 className='leading-[110%] px-6 md:px-10 text-4xl font-semibold md:text-7xl md:font-light md:font-semibold== uppercase'>The future of {/* <br/>  */}Senegal is here</h1>
-            <h3 className='flexV center h4 lg:h3 uppercase'>
+            <h1 className='leading-[110%] px-6 md:px-10 text-4xl font-normal md:text-7xl md:font-light md:font-semibold== uppercase'>The future of {/* <br/>  */}Senegal is here</h1>
+            <h3 className='flex flex-col lg:flex-row gap-0 lg:gap-2 center h4 lg:h3 font-normal'>
               <span>{project.tagline}</span>
               <span>Nga xam sa bopp, mën sa bopp</span>
-              </h3>
+            </h3>
           </div>
       </div>
 
       <div id="Slides" className='flexV center overflow-hidden bg-gray-100 w-full'>
 
         <SplitDiv title="The Leader" color="black" link=""
+          hasQuote={false}
           hasTitle={true} hasText={true}  hasDescr
           hasLink
           layout={1} 
@@ -70,11 +74,13 @@ const Home = () => {
         />
 
         <SplitDiv title="The Visionary" color="white" link=""
+          hasQuote={true}
           hasTitle={true} hasText={true}  hasDescr={true}
           showLines={true}
           css="w-screen h-full bg-gradient-to-t from-gray-200 to-white"
           layout={1} 
-          text='Abdoulaye SYLLA "ABS"' 
+          text='I strive to create Senegalese national champions in this generation and the next.
+          ' 
           descr="When speaking of national development and visionary leadership, Abdoulaye Sylla has no equal. Abdoulaye Sylla (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
 
           His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
@@ -85,9 +91,10 @@ const Home = () => {
         />
 
         <SplitDiv title="Yoon Wi" color="white" link="" 
+          hasQuote={false}
           hasLink
-          hasTitle={true} hasText={true}  hasDescr={true}
-          showLines={true}
+          hasTitle={false} hasText={true}  hasDescr={true}
+          showLines={false}
           mainCSS="lg:min-w-screen lg:items-between"
           layout={2} 
           css="!flex-col= center gap-0 w-full=  "
@@ -96,12 +103,13 @@ const Home = () => {
           descr="
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
-          wrapperCSS="lg:w-1/2 max-h-[800px] overflow-hidden aspect-square lg:rounded-full lg:rounded-l-none== mt-14 "
+          wrapperCSS="lg:w-1/2 max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== mt-14 "
           image={flagsenegal} 
           imageCSS="object-cover origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
 
         <SplitDiv title="Ci La Bokk" color="white" link="" 
+          hasQuote={false}
           hasTitle={false} hasText={true}  hasDescr={true}
           showLines={true}
           layout={1} 
@@ -117,6 +125,7 @@ const Home = () => {
 
         <div className='TheBusinessMan relative'>
           <SplitDiv title="the business man" color="black" link="/" 
+            hasQuote={false}
             hasTitle={true} hasText={true}  hasDescr={true}
             showLines={true}
             layout={1} 
@@ -134,7 +143,10 @@ const Home = () => {
           />
         </div>
 
-        <div className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
+        
+        <ScrollTrigger /* onEnter={() => setCounterOn(true)} onExit={setCounterOn(false)} */
+
+        className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
           <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
@@ -165,26 +177,28 @@ const Home = () => {
               </div>
 
               <Link to='/the-philanthropist' onMouseEnter={handleToggle} 
-                className={`border hidden lg:flex rounded w-fit ml-6 lg:ml-10 py-2 bg-blakk text-white px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700 whitespace-nowrap absolute -bottom-0 left-10  `}><p className='whitespace-nowrap w-fit'>Read more</p> 
+                className={`border hidden lg:flex rounded w-fit ml-6 lg:ml-10 py-2 bg-blakk text-white px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm lg:opacity-0  group-hover:opacity-100 transition-opacity duration-700 whitespace-nowrap absolute -bottom-0 left-10  `}><p className='whitespace-nowrap w-fit'>Read more</p> 
               </Link>
               
-              <div className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
+              {/* <div className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
                 {contributions?.map((item, index) => (
                   <Stat key={index} 
                   title={item.title} 
                   value={item.value}
                   hasAdded={item.hasAdded}
                   added={item.added}
+                  // counterOn={counterOn}
+                  // setCounterOn={setCounterOn}
                   />
                 ))}
-              </div>
+              </div> */}
 
             </div>
 
           </div>
-        </div> 
+        </ScrollTrigger> 
         
-        <div className='contributionsLAPTOP hidden lg:flex border-t border-white/70 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
+        <div className='contributionsLAPTOP hidden ===lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
           {contributions?.map((item, index) => (
             <Stat key={index} 
             title={item.title} 
@@ -197,10 +211,10 @@ const Home = () => {
 
         <AndTheCommunity />
 
-        <div className='JoinTheMovement w-full h-[50vh] min-h-[600px] max-h-[900px] flexV center bg-white relative overflow-hidden '>
-          <div className="flexV center w-full max-w-7xl h-full relative overflow-hidden">
-
+        <div className='JoinTheMovement w-full lg:h-[50vh] min-h-[600px] lg:max-h-[900px] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
+          <div className="flexV center w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
+              hasQuote={false}
               hasTitle={true} hasText={true}  hasDescr={true}
               showLines={true}
               mainCSS="center"
@@ -216,8 +230,8 @@ const Home = () => {
               hasLink action="Become a member"
             />
 
-            <div className='w-full lg:w-[50%] text-black h-full min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
-                <div className='border flexV justify-between p-8 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
+            <div className='slides w-full lg:w-[50%] text-black h-full lg:min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
+                <div className='border flexV justify-between px-6 py-4 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
                   {movementSlides.slice(1).map((item, index) => (
                     <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative '>
                       <div className='flexV start w-full h-full'>
@@ -225,19 +239,18 @@ const Home = () => {
                         <p className='text-2xl'>{item.title}</p>
                         <h5 className='mt-4'>{item.descr}</h5>
                       </div>
-                      <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-fit text-sm mt-8'>{item.action}</Link>
+                      <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-full lg:w-fit text-sm mt-8'>{item.action}</Link>
                     </div>
-                    ))}
+                  ))}
                 </div>
-
                 {/* <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
                   <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
                   <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
                 </div> */}
-
             </div>
 
           </div>
+
         </div>
 
         <ContactForm />

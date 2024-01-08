@@ -5,7 +5,7 @@ import { allTransitions } from '../utils/style'
 import { Link } from 'react-router-dom'
 
 const SplitDiv = ({
-  layout, title, text, descr, image, short, css, color, hashtags, imageCSS, wrapperCSS, link, hasLink, mainCSS, action,
+  layout, title, text, descr, image, short, css, color, hashtags, hasQuote, imageCSS, wrapperCSS, link, hasLink, mainCSS, action,
   hasTitle, hasText, hasDescr, showLines, blockCSS
 
   
@@ -38,15 +38,18 @@ const SplitDiv = ({
             color={color}
             css={title !== "black" | "white" && "!border-gray-400/40" }
             hashtags={hashtags}
+            hasQuote={hasQuote}
           />
+          
           {hasLink && 
           <Link 
             to={`/${link}`} onMouseEnter={handleToggle} 
-            className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700  z-[5] self-start
+            className={`border-[2px] rounded-lg ml-6 lg:ml-10  lg:hover:bg-gray-800 lg:hover:text-white lg:hover:text-white= text-sm lg:opacity-0=  group-hover:opacity-100 transition-opacity duration-700 z-[5] self-start flex center
             ${color === "white" && "text-black border-blakk" }
-            ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-blakk transition-colors duration-1000" }
+            ${color === "black" && "text-white border-white lg:hover:bg-white lg: hover:text-black transition-colors duration-1000" }
             `}>
-              <p>{action || 'Read more'}</p>
+              <p className='px-4 py-2 font-[500]'>{action || 'Read more'}</p>
+              <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[2px] text-xl' />
           </Link>
           }
 

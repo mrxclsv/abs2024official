@@ -242,10 +242,10 @@
     @apply text-2xl md:text-5xl font-bold leading-[120%] gap-2 
   }
   .h2 {
-    @apply text-3xl font-semibold
+    @apply text-2xl lg:text-[2.4rem] font-semibold
   }
   .h3 {
-    @apply text-lg md:text-xl
+    @apply text-[1.8rem] md:text-xl
   }
   .h4 {
     @apply text-sm leading-[200%]
@@ -380,6 +380,14 @@ h4 {
   display: block;
 }
 
+p, h1, h2, h3, h4, h5 {
+  pointer-events: none;
+  user-select: none;
+}
+img {
+  pointer-events: none;
+  user-select: none;
+}
 
 
 #root {

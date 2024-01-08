@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { SplitDiv, TextLayout, daara, leket, mapsenegaldark, water } from '../../utils/components'
+import { Hero, SplitDiv, TextLayout, daara, leket2, mapsenegaldark, water } from '../../utils/components'
 import { journey, project } from '../../utils/data'
 // import { SplitDiv, TextLayout, Timeline } from '../../utils/components'
 
@@ -18,19 +18,14 @@ const ThePhilanthropist = () => {
   return (
     <div className='min-h-screen= h-full w-screen center flexV bg-white text-black gap-10 relative' >
 
-      <div id='hero' className='screen relative bg-gray-100 flexCenter z-[1]'>
-        <img className='screen flex object-cover object-bottom opacity-100' src={leket} alt={thisPage} />
-        <div className='flexV center absolute absoluteAll m-auto gap-4 '>
-          <h1 className='h1 font-light uppercase'>{page}</h1>
-          <h3 className='flexV center h3'>
-            {/* <span>""</span> */}
-            </h3>
-        </div>
-      </div>
+      <Hero
+        image={leket2}
+        title={page}
+      />
 
       <div className='mt-0 flexV center w-full h-full relative  '>
 
-        <div className='max-w-7xl flex center w-full relative h-full py-10'>
+        <div className='max-w-7xl flex center w-full relative h-full pt-6 pb-10'>
           <SplitDiv title="#ABS2024 #BoromTerangaYi" color="white" link=""
             hasTitle={true} hasText={true}  hasDescr
             layout={1} 
@@ -43,7 +38,7 @@ const ThePhilanthropist = () => {
           />
         </div>
         
-        <div className='flex w-full relative overflow-y-hidden overflow-x-scroll bg-blakk pt-10 md:p-[200px] h-[80vh}'>
+        <div className='TheJourney flex w-full relative overflow-y-hidden overflow-x-scroll bg-blakk pt-10 md:p-[200px] h-[80vh}'>
 
           <img className='mix-blend-screen z-[0] animate-pulse aspect-square max-w-[800px] fixed m-auto absoluteAll opacity-100 brightness-[.1]' src={mapsenegaldark} alt="senegal" />
 

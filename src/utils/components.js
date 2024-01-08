@@ -14,6 +14,8 @@ export { default as TextLayout } from '../components/TextLayout'
 export { default as Stat} from '../components/Stat'
 export { default as Contact} from '../components/Contact'
 
+export { default as Hero } from '../components/Hero'
+
 
 export { default as MenuComponent } from '../components/Menu/MenuComponent'
 export { default as Timeline} from '../components/Timeline'

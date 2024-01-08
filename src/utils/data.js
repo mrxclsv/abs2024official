@@ -112,7 +112,7 @@ export const website = "abs2024.com"
 
 export const headers = [
   { name: 'son of senegal', 
-    descr:'the lab for content in Branding Media Production, 3D & Dev', 
+    descr:' journey from a humble beginning to becoming a national leader', 
     link:'son-of-senegal', 
     icon:'',
     image: 'menu1', 
@@ -143,8 +143,8 @@ export const movementSlides = [
 ]
 
 export const contactInfo = [
-  { title:"email",  contact:"media@abs2024.com",  action:""},
-  { title:"phone",  contact:"33 860 38 90",  action:"callto:00221338603890"},
+  { title:"email",  contact:"media@abs2024.com",  action:"mailto:contact@abs2024.com"},
+  { title:"phone",  contact:"33 860 38 90",  action:"tel:+221338603890"},
   { title:"hours",  contact:"Mon-Fri 9:00AM - 5:00PM",  action:"#"},
   { title:"address",  contact:"7e étage, Immebule BICIS, Rond Point Stele Mermoz, 10200, Dakar",  action:"#"},
 ]
@@ -298,7 +298,6 @@ export const social = [
   {title:"snapchat", icon:"snapchat", link:"bit.ly/ABS"},
 ]
 
-
 export const lawwd = {
   logo: "abs.ico",
   link: "https://abs2024.com",
@@ -318,7 +317,7 @@ export const contributions = [
     position:"left-[60%] top-[50%]"
   },
   { title: "annual donations",  
-    value:"2 Billion ", 
+    value:2000000000, 
     added:"cfa", 
     link:"#" ,
     position:"left-[20%] top-[75%]"
