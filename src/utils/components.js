@@ -19,13 +19,14 @@ export { default as MenuComponent } from '../components/Menu/MenuComponent'
 export { default as Timeline} from '../components/Timeline'
 export { default as TimelineElement } from '../components/TimelineElement'
 export { default as AndTheCommunity } from '../components/AndTheCommunity'
+export { default as Links } from '../components/Links'
 
 export { default as ProjectCard } from '../components/Projects/ProjectCard'
 export { default as Button } from '../components/Button'
 
 export {default as NotFound } from '../components/NotFound'
 export { default as Socials } from '../components/Socials'
-
+export { default as ContactForm } from '../components/ContactForm'
 
 
 // IMAGES

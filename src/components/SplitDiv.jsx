@@ -5,7 +5,7 @@ import { allTransitions } from '../utils/style'
 import { Link } from 'react-router-dom'
 
 const SplitDiv = ({
-  layout, title, text, descr, image, short, css, color, imageCSS, wrapperCSS, link, hasLink, mainCSS,
+  layout, title, text, descr, image, short, css, color, hashtags, imageCSS, wrapperCSS, link, hasLink, mainCSS, action,
   hasTitle, hasText, hasDescr, showLines, blockCSS
 
   
@@ -37,14 +37,17 @@ const SplitDiv = ({
             showLines={showLines}
             color={color}
             css={title !== "black" | "white" && "!border-gray-400/40" }
+            hashtags={hashtags}
           />
           {hasLink && 
-            <Link to={`/${link}`} onMouseEnter={handleToggle} 
-                  className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700  z-[5] self-start
-                  ${color === "white" && "text-black border-blakk" }
-                  ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-blakk transition-colors duration-1000" }
-                            `}><p>Read more</p> 
-            </Link>
+          <Link 
+            to={`/${link}`} onMouseEnter={handleToggle} 
+            className={`border rounded ml-6 lg:ml-10 py-2 px-4 lg:hover:bg-gray-800 lg:hover:text-white text-sm opacity-0  group-hover:opacity-100 transition-opacity duration-700  z-[5] self-start
+            ${color === "white" && "text-black border-blakk" }
+            ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-blakk transition-colors duration-1000" }
+            `}>
+              <p>{action || 'Read more'}</p>
+          </Link>
           }
 
         </div>

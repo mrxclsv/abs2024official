@@ -137,6 +137,11 @@ export const headers = [
   },
 ]
 
+export const movementSlides = [
+  {title:"Join the movement", small:"this text", action:"register now!", descr:"Join us in supporting the ABS2024 campaign"},
+  {title:"slide 2", small:"this text", action:"register now!", descr:"This is a descriptoin for slide 2. It could be this long. We'll for sure translate it to french."},
+]
+
 export const contactInfo = [
   { title:"email",  contact:"media@abs2024.com",  action:""},
   { title:"phone",  contact:"33 860 38 90",  action:"callto:00221338603890"},

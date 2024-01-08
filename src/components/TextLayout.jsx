@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TextLayout = ({
-  layout, title, text, descr, image, css,
+  layout, title, text, descr, image, css, hashtags,
   hasTitle, hasText, hasDescr, showLines, color
 }) => {
 
@@ -32,6 +32,15 @@ const TextLayout = ({
     {hasDescr && <h4 className='text-left mt-8'>
                     {descr || "Add the corresponding description and keep it aesthetically correct" }
                 </h4>}
+    {/* {hashtags !== "" && 
+      <h4 className=''>{hashtags}</h4>
+    }                 */}
+    <div className='flex gap-1'>
+      {hashtags?.map((item, index) => (
+        <h4 key={item} className='opacity-80 italic hover:opacity-100 hover:font-normal transition py-1 cursor-pointer'>{`#${item}`}</h4>
+      ))}
+
+    </div>
     </div>
 
   )

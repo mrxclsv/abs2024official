@@ -1,25 +1,33 @@
 import React from 'react'
 import { navbar } from '../utils/data'
 import { Link } from 'react-router-dom'
+import SplitDiv from './SplitDiv'
+import { Socials, abswhite } from '../utils/components'
 
 
 const AndTheCommunity = () => {
   return (
-    <div className='w-full h-full max-w-7xl grid grid-cols-2 lg:grid-cols-4 center justify-around gap-6 lg:gap-20 mt-20 p-6 lg:p-10'>
-    {navbar?.map((item, index) => (
-      <Link key={index} to={item.link} className='w-auto rounded-lg bg-gray-400 aspect-6/4 overflow-hidden relative group hover:shadow-lg shadow-black/30'>
-          
-          {/* <img className={`full object-cover group-hover:scale-110 transition duration-2000 ${item.position} `} src={item.image} alt={item.name} /> */}
-          
-          <div className='info absolute bottom-0 z-[1] translate-y-1/4 group-hover:translate-y-0 left-0 text-white flexV text-left p-4 justify-end right-0 bg-gradient-to-t from-black/60 to-transparent w-full h-20 transition duration-700 '>
-            <p className='capitalize text-sm font-semibold text-white'>{item.name}</p>
-            <p className='capitalize text-xs text-white opacity-0 group-hover:opacity-80 transition'>{item.views} views</p>
+    <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
+      <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-7xl'>
 
-          </div>
-      </Link>
-    ))}
+        <SplitDiv title="The philanthropist" color="black" link="/the-philanthropist"
+          hasTitle={true} hasText={true}  hasDescr={true}
+          showLines={true}
+          mainCSS="lg:w-full"
+          css="w-full pr-0"
+          blockCSS="!h-fit w-full min-w-full lg:pr-0"
+          layout={1} 
+          text='& the community' 
+          descr="Abdoulaye’s vision extends far beyond the economic realm; it encompasses a holistic approach to societal well-being. His commitment to social equity, environmental sustainability, and overall quality of life for his fellow Senegalese showcases the depth of his vision. ABS is not just a leader driven by numbers and statistics; he is a champion of comprehensive progress."
+          wrapperCSS='h-fit w-1/2== hidden=' 
+          imageCSS='hidden'
+          image={abswhite}
+          hasLink
+        />
+        <Socials css="" />
 
-  </div>
+      </div>
+    </div>
   )
 }
 

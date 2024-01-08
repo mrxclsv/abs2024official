@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
+// import emailjs from '@emailjs/browser';
+
+import { 
+  SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, AndTheCommunity
+} from '../utils/components'
 import { Link, useLocation } from 'react-router-dom'
-import { SplitDiv, Stat, mapafrica, mapsenegal, abssuit1, abswhite, abshero, abssit2, flagsenegal, TextLayout, Socials } from '../utils/components'
-import { contributions, project, social } from '../utils/data'
+import { contributions, movementSlides, project } from '../utils/data'
 import { allTransitions } from '../utils/style'
 
 const Home = () => {
@@ -18,17 +22,37 @@ const Home = () => {
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
 
+  const a = 0
+  const b = 1
+  const c = 2
+
+  const slicedSlide = movementSlides.slice(0,1)
+  const slicedSlide2 = movementSlides.slice(1,2)
+  const [slide, setSlide] = useState(slicedSlide);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setSlide(slide === slicedSlide ?  slicedSlide2 : slicedSlide);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [slide]);
+  
+  const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
+
   return (
 
     <div className='flexVStart w-screen overflow-x-hidden overflow-y-auto scrollbar-hide items-center justify-start relative pt-[75px]=='>
 
       <div id='FutureOfSenegal' className='screen relative bg-gray-800 flexCenter'>
         <div className='w-full h-3/4 absolute -top-20 left-0 right-0 bg-gradient-to-b from-black/60 -to-transparent z-[1]' />
-          <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-100' src={abshero} alt="The Future of Senegal Is Here" />
+          <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-60 md:opacity-100' src={abshero} alt="The Future of Senegal Is Here" />
 
           <div className='flexV center absolute absoluteAll sm:max-w-3/4 lg:max-w-[1024px] mx-auto gap-4 text-white z-[2]'>
-            <h1 className='leading-[110%] px-6 md:px-10 text-5xl md:text-7xl font-light md:font-semibold== uppercase'>The future of {/* <br/>  */}Senegal is here</h1>
-            <h3 className='flexV center h3'>
+            <h1 className='leading-[110%] px-6 md:px-10 text-4xl font-semibold md:text-7xl md:font-light md:font-semibold== uppercase'>The future of {/* <br/>  */}Senegal is here</h1>
+            <h3 className='flexV center h4 lg:h3 uppercase'>
               <span>{project.tagline}</span>
               <span>Nga xam sa bopp, mën sa bopp</span>
               </h3>
@@ -173,33 +197,57 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
+        <AndTheCommunity />
 
-          <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-7xl'>
+        <div className="JoinTheMovement flexV center w-full h-full max-h-[900px] relative">
 
-            <SplitDiv title="The philanthropist" color="black" link="/the-philanthropist"
-              hasTitle={true} hasText={true}  hasDescr={true}
-              showLines={true}
-              mainCSS="lg:w-full"
-              css="w-full pr-0"
-              blockCSS="!h-fit w-full min-w-full lg:pr-0"
-              layout={1} 
-              text='& the community' 
-              descr="Abdoulaye’s vision extends far beyond the economic realm; it encompasses a holistic approach to societal well-being. His commitment to social equity, environmental sustainability, and overall quality of life for his fellow Senegalese showcases the depth of his vision. ABS is not just a leader driven by numbers and statistics; he is a champion of comprehensive progress."
-              wrapperCSS='h-fit w-1/2== hidden=' 
-              imageCSS='hidden'
-              image={abswhite}
-              hasLink
-            />
-            <Socials css="" />
+          <SplitDiv title="Join The Movement" color="white" link=""
+            hasTitle={true} hasText={true}  hasDescr={true}
+            showLines={true}
+            css="w-screen h-fit"
+            layout={1} 
+            text='ABS2024' 
+            descr="Join us in supporting the ABS2024 campaign Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
+            // hashtags={("abs2024", "C50pn", "fifty50leu")}
+            hashtags={hashtagsArray}
+            wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0 w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
+            imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-bottom md:origin-top md:object-contain scale-[105%= pt-4 md:translate-y-20 hidden'
+            image={abswhite} 
+            hasLink action="Become a member"
+          />
+
+          <div className='w-[50vw] text-black z-[2] lg:absolute right-0 flexV gap-2 center h-[400px] top-0 bottom-0 my-auto px-10 relative'>
+              <div className='border flexV justify-between p-8 bg-gray-100 w-full h-full max-h-[400px] rounded-lg start relative'>
+                {slide?.map((item, index) => (
+                  <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative'>
+                    <div className='flexV w-full'>
+                      <h4 className='title_small uppercase'>{item.small}</h4>
+                      <p className='text-2xl'>{item.title}</p>
+                      <h5 className='mt-4'>{item.descr}</h5>
+                    </div>
+                    <Link /* to={} */ className='bg-black leading-8 tracking-widest uppercase transition group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-fit text-sm'>{item.action}</Link>
+                  </div>
+                  ))}
+              </div>
+
+              <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
+                <button onClick={() => setSlide(slicedSlide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+                <button onClick={() => setSlide(slicedSlide2)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+              </div>
 
           </div>
-          
+
         </div>
 
 
-      </div>
 
+      </div>
+      
+      {/* ENTER SUBMIT FORM */}
+      <div className='flexV center w-full py-20 px-10 bg-blakk'>
+
+
+      </div>
 
 
 
