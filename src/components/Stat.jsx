@@ -12,10 +12,10 @@ const Stat = ({
 
     <Link className={`flexV animate-slideleft md:start ==center relative w-fit min-w-[200px] px-4 md:pl-10 ${added !== "" && "md:col-span-2 w-full max-w-[300px]"} `}>
         {counterOn && 
-          <CountUp className='!md:h4= h1 text-3xl flex relative text-left whitespace-nowrap items-center mb-4 font-normal tracking-wide' start={0} end={value} duration={4} delay={0}>
+          <CountUp className='!md:h4= h1 text-3xl flex relative text-left whitespace-nowrap items-center mb-4 font-normal tracking-wide' start={0} end={value} duration={2} delay={0}>
           {/* <h5 className='!md:h4= h2 whitespace-nowrap items-center mb-4 tracking-wide' >{value} */}
           {added !== "" && 
-            <span className='h3 md:h4 ml-2 capitalize whitespace-nowrap w-fit text-gray-500 font-normal mt-2 opacity-80 text-left'>
+            <span className='h3 md:h4 ml-2 capitalize whitespace-nowrap signal w-fit text-gray-500 font-normal mt-2 opacity-80 text-left'>
               {added}
             </span>}
           </CountUp>

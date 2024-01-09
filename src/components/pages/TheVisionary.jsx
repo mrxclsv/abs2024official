@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { project } from '../../utils/data'
-import { Timeline, abssit } from '../../utils/components'
+import { SplitDiv, Timeline, abssit, water } from '../../utils/components'
 
 const TheVisionary = () => {
 
@@ -28,7 +28,17 @@ const TheVisionary = () => {
         </div>
       </div>
 
-      <h2 className='h2 flex center z-[20] translate-y-10 text-white drop-shadow-lg  relative gap-2'>Timeline <span className='text-sm absolute translate-y-[30px] font-light'>of accomplishments</span></h2>
+      <SplitDiv title="#ABS2024 #BoromTerangaYi" color="black" link=""
+            hasTitle={true} hasText={true}  hasDescr={false}
+            layout={1} 
+            showLines={true}
+            text="Timeline"
+            descr=""
+            image={water}
+            wrapperCSS="hidden"
+            css="mt-0 mx-auto"
+            hasLink={false}
+          />
 
       <div className='flexV center w-full relative h-full bg-blakk overflow-hidden mt-10'>
           <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-8 left-0 ml-5' />

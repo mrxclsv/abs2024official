@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
+
 
 const TimelineElement = ({
-  layout, date, title, descr, css, 
-  showLines
-}, bgcolor) => {
+  layout, date, title, descr, css, showLines
+}, bgcolor ) => {
 
   const alignCondition = layout === "left" ? "text-left md:text-right md:self-end" : "self-end md:self-end text-left md:text-left"
 
+  const [animate, setAnimate] = useState(false)
 
   return (
-    <div className={`flexV center p-4 md:p-6 z-[1] relative animate-slideup
+    <ScrollTrigger 
+      onEnter={() => setAnimate(true)}
+      // onExit={() => setAnimate(false)}
+      className={`flexV center p-4 md:p-6 z-[1] relative animate-slideup
     ${bgcolor === "white" ? "text-blakk" : "text-white"}
+    ${animate ? 'translate-y-0 opacity-100' : 'translate-y-20 saturate-0 opacity-0'}
+    transition-all duration-[1.5s] ease-in-out
     `}>
 
       <div className={`flex relative w-full max-w-7xl center ${layout === "left" ? "" : "md:flex-row-reverse"}`}>
@@ -25,7 +32,7 @@ const TimelineElement = ({
 
       </div>
 
-    </div>
+    </ScrollTrigger>
 
   )
 }

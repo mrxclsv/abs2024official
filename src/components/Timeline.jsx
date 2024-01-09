@@ -7,6 +7,7 @@ import { timeline } from '../utils/data'
 const Timeline = ({date, position, title, desc}) => {
   
   const bgcolor = "blakk"
+
   
   return (
     <div className={`w-full h-full flexV bg-${bgcolor} gap-2`}>

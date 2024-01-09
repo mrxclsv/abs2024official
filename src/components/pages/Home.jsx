@@ -17,9 +17,9 @@ const Home = () => {
   // document.title = `${project.name} — ${project.tagline}`
   document.title = thisPage
 
-  // useEffect(() => {
-  //   window.scroll(0,0)
-  // },[location])
+  useEffect(() => {
+    window.scroll(0,0)
+  },[location])
 
   const [toggleRead, setToggleRead] = useState(false)
   const handleToggle = () => setToggleRead(!toggleRead)
@@ -41,7 +41,23 @@ const Home = () => {
   
   const [counterOn, setCounterOn] = useState(false)
 
+  // const handleCounter = useEffect(() => {
+  //     const timer = setTimeout(() => {
+  //       setCounterOn(false)
+  //       console.log('Counter is desactivated')
+  //     }, 5000)
+
+  //     setTimeout(() => {
+  //       setCounterOn(true)
+  //       console.log('Counter is activated again')
+  //     }, 3000)
+      
+  //   return () => {clearTimeout(timer)}
+  // }, [])
+
+
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
+
 
   return (
 
@@ -145,9 +161,7 @@ const Home = () => {
         </div>
 
         
-        <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}
-
-        className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
+        <div className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
           <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
@@ -187,7 +201,7 @@ const Home = () => {
               </Link>
               
 
-              <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)} className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 pt-8 lg:absolute top-0 lg:hidden  '>
+              <ScrollTrigger onEnter={() => setCounterOn(true)}  className='w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 pt-14 lg:absolute top-0 lg:hidden  '>
                 {contributions?.map((item, index) => (
                   <Stat key={index} 
                   title={item.title} 
@@ -203,7 +217,8 @@ const Home = () => {
             </div>
 
           </div>
-        <div className='contributionsLAPTOP hidden lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200  text-black justify-around px-20'>
+        <ScrollTrigger onEnter={() => setCounterOn(true)}
+                      className='contributionsLAPTOP hidden lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200 text-black justify-around px-20'>
           {contributions?.map((item, index) => (
             <Stat key={index} 
             title={item.title} 
@@ -214,8 +229,8 @@ const Home = () => {
             setCounterOn={setCounterOn}
             />
           ))}
-        </div>
-        </ScrollTrigger> 
+        </ScrollTrigger>
+        </div> 
         
 
         <AndTheCommunity />
