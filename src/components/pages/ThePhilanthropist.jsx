@@ -66,7 +66,7 @@ const ThePhilanthropist = () => {
           flex start w-screen h-[80vh] relative overflow-x-hidden
           '>
               {/* <div className='w-[r200px] absolute left-0 top-0 bottom-0 my-auto z-[2] bg-gradient-to-r from-black to-transparent' /> */}
-            <div className='flex scrollbar-hide px-[15vw] h-full gap-8 px-10 overflow-x-auto relative'>
+            <div className='flex scrollbar-hide px-[15vw] h-full gap-8 px-10= overflow-x-auto relative'>
               {journey?.map((item, index) => (
                 <div key={index} className='flexV min-w-[300px] md:min-w-[400px] rounded-lg border border-white/40 max-h-[500px] bg-gradient-to-b from-neutral-900/50 to-gray-900 h-full relative pt-6 md:pt-2'>
                   {/* <p className='text-primary mix-blend-difference absolute right-6 md:right-10 tracking-wide top-4 opacity-50 '>{`0${index + 1}`}</p> */}

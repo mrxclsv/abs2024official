@@ -15,7 +15,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
   const notActiveCSS = 'flexV center text-xs font-semibold text-neutral-700 hover:text-black cursor-pointer w-full h-full rounded-lg capitalize px-3 relative z-[2] duration-500'
   const activeCSS = `${notActiveCSS} font-bold underline text-black z-[2] md:text-black ${allTransitions} ` 
 
-  const headerNotActiveCSS = `flexV justify-end items-end w-full pr-4 end group h-fit py-4= lg:py-0 relative ${allTransitions}`
+  const headerNotActiveCSS = `flexV justify-end items-end w-full capitalize pr-4 end group h-fit py-4= lg:py-0 relative ${allTransitions}`
   const headerActiveCSS = `${headerNotActiveCSS} pr-4 underline=underline-offset-[10px]= opacity-100 font-semibold !text-black z-[2] !md:text-black ${allTransitions} ` 
 
 
