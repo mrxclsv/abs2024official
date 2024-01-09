@@ -18,7 +18,7 @@ const SonOfSenegal = () => {
   return (
     <div className='min-h-screen w-screen flexV bg-white text-black pt-[75px]'>
 
-      <div className='hero w-full lg:hidden h-[50vh] min-h-[400px] center relative bg-gray-100'>
+      <div className='hero w-full lg:hidden= h-[50vh] min-h-[400px] center relative bg-gray-100'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
           <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
         </div>
@@ -45,7 +45,7 @@ const SonOfSenegal = () => {
             descr=""
             color="white" 
           />
-            <img className='hidden lg:flex absolute z-[0] max-w-[900px] origin-top object-bottom lg:right-0 translate-x-1/4 lg:scale-[60%] right-[15vw]  top-20 h-full mx-auto my-auto object-contain' src={flagsenegal2} alt="senegal" /> 
+            {/* <img className='hidden lg:flex absolute z-[0] max-w-[900px] origin-top object-bottom lg:right-0 translate-x-1/4 lg:scale-[60%] right-[15vw]  top-20 h-full mx-auto my-auto object-contain' src={flagsenegal2} alt="senegal" />  */}
           
             <img className='lg:absolute right-0 md:right-[20%] m-auto top-[30%] min-w-[300px] max-w-full lg:scale-[150%] origin-bottom  object-top scale-[120%] z-[1] left-0== top-20===== h-[80vh]== object-contain w-[400px]' src={absyellowfit} alt="senegal" />
         </div>

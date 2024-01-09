@@ -12,7 +12,7 @@ const TheLeader = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   },[location])
 
   return (
@@ -88,7 +88,7 @@ const TheLeader = () => {
             mainCSS="overflow-hidden min-h-[50vh] max-w-7xl lg:max-h-[800px] my-20 rounded-lg overflow-hidden"
             blockCSS="h-full"
             css="group "
-            text='policy of inclusivity' 
+            text='Policy of Inclusivity' 
             descr="As part of Abdoulaye's plan to elevate the nation, he employs 6% disabled individuals as part of his workforce. His approach serves as a model for the nation. By creating an inclusive environment, he demonstrates that disabilities are no barrier to success
             "
             imageCSS={`object-contain duration-400 !object-contain w-full transition-transform duration-1000  ${allTransitions}`}

@@ -184,25 +184,25 @@ export const navbar = [
 ]
 
 export const timeline = [
-  {
-    date:"Financial district", 
-    position:"right", 
-    title:"First steps", 
-    descr:'Abdoulaye Sylla designed a financial district worth over 3000 billion CFA.'},
+  // {
+  //   date:"Financial district", 
+  //   position:"right", 
+  //   title:"First steps", 
+  //   descr:'Abdoulaye Sylla designed a financial district worth over 3000 billion CFA.'},
   {
     date:"1998 – 2002", 
     position:"left", 
-    title:"event", 
+    title:"E.A.S", 
     descr:'Abdoulaye Sylla founded his first company in the construction industry, named "Etablissement Abdoulaye Sylla."'},
   {
     date:"2003 – 2004", 
     position:"right", 
-    title:"Electrified a stadium", 
+    title:"Electrification of stadiums", 
     descr:'Abdoulaye Sylla electrified the Marius Ndiaye Stadium in Dakar, as well as the one in Bignona and other stadiums in the interior of the country.'},
   {
     date:"2004", 
     position:"left", 
-    title:"Expansion", 
+    title:"SLC", 
     descr:'The company "Etablissement Abdoulaye Sylla" became "SLC." Beyond construction, SLC was involved in the distribution of hydrocarbons.'},
   {
     date:"2006", 
@@ -212,17 +212,17 @@ export const timeline = [
   {
     date:"2015", 
     position:"left", 
-    title:"Corporate ethics", 
-    descr:'Abdoulaye Sylla implemented a law in his companies that requires at least 15% of the personnel to be disabled individuals.'},
+    title:"policy of inclusivity ", 
+    descr:'Abdoulaye Sylla implemented a law in his companies that requires at least 6% of the personnel to be disabled individuals.'},
   {
     date:"2017", 
     position:"right", 
-    title:"Dream of a smart city", 
+    title:"DGPU smart city", 
     descr:'Abdoulaye Sylla initiated the Diamniadio Smart City project.'},
   {
     date:"2018", 
     position:"left", 
-    title:"Acquisition", 
+    title:"Media company", 
     descr:'Abdoulaye Sylla acquisitioned a Media Group.'},
   {
     date:"2019", 
@@ -237,7 +237,7 @@ export const timeline = [
   {
     date:"2022 - 2023", 
     position:"right", 
-    title:"School acquisition", 
+    title:"Hemodialysis center", 
     descr:'Abdoulaye Sylla financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA..'},
 ]
 
@@ -305,13 +305,13 @@ export const lawwd = {
 
 export const contributions = [
   { title: "jobs",  
-    value:1300, 
+    value:1800, 
     added:"", 
     link:"#" ,
     position:"left-[5%] top-[47%]"
   },
   { title: "industries",  
-    value:5, 
+    value:10, 
     added:"", 
     link:"#" ,
     position:"left-[60%] top-[50%]"
