@@ -12,7 +12,9 @@ const News = () => {
   },[location])
   
   return (
-    <div>News</div>
+    <div className='page'>
+      News
+    </div>
   )
 }
 

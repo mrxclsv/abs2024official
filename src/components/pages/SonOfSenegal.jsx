@@ -30,17 +30,17 @@ const SonOfSenegal = () => {
       <div className='contentWrapper= flexV relative center mx-auto'>
 
         <div className='flex-col !lg:flex-row w-screen lg:h-[250vh]==== md:h-[100vh]== bg-gradient-to-t from-gray-200 to-white relative overflow-hidden'>
-          <SplitDiv title="The Son of Senegal" 
+          <SplitDiv title="The Son of Senegal"
             hasTitle={true} hasText={true}  hasDescr={false}
             layout={1} 
             showLines={true}
             image={flagsenegal2}
-            mainCSS="lg:max-h-[900px] w-screen overflow-hidden lg:h-[80vh] !bg-transparent h-fit==  "
+            mainCSS="lg:max-h-[1000px] w-screen overflow-hidden lg:h-[90vh] !bg-transparent h-fit==  "
             css="max-w-7xl relative lg:flex-row items-start justify-center bg-transparent !mx-0 !bg-transparent"
 
             blockCSS="my-auto lg:mt-20=== lg:top-24= lg:mt-10 absolute= left-0= w-1/2="
             wrapperCSS="flexV center overflow-visible z-[3] w-full relative !bg-transparent"
-            imageCSS="object-top origin-top w-full h-full object-cover !absolute=== hidden left-0 right-0 m-auto z-[10]"
+            imageCSS="object-top origin-top translate-y-6 w-full h-full object-cover !absolute=== hidden left-0 right-0 m-auto z-[10]"
             text="Fétë fétë biiy xaalë yoonu sopi, Yoonu koom"
             descr=""
             color="white" 

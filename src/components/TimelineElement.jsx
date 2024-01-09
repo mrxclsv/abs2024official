@@ -14,13 +14,13 @@ const TimelineElement = ({
     <ScrollTrigger 
       onEnter={() => setAnimate(true)}
       // onExit={() => setAnimate(false)}
-      className={`flexV center p-4 md:p-6 z-[1] relative animate-slideup
+      className={`flexV center p-4 md:p-6 z-[1] relative animate-slideup 
     ${bgcolor === "white" ? "text-blakk" : "text-white"}
     ${animate ? 'translate-y-0 opacity-100' : 'translate-y-20 saturate-0 opacity-0'}
     transition-all duration-[1.5s] ease-in-out
     `}>
 
-      <div className={`flex relative w-full max-w-7xl center ${layout === "left" ? "" : "md:flex-row-reverse"}`}>
+      <div className={`flex relative w-full max-w-7xl= lg:max-w-[1200px] lg:min-w-[800px] center ${layout === "left" ? "" : "md:flex-row-reverse"}`}>
 
         <div className={`1 flex-col relative w-full md:w-1/2 px-6 text-left ${layout === "left" && "text-left md:text-right items-end self-end justify-end"}`}>
           <h4 className={`h4 w-full  relative uppercase text-primary font-normal tracking-widest`}>{ date ||'date'}</h4>

@@ -11,13 +11,13 @@ const TheVisionary = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   },[location])
   
   return (
     <div className='min-h-screen h-full= w-screen flexV bg-blakk text-black gap-10 relative' >
 
-      <div className='hero w-full h-[70vh] min-h-[400px] flex center relative bg-gray-100 group'>
+      <div className='hero w-full fixed= h-[70vh] min-h-[400px] flex center relative bg-gray-100 group'>
 
 
         <div className='full flex center overflow-hidden relative bg-black text-white'>
@@ -38,20 +38,20 @@ const TheVisionary = () => {
             wrapperCSS="hidden"
             css="mt-0 mx-auto"
             hasLink={false}
-            mainCSS="translate-x-[-5%]"
-          />
+            mainCSS="translate-x-[5%]"
+      />
 
-      <div className='flexV center w-full relative h-full bg-blakk overflow-hidden mt-10 pb-20'>
+      <div className='flexV center w-full relative h-full bg-blakk overflow-hidden mt-10 mb-20'>
           <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-8 left-0 ml-5' />
-        <div className='wrapper max-w-7xl relative w-full flex center py-10 '>
-          <div className='lineDesk w-[3px] bg-primary/50 h-full hidden md:flex absolute z-[1] top-8 left-0 right-0 mx-auto ' />
-          <div className='w-3 h-1 bg-primary absolute left-0 right-0 -bottom-2 mx-auto' />
+        <div className='wrapper max-w-7xl relative w-full flex center py-6 '>
+          <div className='lineDesk w-[3px] bg-primary/50 h-full hidden md:flex absolute z-[1] top-8 bottom-4 left-0 right-0 mx-auto ' />
+          <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-0 mx-auto' />
           <Timeline />
         </div>
 
       </div>
 
-      
+    
 
     </div>
   )
