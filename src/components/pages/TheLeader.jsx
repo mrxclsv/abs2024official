@@ -60,7 +60,7 @@ const TheLeader = () => {
             <div className='flexV max-w-7xl justify-between lg:flex-row px-10 py-10'>
               <TextLayout title="A leader by example"
                 text='Diversity & Inclusivity'
-                descr="In the modern world, diversity and inclusivity are the foundations of successful organizations, Abdoulaye Sylla's Ecotra stands as an example of how a company can leverage the strengths of both local and foreign talent to create, innovate, and build the nation . With a workforce of 1300 people, including 800 Senegalese, representatives from 20 nations around the world, and 6% disabled individuals"
+                descr="In the modern world, diversity and inclusivity are the foundations of successful organizations, Abdoulaye SYLLA's Ecotra stands as an example of how a company can leverage the strengths of both local and foreign talent to create, innovate, and build the nation . With a workforce of 1300 people, including 800 Senegalese, representatives from 20 nations around the world, and 6% disabled individuals"
                 hasTitle={true}
                 hasText={false}
                 hasDescr={true}
@@ -76,7 +76,7 @@ const TheLeader = () => {
                 color="black"
                 showLines={false}
                 css="px-0"
-                descr="Founded on the principle of supporting local communities and fostering economic development, Abdoulaye Sylla plays a pivotal role in the growth of Senegal's engineering, architectural, technology, and infrastructure sectors. His commitment to hiring local young engineers and architects has provided jobs and also transferred knowledge, skills, and technology to the local workforce. "
+                descr="Founded on the principle of supporting local communities and fostering economic development, Abdoulaye SYLLA plays a pivotal role in the growth of Senegal's engineering, architectural, technology, and infrastructure sectors. His commitment to hiring local young engineers and architects has provided jobs and also transferred knowledge, skills, and technology to the local workforce. "
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ const TheLeader = () => {
               hasDescr={true}
               color="white"
               showLines={false}
-              descr="Abdoulaye Sylla's life is a testament of how one man can build a better future for his country. From constructing schools and hospitals to sustainable infrastructure and everything in between, his 20 years has created a lasting impact on the Senegal he serves. ABS is a leader and a model of how a man of vision can transform a society. "
+              descr="Abdoulaye SYLLA's life is a testament of how one man can build a better future for his country. From constructing schools and hospitals to sustainable infrastructure and everything in between, his 20 years has created a lasting impact on the Senegal he serves. ABS is a leader and a model of how a man of vision can transform a society. "
             />
           </div>        
 

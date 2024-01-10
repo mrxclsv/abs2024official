@@ -124,7 +124,7 @@ export const headers = [
     image: 'menu2', 
   },
   { name: 'the philanthropist', 
-    descr:'Abdoulaye Sylla, a man for the people', 
+    descr:'Abdoulaye SYLLA, a man for the people', 
     link:'the-philanthropist', 
     icon:'',
     image: 'menu4', 
@@ -188,57 +188,57 @@ export const timeline = [
   //   date:"Financial district", 
   //   position:"right", 
   //   title:"First steps", 
-  //   descr:'Abdoulaye Sylla designed a financial district worth over 3000 billion CFA.'},
+  //   descr:'Abdoulaye SYLLA designed a financial district worth over 3000 billion CFA.'},
   {
     date:"1998 – 2002", 
     position:"left", 
     title:"E.A.S", 
-    descr:'Abdoulaye Sylla founded his first company in the construction industry, named "Etablissement Abdoulaye Sylla."'},
+    descr:'Abdoulaye SYLLA founded his first company in the construction industry, named "Etablissement Abdoulaye SYLLA."'},
   {
     date:"2003 – 2004", 
     position:"right", 
     title:"Electrification of stadiums", 
-    descr:'Abdoulaye Sylla electrified the Marius Ndiaye Stadium in Dakar, as well as the one in Bignona and other stadiums in the interior of the country.'},
+    descr:'Abdoulaye SYLLA electrified the Marius Ndiaye Stadium in Dakar, as well as the one in Bignona and other stadiums in the interior of the country.'},
   {
     date:"2004", 
     position:"left", 
     title:"SLC", 
-    descr:'The company "Etablissement Abdoulaye Sylla" became "SLC." Beyond construction, SLC was involved in the distribution of hydrocarbons.'},
+    descr:'The company "Etablissement Abdoulaye SYLLA" became "SLC." Beyond construction, SLC was involved in the distribution of hydrocarbons.'},
   {
     date:"2006", 
     position:"right", 
     title:"Ecotra", 
-    descr:'Abdoulaye Sylla established Ecotra SA, which has since become a leading company in the construction sector in Senegal and the sub-region.'},
+    descr:'Abdoulaye SYLLA established Ecotra SA, which has since become a leading company in the construction sector in Senegal and the sub-region.'},
   {
     date:"2015", 
     position:"left", 
     title:"policy of inclusivity ", 
-    descr:'Abdoulaye Sylla implemented a law in his companies that requires at least 6% of the personnel to be disabled individuals.'},
+    descr:'Abdoulaye SYLLA implemented a law in his companies that requires at least 6% of the personnel to be disabled individuals.'},
   {
     date:"2017", 
     position:"right", 
     title:"DGPU smart city", 
-    descr:'Abdoulaye Sylla initiated the Diamniadio Smart City project.'},
+    descr:'Abdoulaye SYLLA initiated the Diamniadio Smart City project.'},
   {
     date:"2018", 
     position:"left", 
     title:"Media company", 
-    descr:'Abdoulaye Sylla acquisitioned a Media Group.'},
+    descr:'Abdoulaye SYLLA acquisitioned a Media Group.'},
   {
     date:"2019", 
     position:"right", 
     title:"School acquisition", 
-    descr:'Abdoulaye Sylla acquisitioned Ettica Business School.'},
+    descr:'Abdoulaye SYLLA acquisitioned Ettica Business School.'},
   {
     date:"2021", 
     position:"left", 
     title:"C50PN", 
-    descr:' Abdoulaye Sylla founded C50PN (Club 50% de Préférence Nationale), an organization that aims to change the national law in favor of the promotion of local content.'},
+    descr:' Abdoulaye SYLLA founded C50PN (Club 50% de Préférence Nationale), an organization that aims to change the national law in favor of the promotion of local content.'},
   {
     date:"2022 - 2023", 
     position:"right", 
     title:"Hemodialysis center", 
-    descr:'Abdoulaye Sylla financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA..'},
+    descr:'Abdoulaye SYLLA financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA..'},
 ]
 
 export const journey = [
@@ -246,47 +246,47 @@ export const journey = [
     date:"Since 2017", 
     position:"left", 
     title:"Magal Touba", 
-    descr:'Abdoulaye Sylla has contributed over 1 billion CFA annually to the Magal de Touba for sanitation work before and after the event and donations.'},
+    descr:'Abdoulaye SYLLA has contributed over 1 billion CFA annually to the Magal de Touba for sanitation work before and after the event and donations.'},
   {
     date:"2019", 
     position:"right", 
     title:"First steps", 
-    descr:'Abdoulaye Sylla financed sanitation work at the Ocass market in Touba, amounting to 200 million CFA..'},
+    descr:'Abdoulaye SYLLA financed sanitation work at the Ocass market in Touba, amounting to 200 million CFA..'},
   {
     date:"2022", 
     position:"left", 
     title:"Mausoleums of Serigne Fallou MACKE", 
-    descr:'Abdoulaye Sylla renovated the Mausoleums of Serigne Fallou Mbacke and Serigne Sidy Moctar Mbacke in Touba at a cost of over 2 billion CFA, free of charge.'},
+    descr:'Abdoulaye SYLLA renovated the Mausoleums of Serigne Fallou Mbacke and Serigne Sidy Moctar Mbacke in Touba at a cost of over 2 billion CFA, free of charge.'},
   {
     date:"2022", 
     position:"right", 
     title:"Yeba school", 
-    descr:'Abdoulaye Sylla renovated the Yeba School in Sebikotane for an amount of 30 million CFA, along with donations exceeding 3 million CFA.'},
+    descr:'Abdoulaye SYLLA renovated the Yeba School in Sebikotane for an amount of 30 million CFA, along with donations exceeding 3 million CFA.'},
   {
     date:"2022 - 2023", 
     position:"left", 
     title:"Hemodialysis Center", 
-    descr:'Abdoulaye Sylla financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA.'},
+    descr:'Abdoulaye SYLLA financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA.'},
   {
     date:"2023", 
     position:"right", 
-    title:"Mawa Sylla mosque", 
-    descr:'Abdoulaye Sylla is building the Mawa Sylla Mosque and Islamic Institute in Saint Louis, for a total cost of 1.5 billion CFA.'},
+    title:"Mawa SYLLA mosque", 
+    descr:'Abdoulaye SYLLA is building the Mawa SYLLA Mosque and Islamic Institute in Saint Louis, for a total cost of 1.5 billion CFA.'},
   {
     date:"2023", 
     position:"left", 
     title:"fighting immagration through sports", 
-    descr:'Abdoulaye Sylla sponsored a football tournament for the youth of Keur Massar, costing 100 million.'},
+    descr:'Abdoulaye SYLLA sponsored a football tournament for the youth of Keur Massar, costing 100 million.'},
   {
     date:"2023", 
     position:"right", 
     title:"Electrify keur massar sotrac market", 
-    descr:'Abdoulaye Sylla He financed the electrification of the Sotrac market in Keur Massar for an amount of 30 million.'},
+    descr:'Abdoulaye SYLLA He financed the electrification of the Sotrac market in Keur Massar for an amount of 30 million.'},
   {
     date:"2023", 
     position:"left", 
     title:"aiding the community", 
-    descr:'Abdoulaye Sylla is passionate about aiding the community, he has made donations totaling around 2 billion in Touba.'},
+    descr:'Abdoulaye SYLLA is passionate about aiding the community, he has made donations totaling around 2 billion in Touba.'},
 ]
 
 export const social = [

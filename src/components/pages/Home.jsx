@@ -83,7 +83,7 @@ const Home = () => {
           showLines={true}
           text={project.tagline_long}
           image={abssuit1}
-          descr="In the archives of Senegalese history, there are extraordinary visionaries whose unwavering dedication to their nation’s prosperity sparks transformation, leaving an indelible legacy. Among these luminaries is Abdoulaye Sylla."
+          descr="In the archives of Senegalese history, there are extraordinary visionaries whose unwavering dedication to their nation’s prosperity sparks transformation, leaving an indelible legacy. Among these luminaries is Abdoulaye SYLLA."
         />
 
         <SplitDiv title="The Visionary" color="white" link="/the-visionary"
@@ -95,7 +95,7 @@ const Home = () => {
           layout={1} 
           text='I strive to create Senegalese national champions in this generation and the next.
           ' 
-          descr="When speaking of national development and visionary leadership, Abdoulaye Sylla has no equal. Abdoulaye Sylla (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
+          descr="When speaking of national development and visionary leadership, Abdoulaye SYLLA has no equal. Abdoulaye SYLLA (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
 
           His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
           wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0  w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
@@ -115,7 +115,7 @@ const Home = () => {
           blockCSS="md:w-screen= w-full md:self-start= lg:h-full lg:items-center"
           text='A bold blueprint for national progress' 
           descr="
-          At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye Sylla embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
+          At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye SYLLA embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
           wrapperCSS="lg:w-1/2 h-fit lg:max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== pt-14 "
           image={flagsenegal} 
@@ -178,7 +178,7 @@ const Home = () => {
                 <div className='translate-x-4 lg:translate-x-10 w-16 z-[3] translate-y-[65%] rounded h-[3px] bg-blakk' />
                 <TextLayout title="Homme Social 2023"  /* &#127942; */
                   text="Contributions "
-                  descr="Président Abdoulaye Sylla a été nommé Homme Social de l'année aux Jambaar Awards 2023. Sa contribution exceptionnelle à l'éducation et au développement économique du Sénégal y a été saluée. Félicitations à un leader visionnaire !"
+                  descr="Président Abdoulaye SYLLA a été nommé Homme Social de l'année aux Jambaar Awards 2023. Sa contribution exceptionnelle à l'éducation et au développement économique du Sénégal y a été saluée. Félicitations à un leader visionnaire !"
                   hasTitle
                   hasText={true}
                   hasDescr={true}
