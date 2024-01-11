@@ -44,8 +44,8 @@ const SplitDiv = ({
           {hasLink && 
           <Link 
             to={`/${link}`} onMouseEnter={handleToggle} 
-            className={`border-[1px] rounded-lg ml-6 lg:ml-10  lg:hover:bg-neutral-800 lg:hover:text-white lg:hover:text-white= text-sm lg:opacity-0=  group-hover:opacity-100 transition-opacity duration-700 z-[5] self-start flex center
-            ${color === "white" && "text-black border-blakk" }
+            className={`border-[1px] rounded-lg ml-6 lg:ml-10  lg:hover:bg-neutral-800= text-sm lg:opacity-0=  group-hover:opacity-100 transition-opacity duration-700 z-[5] self-start flex center
+            ${color === "white" && "text-black border-blakk lg:hover:text-white lg:hover:bg-blakk" }
             ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-black transition-colors duration-1000" }
             `}>
               <p className='px-4 py-2 font-[500]'>{action || 'Read more'}</p>
@@ -62,7 +62,7 @@ const SplitDiv = ({
         {title === "the business man" && 
           <div className='light w-[150px] lg:w-[200px] h-auto aspect-square rounded-full z-[1] bg-white blur-[100px] absolute right-[15%] top-[18%] lg:right-[30%] lg:top-[28%]' />
         }
-        <img className={`group-hover:scale-[105%] object-cover ${imageCSS} ${allTransitions} z-[2] !duration-[3s] `} src={image || '/default.jpg'} alt={short || "this content"} />
+        <img loading='lazy' className={`group-hover:scale-[105%] object-cover  ${imageCSS} ${allTransitions} z-[2] !duration-[3s] `} src={image || '/default.jpg'} alt={short || "this content"} />
       </div>
 
       </div>

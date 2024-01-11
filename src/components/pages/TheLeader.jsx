@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom"
-import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, abs_signature, } from '../../utils/components'
+import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, ContactForm, } from '../../utils/components'
 import { project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
 
@@ -146,6 +146,7 @@ const TheLeader = () => {
         </div>
       </div>
 
+      <ContactForm />
 
     </div>
   )

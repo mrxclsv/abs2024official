@@ -18,7 +18,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   },[location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -105,19 +105,19 @@ const Home = () => {
         />
 
         <SplitDiv title="Yoon Wi" color="white" link="/the-leader" 
+          text='A bold blueprint for national progress' 
           hasQuote={false}
           hasLink
           hasTitle={false} hasText={true}  hasDescr={true}
           showLines={false}
           mainCSS="lg:min-w-screen lg:items-between"
           layout={2} 
-          css="!flex-col= center gap-0 w-full=  "
+          css="!flex-col= center gap-0 w-full max-w-7xl "
           blockCSS="md:w-screen= w-full md:self-start= lg:h-full lg:items-center"
-          text='A bold blueprint for national progress' 
           descr="
           At the core of ABS’s leadership lies an unparalleled ability to envision a future for his nation that transcends the ordinary. His vision is not merely a hope or dream, but a comprehensive blueprint, meticulously crafted to guide his country toward prosperity, innovation, and sustainable growth. Abdoulaye SYLLA embodies the essence of a visionary leader, capable of seeing possibilities where others see obstacles.
           "
-          wrapperCSS="lg:w-1/2 h-fit lg:max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== pt-14 "
+          wrapperCSS="lg:w-1/2= h-fit lg:max-h-[800px] overflow-hidden aspect-square =lg:rounded-full =lg:rounded-l-none== pt-14 "
           image={flagsenegal} 
           imageCSS="object-contain origin-top w-full h-full object-top group-hover:scale-none scale-none pt-6"
         />
@@ -157,7 +157,6 @@ const Home = () => {
           />
         </div>
 
-        
         <div className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
           <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
 
@@ -191,10 +190,8 @@ const Home = () => {
               <Link to='/the-philanthropist' onMouseEnter={handleToggle} 
                 className={`border-[1px] rounded-lg ml-6 lg:ml-10 w-fit border-blakk text-blakk lg:hover:bg-neutral-800 lg:hover:text-white lg:hover:text-white= text-sm group-hover:opacity-100 transition-opacity duration-700 z-[5] self-start flex center
                 `}>
-              {/* ${color === "black" && "text-white border-white lg:hover:bg-white lg:hover:text-black transition-colors duration-1000" }
-              ${color === "white" && "text-black border-blakk" } */}
-              <p className='px-4 py-2 font-[500]'>Read more</p>
-              <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[1px] border-blakk/30 text-xl' />
+                <p className='px-4 py-2 font-[500]'>Read more</p>
+                <i className='ri-arrow-right-line py-2 px-3 h-full border-l-[1px] border-blakk/30 text-xl' />
               </Link>
               
 
@@ -215,7 +212,7 @@ const Home = () => {
 
           </div>
         <ScrollTrigger onEnter={() => setCounterOn(true)}
-                      className='contributionsLAPTOP hidden lg:flex border-t border-black/30 center w-screen gap-8 py-6 bg-gray-200 text-black justify-around px-20'>
+                      className='contributionsLAPTOP hidden lg:flex border-t border-black/10 center w-screen gap-8 py-6 bg-gray-200 text-black justify-around px-20'>
           {contributions?.map((item, index) => (
             <Stat key={index} 
             title={item.title} 
@@ -228,7 +225,6 @@ const Home = () => {
           ))}
         </ScrollTrigger>
         </div> 
-        
 
         <AndTheCommunity />
 

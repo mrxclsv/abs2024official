@@ -335,6 +335,13 @@
     @apply bg-white text-blakk placeholder-black
   }
 
+  .slideButtonWrapper {
+    @apply flex center absolute top-0 bottom-0 bg-black/5 min-w-[80px]
+  }
+  .slideButton {
+    @apply w-[40px] hover:w-[55px] flex bg-white/40 center rounded-full hover:bg-white transition-all duration-200 ease-in-out cursor-pointer font-bold
+  }
+
 }
 
 body {

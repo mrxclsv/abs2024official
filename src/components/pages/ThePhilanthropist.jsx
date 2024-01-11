@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Hero, SplitDiv, TextLayout, daara2, leket2, water } from '../../utils/components'
+import { ContactForm, Hero, SplitDiv, TextLayout, daara2, leket2, water } from '../../utils/components'
 import { journey, project } from '../../utils/data'
-// import { SplitDiv, TextLayout, Timeline } from '../../utils/components'
 
 const ThePhilanthropist = () => {
 
@@ -18,10 +17,7 @@ const ThePhilanthropist = () => {
   return (
     <div className='min-h-screen= h-full w-screen center flexV bg-white text-black gap-10 relative' >
 
-  {/* <Hero
-        image={leket2}
-        title={page}
-      /> */}
+      <Hero image={leket2} title={page} />
 
       <div className='mt-0 flexV center w-full h-full relative text-black  '>
 
@@ -35,6 +31,7 @@ const ThePhilanthropist = () => {
             image={water}
             wrapperCSS="mb-0 pb-0"
             css="mt-0 mx-auto"
+            imageCSS=''
             hasLink
           />
         </div>
@@ -93,6 +90,8 @@ const ThePhilanthropist = () => {
         </div>
 
       </div>
+
+      <ContactForm />
 
       </div>
   )

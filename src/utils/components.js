@@ -16,8 +16,8 @@ export { default as Stat} from '../components/Stat'
 export { default as Contact} from '../components/Contact'
 
 export { default as Hero } from '../components/Hero'
-
-
+export { default as Slide } from '../components/Slide'
+export { default as ContributionsMap } from '../components/ContributionsMap'
 export { default as MenuComponent } from '../components/Menu/MenuComponent'
 export { default as Timeline} from '../components/Timeline'
 export { default as TimelineElement } from '../components/TimelineElement'

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { project } from '../../utils/data'
+import ContactForm from '../ContactForm'
 
 
 const Projects = () => {
@@ -15,14 +16,17 @@ const Projects = () => {
   },[location])
 
   return (
-    <div className='w-screen min-h-screen flex center h-full overflow-x-hidden'>
-      <div className='wrapper relative'>
+    <div className='w-screen min-h-screen flexV center h-full overflow-x-hidden'>
+      <div className='page relative'>
         <div className='relative flex start max-w-7xl'>
 
           Projects 
 
         </div>
       </div>
+
+      <ContactForm />
+
     </div>
   )
 }

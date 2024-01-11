@@ -150,32 +150,36 @@ export const contactInfo = [
 ]
 
 export const navbar = [
+  // { name: "home", 
+  //   icon: 'home-4', 
+  //   link:'/',
+  //   // image: abssuit1,
+  //   position:"object-center object-contain",
+  //   views:"440k" 
+  // },
   { name: "Son of Senegal", 
-    // icon: 'projects.svg', 
+    icon: 'projects.svg', 
     link:'/son-of-senegal',
     // image: abssuit1,
     position:"object-center object-contain",
     views:"440k" 
-
   },
   { name: "the leader", 
-    // icon: 'events.svg', 
+    icon: 'events.svg', 
     link:'/the-leader',
     // image: abssuit1,
     position:"object-top",
     views:"229k" 
-
   },
   { name: "the philanthropist", 
-    // icon: 'tutorials.svg', 
+    icon: 'tutorials.svg', 
     link:'/the-philanthropist',
     // image: abshero,
     position:"object-top",
     views:"420k" 
-
   },
   { name: "the visionary", 
-    // icon: 'settings.svg', 
+    icon: 'settings.svg', 
     link:'/the-visionary',
     // image: abssit,
     position:"object-top",
@@ -239,6 +243,14 @@ export const timeline = [
     position:"right", 
     title:"Hemodialysis center", 
     descr:'Abdoulaye SYLLA financed the construction of the Saliou Fall Hemodialysis Center in Zone de Captage Dakar, at a cost of approximately 1 billion CFA..'},
+]
+
+export const ABSfacts = [
+  {
+    title: "", 
+    fact:"Abdoulaye SYLLA est né à Diourbel et a des origines à Saint-Louis et Matam, ainsi qu’en Casamance.", 
+    icon:""
+  }
 ]
 
 export const journey = [
@@ -316,7 +328,7 @@ export const contributions = [
     link:"#" ,
     position:"left-[60%] top-[50%]"
   },
-  { title: "annual donations",  
+  { title: "annual donations (CFA)",  
     value:2000000000, 
     added:"cfa", 
     link:"#" ,

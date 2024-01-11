@@ -12,7 +12,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const notActiveCSS = 'flexV center text-xs font-semibold text-neutral-700 hover:text-black cursor-pointer w-full h-full rounded-lg capitalize px-3 relative z-[2] duration-500'
+  const notActiveCSS = 'flex flex-row-reverse gap-2 relative center text-xs font-semibold text-neutral-700 hover:text-black cursor-pointer w-full h-full rounded-lg capitalize px-3 relative z-[2] duration-500'
   const activeCSS = `${notActiveCSS} font-bold underline text-black z-[2] md:text-black ${allTransitions} ` 
 
   const headerNotActiveCSS = `flexV justify-end items-end w-full capitalize pr-4 end group h-fit py-4= lg:py-0 relative ${allTransitions}`
@@ -34,6 +34,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({isActive}) => isActive ? activeCSS : notActiveCSS }>
               <p className='whitespace-nowrap'>{item.name}</p>
+              <i className={`ri-${item.icon}-fill text-lg `}/>
             </NavLink>
           ))}
 
@@ -71,7 +72,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
 
         <div className="headersBIGMENU flexV h-full justify-center items-end mx-auto lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
 
-          <div className='flexV w-fit h-fit relative'>
+          <div className='flexV w-fit h-full mt-20 lg:mt-0 center relative'>
           {headers.map((item, index) => (
             <NavLink 
               key={index} 
@@ -83,15 +84,15 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
               <h1 className={`h2 md:h1 text-gray-700 text-right self-start w-full whitespace-nowrap h-20 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
 
               <div className={`w-fit -translate-y-2 h-full flex center text-center text-gray-400 object-center opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
-                  <p className={`hidden lg:flex text-right lg:whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} duration-[.5s]`}>{item.descr}</p>
+                  <p className={`hidden lg:flex text-right lg:whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} font-normal duration-[.5s]`}>{item.descr}</p>
               </div>
             </NavLink>
           ))}
           </div>
 
-          <div className='w-full flex-col-reverse====lg:flex-row flex center absolute left-0 right-0 lg;bottom-4 bottom-20 center'>
+          <div className='w-full flex-col-reverse====lg:flex-row flex center md:absolute relative left-0 right-0 md:bottom-8 bottom-4 center'>
 
-            <div className='flexV gap-6 ==flex-col-reverse lg:flex-row w-full items-center ===center justify-between px-8 py-6 mb-2 lg:gap-4'>
+            <div className='flexV gap-6 ==flex-col-reverse lg:flex-row md:w-full justify-end items-end lg:justify-between px-8 py-6 mb-2 w-fit lg:gap-4'>
               <div className='socialNetworks flex gap-4 self-center w-fit !text-black '>
               {social?.map((item, index) => (
                 <button 
