@@ -1,16 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom';
-import { contributions, movementSlides, project } from '../utils/data';
-import { allTransitions } from '../utils/data';
-import ScrollTrigger from 'react-scroll-trigger'
+import { contributions } from '../utils/data';
 import { mapsenegal } from '../utils/components';
 
 
 const ContributionsMap = () => {
-
-
-
 
   return (
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { AndTheCommunity, Slide, SplitDiv, TextLayout, absyellowfit, fam1, jumeaux, senegalHero } from '../../utils/components'
+import { AndTheCommunity, Slide, SplitDiv, TextLayout, absyellowfit, jumeaux, senegalHero } from '../../utils/components'
 import { project } from '../../utils/data'
 
 const SonOfSenegal = () => {
@@ -11,7 +11,7 @@ const SonOfSenegal = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0,0)
+    window.scroll(0,0)
   },[location])
   
 
