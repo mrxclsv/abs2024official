@@ -254,10 +254,10 @@ export const ABSfacts = [
 ]
 
 export const news = [
-  {title:"sud quotidien", image:sudquotidien2, link:"https://www.sudquotidien.sn/c50pn-club-50-de-preference-nationale-manifeste-du-fondateur-abdoulaye-sylla/" },
-  {title:"seneweb", image:seneweb, link:"" },
-  {title:"senego", image:senego, link:"" },
-  {title:"direct news", image:directNews, link:"" },
+  {title:"sud quotidien", image:"sudquotidien.jpg", link:"https://www.sudquotidien.sn/c50pn-club-50-de-preference-nationale-manifeste-du-fondateur-abdoulaye-sylla/" },
+  {title:"seneweb", image:"seneweb.png", link:"" },
+  {title:"senego", image:"senego.png", link:"" },
+  {title:"direct news", image:"directNews.jpg", link:"" },
 ]
 
 export const journey = [

@@ -131,13 +131,13 @@ const ThePhilanthropist = () => {
 
               <p className='flex text-xl'>No news available, please try again later.</p>
               :
-              <button /* {item.link} */ key={index} className=' flexV center relative overflow-hidden gap-10 lg:w-[20vw] lg:max-w-[200px] aspect-16/9 p-6 group'>
+              <div /* {item.link} */ key={index} className=' flexV center relative overflow-hidden gap-10 lg:w-[20vw] lg:max-w-[200px] aspect-16/9 p-6 group cursor-context-menu'>
                 <img 
-                  src={item.image} 
+                  src={`/press/${item.image}`} 
                   className="newsElement w-full scale-[.95] opacity-[.7] saturate-0 group-hover:opacity-100 group-hover:scale-100 group-hover:saturate-100 transition duration-700" 
                   alt={`ABS in ${item.title}`} 
                 />
-              </button>
+              </div>
               }
             </>       
           ))}
