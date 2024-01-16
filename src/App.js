@@ -66,11 +66,10 @@ function App() {
 
       <Navbar nawW={navW} menu={menu} setMenu={setMenu} 
               toggleNav={toggleNav} toggleMenu={toggleMenu} 
-              // getTime={getTime} navTrigger={navTrigger}  navHeight={navHeight}
           />
       
 
-      <main className='flex w-screen overflow-x-hidden center relative scrollbar-hide scroll-smooth'>
+      <main className='flex w-[100dvw] overflow-x-hidden items-center justify-start relative scrollbar-hide scroll-smooth'>
 
       <Routes>
 

@@ -1,9 +1,5 @@
 export const ABS100FACTS = [
   {
-  number: 0,
-  fact : "Abdoulaye SYLLA a fréquenté l’école coranique à bas âge. "
-  },
-  {
   number: 1,
   fact : "Abdoulaye SYLLA a fréquenté l’école coranique à bas âge. "
   },

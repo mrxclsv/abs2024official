@@ -129,7 +129,7 @@
     @apply flex items-center mx-auto w-fit justify-center px-5 text-center capitalize buttonHover2 cursor-pointer
   }
   .page {
-    @apply mx-auto w-screen min-h-screen flex center
+    @apply mx-auto w-[100dvw] min-h-[90dvh] flexV center
   }
   .withgradient {
     @apply bg-gradient-to-tr from-slate-600 to-gray-900
@@ -419,6 +419,13 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+#stickyElement {
+  position: sticky;
+  top: 10;
+  height: fit-content;
+  z-index: 5; 
 }
 
 .newsElement {
