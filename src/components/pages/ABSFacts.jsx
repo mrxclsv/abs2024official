@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { SplitDiv, abssit2, absstand, abssuit1, absyellowfit } from '../../utils/components'
+import { SplitDiv, abssuit1 } from '../../utils/components'
 import { project } from '../../utils/data'
 
 import { ABS100FACTS } from '../../utils/ABS100Facts'
