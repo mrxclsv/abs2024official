@@ -45,7 +45,7 @@ const ThePhilanthropist = () => {
               <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
                 hasTitle={true} hasText={true}  hasDescr={false}
                 layout={1} 
-                showLines={true}
+                showLines={false}
                 text="The Journey"
                 descr=""
                 mainCSS="w-fit px-0 pt-0"
@@ -63,11 +63,12 @@ const ThePhilanthropist = () => {
           <div id="journey" className='hidden=== 
           flex start w-screen h-[60svh] relative overflow-x-hidden
           '>
-            <div className='scrollDIV w-full === signal ==== absolute bottom-0 z-[5] inset-0 h-[5px] '>
+            {/* <div className='scrollDIV w-full === signal ==== absolute bottom-0 z-[5] inset-0 h-[5px] '>
               <div className='w-1/2 h-full bg-primary' />
-            </div>
+            </div> */}
+
               {/* <div className='w-[r200px] absolute left-0 top-0 bottom-0 my-auto z-[2] bg-gradient-to-r from-black to-transparent' /> */}
-            <div className='flex scrollbar-hide px-[15vw] h-full gap-8 px-10= overflow-x-auto snap-mandatory snap-x relative py-10'>
+            <div className='flex scrollbar-hide px-[15vw] lg:px-10= h-full gap-8 px-10= overflow-x-auto snap-mandatory snap-x relative py-10'>
               {journey?.map((item, index) => (
                 <div key={index} className='snap-center flexV min-w-[300px] md:min-w-[400px] rounded-lg border= border-white/40 max-h-[500px] bg-gradient-to-b from-neutral-900/50 to-gray-900 h-full relative pt-6 md:pt-2 group overflow-hidden'>
                   {/* <p className='text-primary mix-blend-difference absolute right-6 md:right-10 tracking-wide top-4 opacity-50 '>{`0${index + 1}`}</p> */}
@@ -83,7 +84,7 @@ const ThePhilanthropist = () => {
                     titleCSS="line-clamp-2= min-h-[70px]  font-semibold"
                     descrCSS="h-full"
                     color="black"
-                    css="lg:min-w-[400px] justify-around "
+                    css="lg:min-w-[400px]= justify-around "
                   />
                   <div className={`translate-x-[100%] hidden lg:flex group-hover:translate-x-0 absolute inset-0 full z-[4] bg-black rounded-lg overflow-hidden ${allTransitions} !ease-in-out`}>
                     <img src="/default.jpg" className={`full object-cover opacity-80  `} alt="" />
@@ -130,13 +131,13 @@ const ThePhilanthropist = () => {
 
               <p className='flex text-xl'>No news available, please try again later.</p>
               :
-              <Link to={item.link} key={index} className=' flexV center relative overflow-hidden gap-10 lg:w-[20vw] lg:max-w-[200px] aspect-16/9 p-6 group'>
+              <button href={item.link} key={index} className=' flexV center relative overflow-hidden gap-10 lg:w-[20vw] lg:max-w-[200px] aspect-16/9 p-6 group'>
                 <img 
                   src={item.image} 
                   className="newsElement w-full scale-[.95] opacity-[.7] saturate-0 group-hover:opacity-100 group-hover:scale-100 group-hover:saturate-100 transition duration-700" 
                   alt={`ABS in ${item.title}`} 
                 />
-              </Link>
+              </button>
               }
             </>       
           ))}
