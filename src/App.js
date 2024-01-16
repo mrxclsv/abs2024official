@@ -6,6 +6,7 @@ import
   Navbar, Footer, NotFound,
   Home, SonOfSenegal, TheLeader, TheVisionary, ThePhilanthropist,
   Projects,
+  ABSFacts,
 }  
 from './utils/components';
 
@@ -73,14 +74,17 @@ function App() {
 
       <Routes>
 
-        <Route exact path="/"                     element={<Home /* navTrigger={navTrigger} */ />}  />:
+        <Route exact path="/"                     element={<Home /* navTrigger={navTrigger} */ />}  />
         <Route exact path="/son-of-senegal"       element={<SonOfSenegal />}  />
         <Route exact path="/the-leader"           element={<TheLeader />}  />
         <Route exact path="/the-philanthropist"   element={<ThePhilanthropist />}  />
         <Route exact path="/the-visionary"        element={<TheVisionary />}  />
+        <Route exact path="/100facts"             element={<ABSFacts />}  />
         <Route exact path="/projects"             element={<Projects />}  />
+
         <Route exact path="/*"                    element={<NotFound />}  />
-        
+
+
       </Routes>
 
       </main>

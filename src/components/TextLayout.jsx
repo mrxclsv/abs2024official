@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TextLayout = ({
-  layout, title, text, descr, image, css, hashtags, hasQuote,
+  layout, title, text, descr, image, css, hashtags, hasQuote, titleCSS, descrCSS,
   hasTitle, hasText, hasDescr, showLines, color
 }) => {
 
@@ -14,7 +14,7 @@ const TextLayout = ({
       ${css}
       `}>
 
-    {hasTitle && <h4 className='h4 tracking-[.3rem] !leading-[200%] text-left mb-4 relative uppercase'>{ title ||'Headline'}</h4>}
+    {hasTitle && <h4 className={`h4 tracking-[.3rem] !leading-[200%] ${titleCSS} text-left mb-4 relative uppercase`}>{ title ||'Headline'}</h4>}
 
     {hasText && 
       <h2 className='h3= lg:h2= text-left flexV relative leading-[130%] inline-flex='>
@@ -35,7 +35,7 @@ const TextLayout = ({
       </h2>
     }
 
-    {hasDescr && <h4 className='text-left mt-10 font-[400] leading-[230%] w-full'>
+    {hasDescr && <h4 className={`text-left mt-10 font-[400] leading-[230%] w-full ${descrCSS} `}>
                     {descr || "Add the corresponding description and keep it aesthetically correct" }
                 </h4>}
     {/* {hashtags !== "" && 

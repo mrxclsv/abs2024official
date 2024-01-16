@@ -21,7 +21,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
 
   return (
 
-    <header className={`fixed shadow-lg shadow-gray-400/5 top-0 sideZero w-screen z-[300] flex center 
+    <header className={`fixed shadow-lg shadow-gray-400/5 top-0 sideZero w-[100dvw] z-[300] flex center 
                         h-[75px] bg-white  `}>
 
       <div className='flex relative w-full max-w-7xl items-center justify-between'>
@@ -30,7 +30,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 
-        <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden md:flex  `}>
+        <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden md:flex lg:mr-36  `}>
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({isActive}) => isActive ? activeCSS : notActiveCSS }>
               <p className='whitespace-nowrap'>{item.name}</p>
@@ -38,13 +38,13 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
             </NavLink>
           ))}
 
-          <Link className={`${menu ? 'opacity-0 translate-x-[50px]' : 'translate-x-[0px] opacity-100'} transition-all duration-1000 bg-black text-white text-xs px-6 tracking-widest py-3 rounded-lg ml-10 whitespace-nowrap`}>Subscribe</Link>
+          <Link className={`${menu ? 'opacity-0 translate-x-[50px]' : 'translate-x-[0px] opacity-100'} transition-all duration-1000 bg-black text-white text-xs px-6 tracking-wide py-3 rounded-lg ml-10 whitespace-nowrap`}>Subscribe</Link>
         </div>
 
-        <p className=''>{/* {currentHour} */}</p>
+        {/* <p className=''>{currentHour}</p> */}
 
         <button id="menuBtn" onClick={toggleMenu} 
-                className={`menuBtn z-[300] h-full aspect-square flexV center absolute right-10 animate-slideright duration-700 ease-out 
+                className={`menuBtn z-[300] h-full bg-white rounded-full aspect-square flexV center absolute right-6 lg:right-10 animate-slideright duration-700 ease-out 
         ${menu && "bg-gray-100 rounded-full scale-75 "} `}>
           <div className={`line bg-black origin-center top bg-blue-500++ translate-y-[-6px] ${menu && 'rotate-45 translate-y-[2px]'} ${allTransitions} `} />
           <div className={`line bg-black origin-center bot translate-y-[2px] ${menu && ' -rotate-45 translate-y-[3.4px]== '} ${allTransitions}`} />
@@ -52,9 +52,9 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
 
       </div>
 
-
-      <div className={`flexV lg:flex-row absolute inset-0 screen items-end bg-white z-[299] gap-10 
-                      ${menu ? '' : 'opacity-80 overflow-hidden translate-x-[120%]'} ${allTransitions} duration-[.7s] `}>
+      {menu && <div className={`lg:hidden fixed inset-0 screen z-[298] bg-white opacity-0 duration-500 ${menu && 'opacity-100 duration-500' } `} />}
+      <div className={`flexV lg:flex-row absolute inset-0 screen max-h-[100dvh] =transition-transform duratuion-[300] max-w-[100dvw] items-end bg-white z-[299] gap-10 
+                      ${menu ? '' : 'opacity-90  overflow-hidden translate-x-[120%]'} ${allTransitions} duration-[.7s] `}>
 
         <div className='hidden =============lg:flex w-2/4 h-full opacity-0 overflow-hidden'>
           <div className={`w-full flex center
@@ -90,9 +90,9 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
           ))}
           </div>
 
-          <div className='w-full flex-col-reverse====lg:flex-row flex center md:absolute relative left-0 right-0 md:bottom-8 bottom-4 center'>
+          <div className='w-full flex-col-reverse====lg:flex-row flex center md:absolute relative left-0 right-0 md:bottom-8 bottom-4 px-10 center'>
 
-            <div className='flexV gap-6 ==flex-col-reverse lg:flex-row md:w-full justify-end items-end lg:justify-between px-8 py-6 mb-2 w-fit lg:gap-4'>
+            <div className='flexV gap-6 ==flex-col-reverse lg:flex-row md:w-full justify-end items-end lg:justify-between  py-6 mb-2 w-fit lg:gap-4'>
               <div className='socialNetworks flex gap-4 self-center w-fit !text-black '>
               {social?.map((item, index) => (
                 <button 
@@ -103,9 +103,9 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
                   <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center mx-auto rounded-full p-3 w-10 h-10 !aspect-square !text-[1.4em] z-[3] opacity-70 group-hover:opacity-100 ${allTransitions}`} />
                 </button>
                 ))}
-
               </div>
-              <Link className='bg-black text-white text-sm px-3 w-fit self-center py-4 rounded-lg relative '>Become a member today!</Link>
+
+              <Link className='bg-black text-white text-sm px-3 w-full lg:w-fit self-center py-4 rounded-lg relative '>Become a member today!</Link>
             </div>
           </div>
         </div>

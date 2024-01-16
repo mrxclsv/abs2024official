@@ -421,6 +421,16 @@ img {
   }
 }
 
+.newsElement {
+  animation: fade-in linear;
+  animation-timeline: view(100px)
+}
+@keyframes newsElement {
+  from {scale: .8; opacity:.4;}
+  to {scale:1; opacity: 1}
+
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

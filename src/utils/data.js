@@ -1,5 +1,5 @@
 // import { abssit, abssuit1, flagsenegal, abshero } from './components'
-
+import { directNews, senego, seneweb, sudQuotidien, sudquotidien2 } from './components'
 
 export const website = "abs2024.com"
 
@@ -251,6 +251,13 @@ export const ABSfacts = [
     fact:"Abdoulaye SYLLA est né à Diourbel et a des origines à Saint-Louis et Matam, ainsi qu’en Casamance.", 
     icon:""
   }
+]
+
+export const news = [
+  {title:"sud quotidien", image:sudquotidien2, link:"https://www.sudquotidien.sn/c50pn-club-50-de-preference-nationale-manifeste-du-fondateur-abdoulaye-sylla/" },
+  {title:"seneweb", image:seneweb, link:"" },
+  {title:"senego", image:senego, link:"" },
+  {title:"direct news", image:directNews, link:"" },
 ]
 
 export const journey = [
