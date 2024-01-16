@@ -36,7 +36,6 @@ export { default as ContactForm } from '../components/ContactForm'
 // IMAGES
 
 export { default as sudquotidien} from '../components/.images/press/sudQuotidienLogo.jpg'
-export { default as sudquotidien2} from '../components/.images/press/sudquotidien.jpg'
 export { default as directNews} from '../components/.images/press/directNews.jpg'
 export { default as senego} from '../components/.images/press/senego.png'
 export { default as seneweb} from '../components/.images/press/seneweb.png'

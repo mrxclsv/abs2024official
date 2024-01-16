@@ -4,7 +4,7 @@ import { SplitDiv } from '../../utils/components'
 import { project } from '../../utils/data'
 
 import { ABS100FACTS } from '../../utils/ABS100Facts'
-import { allTransitions } from '../../utils/style'
+// import { allTransitions } from '../../utils/style'
 
 
 

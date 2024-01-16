@@ -1,5 +1,4 @@
 // import { abssit, abssuit1, flagsenegal, abshero } from './components'
-import { directNews, senego, seneweb, sudQuotidien, sudquotidien2 } from './components'
 
 export const website = "abs2024.com"
 

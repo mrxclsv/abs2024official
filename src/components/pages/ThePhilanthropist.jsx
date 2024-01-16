@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { ContactForm, Hero, SplitDiv, TextLayout, daara2, leket2, water } from '../../utils/components'
 import { journey, news, project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
