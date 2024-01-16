@@ -104,22 +104,22 @@ const ThePhilanthropist = () => {
           </div>
         </div>
         
-        <div className="inThePress flexV relative max-w-7xl w-full" id="Press">
+        <div className="inThePress flex center relative max-w-7xl h-[60vh] max-h-[1000px] w-full" id="Press">
         <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
                 hasTitle={true} hasText={true}  hasDescr={false}
                 layout={1} 
                 showLines={true}
                 text="ABS in the Press"
                 descr=""
-                mainCSS="w-full px-0 pt-0"
-                blockCSS="!p-0= w-full self-start"
+                mainCSS="w-full px-0 pt-0 h-fit"
+                blockCSS="!p-0 w-fit self-start"
                 image={water}
                 wrapperCSS="hidden"
                 css="mt-0 mx-auto w-full "
                 imageCSS="hidden"
                 hasLink={false}
               />
-          <div className='grid grid-cols-2 lg:grid-cols-4 center w-full justify-between py-10'>
+          <div className='grid grid-cols-2 lg:grid-cols-2 gap-10 center w-full justify-between py-10'>
 
             {/* <p>There {news.length > 1 ? 'are' : 'is'} {news.length} {news.length > 1 ? 'articles' : 'article'} about ABS in the news</p> */}
             {/* NOTIF MARK */}
@@ -131,7 +131,7 @@ const ThePhilanthropist = () => {
 
               <p className='flex text-xl'>No news available, please try again later.</p>
               :
-              <div /* {item.link} */ key={index} className=' flexV center relative overflow-hidden gap-10 lg:w-[20vw] lg:max-w-[200px] aspect-16/9 p-6 group cursor-context-menu'>
+              <div /* {item.link} */ key={index} className=' flexV center relative overflow-hidden lg:w-[20vw]= lg:max-w-[200px]= aspect-16/9 p-6 group cursor-context-menu'>
                 <img 
                   src={`/press/${item.image}`} 
                   className="newsElement w-full scale-[.95] opacity-[.7] saturate-0 group-hover:opacity-100 group-hover:scale-100 group-hover:saturate-100 transition duration-700" 
