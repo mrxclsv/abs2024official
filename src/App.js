@@ -62,14 +62,14 @@ function App() {
 
   return (
 
-    <div className="APP flexV h-screen= relative overflow-x-hidden overflow-y-auto== ==scrollbar-hide scroll-smooth">
+    <div className="APP flexV  relative overflow-x-hidden overflow-y-auto== ==scrollbar-hide scroll-smooth">
 
-      <Navbar nawW={navW} menu={menu} setMenu={setMenu} 
+      {/* <Navbar nawW={navW} menu={menu} setMenu={setMenu} 
               toggleNav={toggleNav} toggleMenu={toggleMenu} 
-          />
+          /> */}
       
 
-      <main className='flex w-[100dvw] overflow-x-hidden items-center justify-start relative scrollbar-hide scroll-smooth'>
+      <main className='flex w-[100dvw] min-h-[100dvh] overflow-x-hidden items-center justify-start relative scrollbar-hide scroll-smooth'>
 
       <Routes>
 

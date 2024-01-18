@@ -323,28 +323,36 @@ export const lawwd = {
 
 export const contributions = [
   { title: "jobs",  
+    before: "",
     value:1800, 
     added:"", 
     link:"#" ,
-    position:"left-[5%] top-[47%]"
+    position:"left-[5%] top-[47%]",
+    duration: 4
   },
   { title: "industries",  
+    before: "+",
     value:10, 
     added:"", 
     link:"#" ,
-    position:"left-[60%] top-[50%]"
+    position:"left-[60%] top-[50%]",
+    duration: 4
   },
   { title: "annual donations (CFA)",  
-    value:2000000000, 
+    before: "+",
+    value:7000000000, 
     added:"cfa", 
     link:"#" ,
-    position:"left-[20%] top-[75%]"
+    position:"left-[20%] top-[75%]",
+    duration: 7
   },
   { title: "partners",  
-    value:326, 
+    before: "",
+    value:103, 
     added:"", 
     link:"#" ,
-    position:"left-[30%] top-[25%]"
+    position:"left-[30%] top-[25%]",
+    duration: 4
   },
 
 ]
