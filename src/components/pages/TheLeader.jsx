@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom"
-import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, ContactForm, } from '../../utils/components'
+import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, ContactForm, AndTheCommunity, } from '../../utils/components'
 import { project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
 
@@ -12,15 +12,15 @@ const TheLeader = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   },[location])
 
   return (
     <div className='min-h-screen w-screen relative flexV start bg-white text-black'>
 
       <div className='hero w-screen h-[120vh] min-h-[400px] flex center relative bg-gray-100 z-[0] '>
-        <div className='full flex center overflow-hidden relative bg-white text-white'>
-          <img className='screen object-cover object-top origin-top opacity-100 fixed hover:scale-110' src={absleader} alt="xam sa bopp" />
+        <div className='full flex min-w-[100dvw] center overflow-hidden relative bg-white text-white'>
+          <img className='min-w-[100dvw] min-h-[100dvh] top-16 h-full object-cover object-top== origin-top== opacity-100 fixed hover:scale-110' src={absleader} alt="xam sa bopp" />
         </div>
         <div className='absolute absoluteAll flex center left-0 right-0 px-4 -translate-y-20=  '>
         <h1 className='h1 leading-[100%] font-normal text-left text-[100px] uppercase md:absolute md:left-20 md:my-auto text-white lg:text-blakk'>Xam <br /> sa <br /> bopp</h1>
@@ -34,7 +34,7 @@ const TheLeader = () => {
           <h3 className='max-w-xl leading-[200%]'>Abdoulaye SYLLA: Building a Better Future Through Local and Global Talent.</h3>
         </div>
 
-        <div id="Slides" className='flexV center overflow-hidden bg-gray-100 z-[1] w-full'>
+        <div id="Slides" className='flexV center overflow-hidden bg-white z-[1] w-full'>
 
           <div className='TheWorkforce relative'>
             <SplitDiv title="Yoon Wi" color="black" link="/" 
@@ -121,23 +121,7 @@ const TheLeader = () => {
           <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
 
             <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-7xl'>
-
-              <SplitDiv title="The philanthropist" color="black" link="/the-philanthropist"
-                hasTitle={true} hasText={true}  hasDescr={true}
-                showLines={true}
-                mainCSS="lg:w-full"
-                css="w-full pr-0"
-                blockCSS="!h-fit w-full min-w-full lg:pr-0"
-                layout={1} 
-                text='& the community' 
-                descr="Abdoulaye’s vision extends far beyond the economic realm; it encompasses a holistic approach to societal well-being. His commitment to social equity, environmental sustainability, and overall quality of life for his fellow Senegalese showcases the depth of his vision. ABS is not just a leader driven by numbers and statistics; he is a champion of comprehensive progress."
-                wrapperCSS='h-fit w-1/2== hidden=' 
-                imageCSS='hidden'
-                image={abswhite}
-                hasLink
-              />
-              <Socials css="" />
-
+              <AndTheCommunity />
             </div>
             
           </div>

@@ -10,7 +10,7 @@ const Socials = ({css, overrideCSS, simplified}) => {
   };
 
   return (
-    <div className={`grid grid-cols-3 text-white center ${simplified && ` ${overrideCSS}`} w-full h-fit p-10 gap-10 lg:gap-0 bg-blakk full z-[1]  center ${css} `}>
+    <div className={`grid grid-cols-3 text-white center ${simplified && ` ${overrideCSS}`} w-full h-fit p-10 gap-10 lg:gap-0 bg-blakk full z-[1]   center ${css} `}>
 
         {social?.map((item, index) => (
           <button key={item.icon} onClick={() => openInNewTab(`https://${item.link}${item.icon}`)}  
