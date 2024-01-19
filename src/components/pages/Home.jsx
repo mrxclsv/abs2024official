@@ -20,7 +20,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0,0)
+    window.scroll(0,0)
   }, [location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -40,6 +40,7 @@ const Home = () => {
 
   const [counterOn, setCounterOn] = useState(false)
   const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     console.log("component is loading" + loading, loading)
     if (loading)
@@ -47,19 +48,16 @@ const Home = () => {
     console.log("component is done loading", loading)
   }, [loading])
 
-  // const handleCounter = useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setCounterOn(false)
-  //       console.log('Counter is desactivated')
-  //     }, 5000)
+  const handleCounter = useEffect(() => {
+      // const timer = setTimeout(() => {
 
-  //     setTimeout(() => {
-  //       setCounterOn(true)
-  //       console.log('Counter is activated again')
-  //     }, 3000)
+      setTimeout(() => {
+        setCounterOn(true)
+        // console.log('Counter is activated again')
+      }, 3000)
 
-  //   return () => {clearTimeout(timer)}
-  // }, [])
+    return () => {clearTimeout()}
+  }, [])
 
 
   const hashtagsArray = ['abs2024', 'c50pn', 'fifty50leu']
@@ -93,13 +91,13 @@ const Home = () => {
           layout={1}
           showLines={true}
           wrapperCSS='overflow-x-visible scrollbar-hide'
-          mainCSS="bg-gradient-to-b from-blakk to-neutral-900"
           imageCSS='lg:mt-6'
-          image={abssuit3}
-          hasShadow={true}
           coordinates={`!bg-black mx-auto left-0 right-0 !bottom-0 scale-[120%] bg-black`}
-        // image={abssuit3}
+          hasShadow={true}
+          image={abssuit3}
+          mainCSS="bg-gradient-to-b from-blakk to-neutral-900"
         />
+
         <SplitDiv title="The Visionary" color="white" link="/the-visionary"
           hasQuote={true}
           hasTitle={true} hasText={true} hasDescr={true}
@@ -148,7 +146,7 @@ const Home = () => {
           descr="What further distinguishes ABS is his unique blend of diligence and visionary thinking. He has founded numerous initiatives and companies, each meticulously designed to confront the socio-economic obstacles that have historically hindered Senegal’s progress. These initiatives serve as pathways, embodying ABS’s conviction that economic growth and social advancement are intertwined.
           "
           imageCSS={`saturate-0 transition-colors !object-contain duration-400 transition-transform duration-1000 mix-blend-multiply h-full group-hover:saturate-100  ${allTransitions}`}
-          image={mapafrica} wrapperCSS="md:object-right center !object-contain object-center h-fit  pr-3 md:pr-0 md:scale-80 mb-20"
+          image={mapafrica} wrapperCSS="md:object-right center !object-contain object-center h-fit md:pr-0 md:scale-80 pb-20 px-4"
         />
 
         <div className='TheBusinessMan relative'>
@@ -172,7 +170,7 @@ const Home = () => {
         </div>
 
         <div className='contributions bg-gradient-to-t from-gray-200 -to-transparent flexV w-full center bg-gray-100 relative'>
-          <div className='flexV lg:flex-row w-full center relative pb-4 md:pb-0'>
+          <div className='flexV flex-col-reverse lg:flex-row w-full center relative pb-4 md:pb-0'>
 
             <div className='image flex full min-h-[40vh] h-fit relative w-full'>
               {contributions?.map((item, index) => (
@@ -236,6 +234,7 @@ const Home = () => {
                 hasAdded={item.hasAdded}
                 duration={item.duration}
                 added={item.added}
+                before={item.before}
                 counterOn={counterOn}
                 setCounterOn={setCounterOn}
               />
@@ -252,8 +251,8 @@ const Home = () => {
               hasTitle={true} hasText={true} hasDescr={true}
               showLines={true}
               mainCSS="center w-fit relative"
-              css="w-full lg:px-0 lg:mx-0 h-fit center"
-              blockCSS="self-center center !lg:px-0 !lg:mx-0"
+              css="w-full lg:px-0 lg:mx-0 !h-full !start"
+              blockCSS="self-center center !lg:px-0 !lg:mx-0 "
               layout={1}
               text='ABS2024'
               descr="Join us in supporting the ABS2024 campaign. Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."

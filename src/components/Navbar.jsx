@@ -68,7 +68,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
                 onClick={() => setMenu(false)}
                 className={({ isActive }) => isActive ? headerActiveCSS : headerNotActiveCSS}
               >
-                <h1 className={`h2 md:h1 text-gray-700 text-right self-start w-full whitespace-nowrap h-20 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h1>
+                <h2 className={`h3 md:h2 text-gray-700 text-right self-start w-full whitespace-nowrap h-20 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h2>
 
                 <div className={`w-fit -translate-y-2 h-full flex center text-center text-gray-400 object-center opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
                   <p className={`hidden lg:flex text-right lg:whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} font-normal duration-[.5s]`}>{item.descr}</p>
@@ -92,7 +92,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
                 ))}
               </div>
 
-              <Link className='bg-black text-white text-sm px-3 w-full lg:w-fit self-center py-4 rounded-lg relative '>Become a member today!</Link>
+              <Link className='bg-black text-white text-sm px-3 w-full lg:w-fit self-center py-4 rounded-lg relative'>Become a member today!</Link>
             </div>
           </div>
         </div>

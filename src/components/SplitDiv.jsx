@@ -26,8 +26,8 @@ const SplitDiv = ({
                     ${css}
                     `}>
 
-        <Link to={link} className={`left w-full lg:w-1/2 relative flexV p-6 pb-0 ${blockCSS} h-fit sticky  items-center justify-center  group`}>
-          <div className={`relative flexV overflow-y-scroll h-full !w-full= lg:min-w-[400px] ${layout === 2 && "!self-start"} lg:self-end `}>
+        <Link to={link} className={`left w-full lg:w-1/2 relative flexV p-6 pb-0 ${blockCSS} h-fit sticky=  items-center justify-center  group`}>
+          <div className={`relative flexV overflow-y-scroll h-full= !w-full= lg:min-w-[400px] ${layout === 2 && "!self-start"} lg:self-end `}>
             <TextLayout
               title={title}
               text={text}
@@ -58,14 +58,14 @@ const SplitDiv = ({
           </div>
         </Link>
 
-        <div className={`imageWrapper lg:w-full h-full items-end justify-end =lg:w-1/2 ${wrapperCSS} lg:max-h-[95svh] !overflow-x-hidden my-0 py-0 flex-grow-0 relative`}>
+        <div className={`imageWrapper h-full items-end justify-end lg:w-1/2 ${wrapperCSS} lg:max-h-[95svh] !overflow-x-hidden my-0 py-0 flex-grow-0 relative`}>
 
           <div id='blurredSHADOW' className={`w-56 aspect-square blur-xl scale-[130%] lg:scale-[200%] translate-y-[100px] lg:opacity-80 z-[1] rounded-full absolute ${coordinates} ${!hasShadow && "hidden"}`} />
 
           <img  src={image || '/default.jpg'}
                 alt={short || "this content"}
                 loading='lazy'
-                className={`group-hover:lg:translate-x-0 lg:translate-x-4 relative lg:w-full lg:h-full z-[2] !object-contain object-top 
+                className={`group-hover:lg:translate-x-0 lg:translate-x-4 relative lg:w-full lg:h-full z-[2] =!object-contain !object-cover object-top 
                 ${imageCSS} ${allTransitions} !duration-[2s]
             `}/>
 

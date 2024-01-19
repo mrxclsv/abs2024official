@@ -49,7 +49,7 @@ const Footer = () => {
                       ">
 
         <div className='section1 w-full md:w-1/2 flexV start relative pl-2 lg:pl-10 h-fit mt-[6rem] ml-2'>
-          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-10 -top-[60%] sm:-top-[35%] md:-top-[50%]'>
+          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-10 -top-[65%] sm:-top-[35%] md:-top-[70%]'>
             <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" />
           </Link>
 

@@ -144,7 +144,6 @@ export const movementSlides = [
 export const contactInfo = [
   { title:"email",  contact:"media@abs2024.com",  action:"mailto:contact@abs2024.com"},
   { title:"phone",  contact:"33 860 38 90",  action:"tel:+221338603890"},
-  { title:"hours",  contact:"Mon-Fri 9:00AM - 5:00PM",  action:"#"},
   { title:"address",  contact:"7e étage, Immebule BICIS, Rond Point Stele Mermoz, 10200, Dakar",  action:"#"},
 ]
 
@@ -344,7 +343,7 @@ export const contributions = [
     added:"cfa", 
     link:"#" ,
     position:"left-[25%] top-[70%]",
-    duration: 7
+    duration: 5
   },
   { title: "partners",  
     before: "",

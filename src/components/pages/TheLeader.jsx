@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLocation } from "react-router-dom"
-import { SplitDiv, TextLayout, abswhite, Socials, workforce, absstand, absleader, ContactForm, AndTheCommunity, } from '../../utils/components'
+import { SplitDiv, TextLayout, workforce, absstand, absleader, ContactForm, AndTheCommunity, } from '../../utils/components'
 import { project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
 
@@ -12,7 +12,7 @@ const TheLeader = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0,0)
+    window.scroll(0,0)
   },[location])
 
   return (
@@ -20,7 +20,7 @@ const TheLeader = () => {
 
       <div className='hero w-screen h-[120vh] min-h-[400px] flex center relative bg-gray-100 z-[0] '>
         <div className='full flex min-w-[100dvw] center overflow-hidden relative bg-white text-white'>
-          <img className='min-w-[100dvw] min-h-[100dvh] top-16 h-full object-cover object-top== origin-top== opacity-100 fixed hover:scale-110' src={absleader} alt="xam sa bopp" />
+          <img className='min-w-[100dvw] min-h-[100dvh] top-16 h-full object-cover opacity-100 fixed hover:scale-110 duration-[4s]' src={absleader} alt="xam sa bopp" />
         </div>
         <div className='absolute absoluteAll flex center left-0 right-0 px-4 -translate-y-20=  '>
         <h1 className='h1 leading-[100%] font-normal text-left text-[100px] uppercase md:absolute md:left-20 md:my-auto text-white lg:text-blakk'>Xam <br /> sa <br /> bopp</h1>
@@ -34,20 +34,20 @@ const TheLeader = () => {
           <h3 className='max-w-xl leading-[200%]'>Abdoulaye SYLLA: Building a Better Future Through Local and Global Talent.</h3>
         </div>
 
-        <div id="Slides" className='flexV center overflow-hidden bg-white z-[1] w-full'>
+        <div id="Slides" className='flexV center overflow-hidden bg-white z-[1] w-sceen'>
 
           <div className='TheWorkforce relative'>
             <SplitDiv title="Yoon Wi" color="black" link="/" 
               hasTitle={true} hasText={true}  hasDescr={true}
               showLines={true}
               layout={1} 
-              mainCSS="w-screen"
-              css='group bg-blakk relative w-screen= flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
+              mainCSS="w-[100vw]"
+              css='group bg-blakk relative w-screen flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
               blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full "
               hasLink
               text='Empowering the Senegalese Workforce by building local talents' 
               image={workforce} 
-              imageCSS={`object-contain h-full md:h-full md:w-screen object-top lg:hover:object-center w-full md:origin-top lg:object-top md:pr-0 duration-4000 group-hover:scale-[100%] scale-[100%] `}
+              imageCSS={`object-cover h-full md:h-full md:w-screen object-top lg:hover:object-center w-full md:origin-top lg:object-top md:pr-0 duration-4000 group-hover:scale-[100%] scale-[100%] `}
               wrapperCSS={`full !h-[85vh] lg:min-h-[800px] lg:w-screen md:mx-0 lg:mr-0 lg:pr-0 lg:w-[100vw] overflow-visible lg:overflow-hidden `} 
               descr="
               
