@@ -42,12 +42,10 @@ const Home = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     console.log("component is loading" + loading, loading)
-    if(loading)
-    setLoading(false)
+    if (loading)
+      setLoading(false)
     console.log("component is done loading", loading)
-
-
-  }, [])
+  }, [loading])
 
   // const handleCounter = useEffect(() => {
   //     const timer = setTimeout(() => {
@@ -99,7 +97,7 @@ const Home = () => {
           imageCSS='lg:mt-6'
           image={abssuit3}
           hasShadow={true}
-          coordinates={`!bg-black mx-auto left-0 right-0 !bottom-0 scale-[120%] bg-black`} 
+          coordinates={`!bg-black mx-auto left-0 right-0 !bottom-0 scale-[120%] bg-black`}
         // image={abssuit3}
         />
         <SplitDiv title="The Visionary" color="white" link="/the-visionary"
@@ -159,14 +157,14 @@ const Home = () => {
             hasTitle={true} hasText={true} hasDescr={true}
             showLines={true}
             layout={1}
-            mainCSS="w-screen"
+            mainCSS="w-[100dvw]"
             css='group bg-gradient-to-t from-gray-600 to-gray-900 =====lg:from-gray-800 ====lg:to-gray-400 relative w-screen= flex justify-end items-start md:pr-0 lg:h-[85vh] lg:min-h-[800px] overflow-hidden   '
-            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full 3xl:ml-[15vw] "
+            blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0  lg:justify-center lg:full =3xl:ml-[15vw] "
             hasLink
             text='A different approach to entrepreneurship'
             image={abssit2}
             imageCSS={`object-contain h-full pt-3 md:h-full md:w-screen object-top w-full md:origin-top-right hover:scale-90 group-hover:scale-[100%] md:pl-10= group-hover:pl-0== group-hover:brightness-[.9] lg:object-top lg:mt-2 md:pr-0 lg:px-10= translate-y-[.4rem] bg-gradient-to-t= from-black/80= to-transparent duration-2000`}
-            wrapperCSS={`full !h-[85vh] lg:min-h-[800px] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-visible lg:overflow-hidden  `}
+            wrapperCSS={`full !h-[85vh]= lg:min-h-[800px] lg:w-screen md:mx-0 lg:mr-0 md:pr-4= lg:pr-0 md:opacity-80=== lg:opacity-20=== lg:w-[100vw] overflow-visible lg:overflow-hidden  `}
             descr="
             Abdoulaye SYLLA is not your typical business man. He is a visionary business leader with a potent plan to tackle Senegal’s most pressing challenges. His leadership is distinguished by his 20 years of dedication to his nation. His vision is not a mere abstraction but a clear and purposeful plan for national development. All his endeavors are infused with a purpose that transcends profit margins, seeking to address issues ranging from education and healthcare to sustainable agriculture, infrastructure, and economic empowerment.
             "
@@ -247,50 +245,65 @@ const Home = () => {
 
         <AndTheCommunity />
 
-        <div className='JoinTheMovement w-full lg:h-[50vh] min-h-[600px] lg:max-h-[900px] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
-          <div className="flexV center w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
+        <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
+          <div className="flex flex-col lg:flex-row center w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
               hasQuote={false}
               hasTitle={true} hasText={true} hasDescr={true}
               showLines={true}
-              mainCSS="center"
-              css="w-screen h-fit center"
-              blockCSS="self-center center"
+              mainCSS="center w-fit relative"
+              css="w-full lg:px-0 lg:mx-0 h-fit center"
+              blockCSS="self-center center !lg:px-0 !lg:mx-0"
               layout={1}
               text='ABS2024'
-              descr="Join us in supporting the ABS2024 campaign Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
+              descr="Join us in supporting the ABS2024 campaign. Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
               hashtags={hashtagsArray}
-              wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0 w-full md:max-w-4xl h-fit md:w-full !overflow-hidden '
+              wrapperCSS='hidden '
               imageCSS='hidden'
               image={abswhite}
               hasLink action="Become a member"
             />
 
-            <div className='slides w-full lg:w-[50%] text-black h-full lg:min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
-              <div className='border flexV justify-between px-6 py-4 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
-                {movementSlides.slice(1).map((item, index) => (
-                  <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative '>
-                    <div className='flexV start w-full h-full'>
-                      <h4 className='title_small uppercase'>{item.small}</h4>
-                      <p className='text-2xl'>{item.title}</p>
-                      <h5 className='mt-4'>{item.descr}</h5>
-                    </div>
-                    <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-full lg:w-fit text-sm mt-8'>{item.action}</Link>
-                  </div>
-                ))}
-              </div>
-              {/* <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
-                  <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-                  <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-                </div> */}
-            </div>
+            <ContactForm simplified />
+
+            {/* <TextLayout
+                  title="Title"
+                  text="Text"
+                  descr="Hello"
+                  hasTitle={true}
+                  hasText={true}
+                  hasDescr={true}
+                  showLines={true}
+                  color='white'
+                  css={` ${title !== "black" | "white" && "!border-gray-400/40"}`}
+                  hashtags={true}
+                  hasQuote={false}
+                /> */}
+
 
           </div>
 
         </div>
-
-        <ContactForm />
-
+        {/* 
+        <div className='hidden ===slides w-full lg:w-[50%] text-black h-full lg:min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
+          <div className='border flexV justify-between px-6 py-4 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
+            {movementSlides.slice(1).map((item, index) => (
+              <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative '>
+                <div className='flexV start w-full h-full'>
+                  <h4 className='title_small uppercase'>{item.small}</h4>
+                  <p className='text-2xl'>{item.title}</p>
+                  <h5 className='mt-4'>{item.descr}</h5>
+                </div>
+                <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-full lg:w-fit text-sm mt-8'>{item.action}</Link>
+              </div>
+            ))}
+          </div>
+          <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
+              <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+              <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
+            </div>
+        </div>
+ */}
       </div>
 
 

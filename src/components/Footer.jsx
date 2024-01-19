@@ -1,17 +1,22 @@
 import React /* , { useRef } */ from 'react';
 import { Link, /* useLocation */ } from 'react-router-dom'
-import { contactInfo } from '../utils/data'
+import { contactInfo, social } from '../utils/data'
 // import { allTransitions } from '../utils/style'
 
 import { Contact, Button } from "../utils/components"
 
 import abslogoblack from '../components/.branding/abslogo_black.svg'
+import { allTransitions } from '../utils/style';
 
 // import emailjs from '@emailjs/browser';
 
 
 
 const Footer = () => {
+
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   // const form = useRef();
 
@@ -25,13 +30,13 @@ const Footer = () => {
   //       console.log(error.text);
   //   });
   // }
-  
+
   // const notActiveCSS = 'flexV center text-xs text-neutral-700 hover:text-black cursor-pointer w-full h-full rounded-lg capitalize px-6 relative z-[2] duration-500'
   // const activeCSS = `${notActiveCSS} text-black z-[2] md:text-black ${allTransitions} ` 
 
   // const location = useLocation()
   // var pageTitle = String(location.pathname).substring(6)/* .replace(/\/$/, ''); */ 
-  
+
 
   return (
 
@@ -48,7 +53,7 @@ const Footer = () => {
             <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" />
           </Link>
 
-          <div className="md:flexV grid grid-cols-2 sm:grid-cols-1 start gap-0 pr-4 md:gap-1 w-full" id="contacts">
+          <div className="md:flexV grid grid-cols-2 sm:grid-cols-1 start gap-2 pr-4 md:gap-1 w-full" id="contacts">
             {contactInfo?.map((item, index) => (
               <Contact
                 key={index}
@@ -66,10 +71,12 @@ const Footer = () => {
             Sign up to receive ABS 2024 news and updates.
             <form action="type" className='flex items-start justify-center h-full w-full bg-white start border mt-4'>
               <input type="text" className='flex center my-auto bg-none bg-transparent border-none px-4 outline-none rounded-lg focus:outline-none full lg:w-full grow' placeholder='Enter your email' />
-              <Button
-                label="Subscribe"
-                type="primary" 
-              />
+              <button className='' type='submit'>
+                <Button
+                  label="Subscribe"
+                  type="primary"
+                />
+              </button>
             </form>
 
           </div>
@@ -77,7 +84,21 @@ const Footer = () => {
 
       </div>
 
-      <p className='absolute== bottom-0 left-0 right-0 border-y-2 mx-auto md:opacity-70 p-6 md:hover:opacity-100 text-sm mt-10 text-blakk'>© Copyright 2024, ABS2024 #YoonWi</p>
+      <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full max-w-7xl mt-6 lg:pb-4 pb-16'>
+        <p className='whitespace-nowrap lg:w-1/2 w-full relative text-center lg:text-left lg:pl-10 fit mx-auto md:opacity-70 p-6 md:hover:opacity-100 text-sm  text-blakk'>© Copyright 2024, ABS2024 #YoonWi</p>
+        <div className='socialNetworks lg:w-1/2 w-full lg:start center lg:pl-10 relative flex gap-2 self-center !text-black '>
+                {social?.map((item, index) => (
+                  <button
+                    key={item.icon} 
+                    onClick={() => openInNewTab(`https://${item.link}${item.icon}`)}
+                    className={`group gap-2 min-h-[40px] aspect-square center overflow-hidden rounded-full hover:bg-gray-100/80
+                  `}>
+                    <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center mx-auto rounded-full p-3 w-10 h-10 !aspect-square !text-[1.4em] z-[3] opacity-70 group-hover:opacity-100 ${allTransitions}`} />
+                  </button>
+                ))}
+        </div>
+      </div>
+
 
 
     </footer>

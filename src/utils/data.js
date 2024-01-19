@@ -327,7 +327,7 @@ export const contributions = [
     value:1800, 
     added:"", 
     link:"#" ,
-    position:"left-[5%] top-[47%]",
+    position:"left-[15%] top-[45%]",
     duration: 4
   },
   { title: "industries",  
@@ -343,7 +343,7 @@ export const contributions = [
     value:7000000000, 
     added:"cfa", 
     link:"#" ,
-    position:"left-[20%] top-[75%]",
+    position:"left-[25%] top-[70%]",
     duration: 7
   },
   { title: "partners",  
