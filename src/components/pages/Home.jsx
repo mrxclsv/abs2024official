@@ -20,7 +20,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    window.scroll(0, 0)
   }, [location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -49,14 +49,11 @@ const Home = () => {
   }, [loading])
 
   const handleCounter = useEffect(() => {
-      // const timer = setTimeout(() => {
+    setTimeout(() => {
+      setCounterOn(true)
+    }, 3000)
 
-      setTimeout(() => {
-        setCounterOn(true)
-        // console.log('Counter is activated again')
-      }, 3000)
-
-    return () => {clearTimeout()}
+    return () => { clearTimeout() }
   }, [])
 
 
@@ -283,26 +280,7 @@ const Home = () => {
           </div>
 
         </div>
-        {/* 
-        <div className='hidden ===slides w-full lg:w-[50%] text-black h-full lg:min-h-[600px] lg:h-fit z-[2] lg:absolute right-0 flexV gap-2 center top-0 bottom-0 my-auto px-10 relative'>
-          <div className='border flexV justify-between px-6 py-4 bg-gray-100 w-full h-full min-h-[400px]= rounded-lg start relative '>
-            {movementSlides.slice(1).map((item, index) => (
-              <div key={index} className='flexV start justify-between h-full text-left mb-2 w-full group relative '>
-                <div className='flexV start w-full h-full'>
-                  <h4 className='title_small uppercase'>{item.small}</h4>
-                  <p className='text-2xl'>{item.title}</p>
-                  <h5 className='mt-4'>{item.descr}</h5>
-                </div>
-                <Link to="/" className='bg-black leading-8 tracking-widest uppercase  transition-colors duration-700 group-hover:bg-primary group-hover:text-black text-white py-3 px-10 rounded-lg text-center w-full lg:w-fit text-sm mt-8'>{item.action}</Link>
-              </div>
-            ))}
-          </div>
-          <div className='flex w-fit self-center gap-2 p-6 absolute bottom-0 translate-y-[60px]'>
-              <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === b ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-              <button onClick={() => setSlide(slide)} className={`w-3 h-3 opacity-100 ${slide === a  ? "opacity-10" : "opacity-100 w-6"} transition-all duration-500 ease-in-out bg-black rounded-full `} />
-            </div>
-        </div>
- */}
+        
       </div>
 
 
