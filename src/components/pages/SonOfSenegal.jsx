@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { AndTheCommunity, Slide, SplitDiv, TextLayout, absyellowfit, jumeaux, senegalHero } from '../../utils/components'
 import { project } from '../../utils/data'
+import ScrollTrigger from 'react-scroll-trigger'
 
 const SonOfSenegal = () => {
 
@@ -11,42 +12,50 @@ const SonOfSenegal = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
-  },[location])
-  
+    // window.scroll(0,0)
+  }, [location])
+
+  const [activateFrame, setActivateFrame] = useState(false)
+  console.log(activateFrame)
+  // function handleActivate() {
+  //   if(setActiv)
+  // }
+
 
   return (
-    <div className='min-h-screen w-screen flexV bg-white text-black pt-[75px]'>
+    <div className='min-h-screen h-full relative w-screen flexV bg-white text-black pt-[75px]'>
 
-      <div className='hero w-full lg:hidden= h-[50vh] min-h-[400px] center relative bg-gray-100'>
+      {/* <div className='hero w-full lg:hidden= h-[50vh] min-h-[400px] center relative bg-gray-100'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
           <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
         </div>
         <div className='absolute absoluteAll flex center  '>
         <h1 className='h1 text-white drop-shadow-lg'>Senegal's beloved son</h1>
         </div>
-      </div>
+      </div> */}
 
-      <div className='contentWrapper= flexV relative center mx-auto'>
+      <div className='contentWrapper= flexV relative h-full center mx-auto bg-white'>
 
         <div className='flex-col !lg:flex-row w-screen lg:h-[250vh]==== md:h-[100vh]== bg-gradient-to-t from-gray-200 to-white relative overflow-hidden'>
           <SplitDiv title="The Son of Senegal" color="white" link="/"
             hasQuote={false}
-            hasTitle={true} hasText={true}  hasDescr={false}
+            hasTitle={true} hasText={true} hasDescr={false}
             showLines={true}
             mainCSS='bg-gradient-to-t from-gray-200 to-white'
             css="w-screen lg:max-w-7xl h-full"
-            layout={1} 
+            layout={1}
             text='Fétë fétë biiy xaalë yoonu sopi, Yoonu koom.'
             descr=""
-            wrapperCSS='h-full lg:min-h-[900px] md:min-h-[600px] w-screen px-0  w-full md:max-w-4xl h-fit md:w-full !overflow-hidden ' 
-            image={absyellowfit} 
-            imageCSS='object-top=== w-full h-full object-contain lg:object-cover origin-bottom md:origin-top  md:object-contain scale-[105%= pt-4 md:translate-y-20'
+            wrapperCSS='h-full max-h-[80vh] h-fit '
+            image={absyellowfit}
+            imageCSS='pt-4 !h-full object-bottom origin-bottom object-contain '
             hasLink
           />
-            {/* <img className='hidden lg:flex absolute z-[0] max-w-[900px] origin-top object-bottom lg:right-0 translate-x-1/4 lg:scale-[60%] right-[15vw]  top-20 h-full mx-auto my-auto object-contain' src={flagsenegal2} alt="senegal" />  */}
-          
-            {/* <img className='lg:absolute right-0 md:right-[20%] m-auto top-[30%] min-w-[300px] max-w-full lg:scale-[150%] origin-bottom  object-top scale-[120%] z-[1] left-0== top-20===== h-[80vh]== object-contain w-[400px]' src={absyellowfit} alt="senegal" /> */}
+          {/* lg:min-h-[900px] md:min-h-[600px] w-screen px-0 justify-end items-end w-full md:max-w-4xl h-full md:w-full !overflow-hidden */}
+
+          {/* <img className='hidden lg:flex absolute z-[0] max-w-[900px] origin-top object-bottom lg:right-0 translate-x-1/4 lg:scale-[60%] right-[15vw]  top-20 h-full mx-auto my-auto object-contain' src={flagsenegal2} alt="senegal" />  */}
+
+          {/* <img className='lg:absolute right-0 md:right-[20%] m-auto top-[30%] min-w-[300px] max-w-full lg:scale-[150%] origin-bottom  object-top scale-[120%] z-[1] left-0== top-20===== h-[80vh]== object-contain w-[400px]' src={absyellowfit} alt="senegal" /> */}
         </div>
 
         <div className='splitText bg-white flexV md:flex-row px-4 lg:px-8 max-w-7xl py-10'>
@@ -73,17 +82,23 @@ const SonOfSenegal = () => {
 
         <div className='hashtags bg-gray-100 flexV center relative w-full '>
           <div className='grid grid-cols-2 lg:grid-cols-4 justify-evenly items-center mx-auto max-w-7xl lg:w-full py-6' >
-            <button onClick={() => {}} className='hashtag self-start md:self-center lg:w-full'>#ABS2024</button>
-            <button onClick={() => {}} className='hashtag self-end md:self-center lg:w-full'>#LeguiFiftyFiftyLeu</button>
-            <button onClick={() => {}} className='hashtag self-start md:self-center lg:w-full'>#YoonWi</button>
-            <button onClick={() => {}} className='hashtag self-end md:self-center lg:w-full'>#BoromTerangaYi</button>
+            <button onClick={() => { }} className='hashtag self-start md:self-center lg:w-full'>#ABS2024</button>
+            <button onClick={() => { }} className='hashtag self-end md:self-center lg:w-full'>#LeguiFiftyFiftyLeu</button>
+            <button onClick={() => { }} className='hashtag self-start md:self-center lg:w-full'>#YoonWi</button>
+            <button onClick={() => { }} className='hashtag self-end md:self-center lg:w-full'>#BoromTerangaYi</button>
           </div>
         </div>
 
         <Slide />
 
-        <div className='flex w-screen relative overflow-hidden center my-20 mb- px-6 lg:px-0 '>
-          <img className='full object-cover max-w-7xl self-center rounded-lg' src={jumeaux} alt="beloved son" />
+        <div className={`flex w-screen relative overflow-hidden center p-20 max-w-7xl `}>
+          <ScrollTrigger onEnter={() => setActivateFrame(true)} onExit={() => setActivateFrame(false)}>
+            <div className=' flex center border-[30px] border-blakk rounded-lg'>
+              <div className=''>
+                <img className='full object-cover  self-center' src={jumeaux} alt="beloved son" />
+              </div>
+            </div>
+          </ScrollTrigger>
         </div>
 
 

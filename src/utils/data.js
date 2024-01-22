@@ -1,4 +1,3 @@
-// import { abssit, abssuit1, flagsenegal, abshero } from './components'
 
 export const website = "abs2024.com"
 
@@ -108,6 +107,7 @@ export const website = "abs2024.com"
 //   }
 
 // ]
+
 
 export const headers = [
   { name: 'son of senegal', 

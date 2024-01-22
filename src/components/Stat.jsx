@@ -28,7 +28,7 @@ const Stat = ({
           }
         </CountUp>
       }
-      <p className='absolute left-10 top-1 mx-auto my-auto text-blakk text-lg font-semibold z-[2] animate-slideleft'>{before}</p>
+      <p className='absolute hidden= inline left-10 top-1 mx-auto my-auto text-blakk text-xl font-semibold z-[2] animate-slideleft'>{before}</p>
       {/* <h2 className=' !md:h4= whitespace-nowrap items-center mb-4 tracking-wide'>{value || "2000"} */}
       {/* </h2> */}
       <div className='w-full h-[2px] relative bg-neutral-500/30  mt-2 mb-2 =mix-blend-exclusion'>

@@ -32,7 +32,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
           <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
         </Link>
 
-        <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden md:flex lg:mr-36  `}>
+        <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden lg:flex lg:mr-36  `}>
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({ isActive }) => isActive ? activeCSS : notActiveCSS}>
               <p className='whitespace-nowrap'>{item.name}</p>
@@ -46,7 +46,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
         {/* <p className=''>{currentHour}</p> */}
 
         <button id="menuBtn" onClick={toggleMenu}
-          className={`menuBtn z-[300] h-full bg-white rounded-full aspect-square flexV center absolute right-6 lg:right-10 animate-slideright duration-700 ease-out 
+          className={`menuBtn z-[300] h-full bg-white rounded-full aspect-square flexV center absolute right-6 md:right-10 animate-slideright duration-700 ease-out 
         ${menu && "bg-gray-100 rounded-full scale-75 "} `}>
           <div className={`line bg-black origin-center top bg-blue-500++ translate-y-[-6px] ${menu && 'rotate-45 translate-y-[2px]'} ${allTransitions} `} />
           <div className={`line bg-black origin-center bot translate-y-[2px] ${menu && ' -rotate-45 translate-y-[3.4px]== '} ${allTransitions}`} />
@@ -54,7 +54,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
 
       </div>
 
-      {menu && <div className={`lg:hidden fixed inset-0 screen z-[298] bg-white opacity-0 duration-500 ${menu && 'opacity-100 duration-500'} `} />}
+      {menu && <div className={`md:hidden fixed inset-0 screen z-[298] bg-white opacity-0 duration-500 ${menu && 'opacity-100 duration-500'} `} />}
       <div className={`flexV lg:flex-row absolute inset-0 screen max-h-[100dvh] =transition-transform duratuion-[300] max-w-[100dvw] items-end bg-white z-[299] gap-10 
                       ${menu ? '' : 'opacity-90  overflow-hidden translate-x-[120%]'} ${allTransitions} duration-[.7s] `}>
 
