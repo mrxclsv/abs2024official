@@ -112,7 +112,7 @@
   }
 
   .formInput {
-    @apply w-full py-2 px-4 rounded-md bg-white/10 text-black group-hover:bg-white/20 duration-300 block flex-wrap
+    @apply w-full py-2 px-4 rounded-md bg-white/10 text-black group-hover:bg-white/20 duration-300 block flex-wrap 
   }
 
   .notifCount {
@@ -185,18 +185,6 @@
 
   .respContainer {
     @apply px-10 md:px-14 lg:px-16 smooth
-  }
-
-  d .smooth {
-    @apply transition-all duration-300
-  }
-
-  .settingsOpened {
-    @apply z-[300] w-[70vw] bg-blakk/90 text-white backdrop-blur-lg h-[100vh] absolute top-0 bottom-0 -right-6 items-center justify-center flex flex-col transition-all duration-300 ease-in-out
-  }
-
-  .settingsClosed {
-    @apply settingsOpened right-[-105vw]
   }
 
   .icon {
@@ -334,6 +322,9 @@
 
   .transparentGrad {
     @apply w-full z-[1] flex select-none h-[60px] from-black/60 to-transparent absolute
+  }
+  .disabledButton {
+    @apply opacity-20 duration-500 !cursor-not-allowed 
   }
 
 

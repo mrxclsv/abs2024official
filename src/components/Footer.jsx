@@ -87,15 +87,15 @@ const Footer = () => {
       <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full max-w-7xl mt-6 lg:pb-4 pb-16'>
         <p className='whitespace-nowrap lg:w-1/2 w-full relative text-center lg:text-left lg:pl-10 fit mx-auto md:opacity-70 p-6 md:hover:opacity-100 text-sm  text-blakk'>© Copyright 2024, ABS2024 #YoonWi</p>
         <div className='socialNetworks lg:w-1/2 w-full lg:start center lg:pl-10 relative flex gap-2 self-center !text-black '>
-                {social?.map((item, index) => (
-                  <button
-                    key={item.icon} 
-                    onClick={() => openInNewTab(`https://${item.link}${item.icon}`)}
-                    className={`group gap-2 min-h-[40px] aspect-square center overflow-hidden rounded-full hover:bg-gray-100/80
-                  `}>
-                    <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center mx-auto rounded-full p-3 w-10 h-10 !aspect-square !text-[1.4em] z-[3] opacity-70 group-hover:opacity-100 ${allTransitions}`} />
-                  </button>
-                ))}
+          {social?.map((item, index) => (
+            <button
+              key={item.icon}
+              onClick={() => openInNewTab(`https://${item.link}${item.icon}`)}
+              className={`group gap-2 min-h-[40px] aspect-square center overflow-hidden rounded-full hover:bg-gray-100/80
+            `}>
+              <i className={`ri-${item.title.replaceAll(' ', '')}-fill flex center mx-auto rounded-full p-3 w-10 h-10 !aspect-square !text-[1.4em] z-[3] opacity-70 group-hover:opacity-100 ${allTransitions}`} />
+            </button>
+          ))}
         </div>
       </div>
 

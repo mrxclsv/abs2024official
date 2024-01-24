@@ -5,8 +5,8 @@ import { Socials, abswhite } from '../utils/components'
 
 const AndTheCommunity = () => {
   return (
-    <div className="&TheCommunity h-full lg:min-h-[600px] w-screen flexV lg:flex center relative bg-blakk py-10 overflow-y-hidden">
-      <div className='flexV lg:flex-row center w-full =lg:h-[80vh] lg:max-h-[600px]= relative max-w-7xl'>
+    <div className="&TheCommunity h-fit lg:h-full lg:min-h-[600px] w-screen flexV lg:flex center relative bg-blakk py-10 overflow-y-hidden">
+      <div className='flexV lg:flex-row center w-full relative max-w-7xl'>
 
         <SplitDiv title="The philanthropist" color="black" link="/the-philanthropist"
           hasTitle={true} hasText={true}  hasDescr={true}

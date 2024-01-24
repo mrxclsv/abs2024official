@@ -25,7 +25,7 @@ const Stat = ({
             start={0}
             end={value}
             duration={duration}
-            delay={0}
+            delay={0.2}
           >
           </CountUp>
 

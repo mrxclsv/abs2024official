@@ -9,7 +9,6 @@ export { default as TheVisionary } from '../components/pages/TheVisionary'
 export { default as ThePhilanthropist } from '../components/pages/ThePhilanthropist'
 export { default as Projects } from '../components/pages/Projects'
 
-
 export { default as SplitDiv } from '../components/SplitDiv'
 export { default as TextLayout } from '../components/TextLayout'
 export { default as Stat} from '../components/Stat'
@@ -29,6 +28,7 @@ export { default as ProjectCard } from '../components/Projects/ProjectCard'
 export { default as Button } from '../components/Button'
 
 export { default as NotFound } from '../components/NotFound'
+export { default as ScrollToTop } from '../components/ScrollToTop'
 export { default as Socials } from '../components/Socials'
 export { default as ContactForm } from '../components/ContactForm'
 

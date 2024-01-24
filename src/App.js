@@ -7,6 +7,7 @@ import
   Home, SonOfSenegal, TheLeader, TheVisionary, ThePhilanthropist,
   Projects,
   ABSFacts,
+  ScrollToTop,
 }  
 from './utils/components';
 
@@ -68,6 +69,7 @@ function App() {
               toggleNav={toggleNav} toggleMenu={toggleMenu} 
           />
       
+      <ScrollToTop />
 
       <main className='flex w-[100dvw] min-h-[100dvh] overflow-x-hidden items-center justify-start relative scrollbar-hide scroll-smooth'>
 

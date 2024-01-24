@@ -100,7 +100,6 @@ const SonOfSenegal = () => {
 
       </div>
 
-      <AndTheCommunity />
 
     </div>
   )
