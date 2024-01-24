@@ -390,12 +390,13 @@
   }
 
   .slideButton {
-    @apply w-[44px] h-[55px] flex active:bg-black/5 center rounded-full text-black bg-white font-semibold transition-all duration-200 ease-in-out cursor-pointer
+    @apply w-[44px] h-[55px] flex active:bg-black/5 hover:bg-gray-50 bg-gray-50/80 center rounded-full text-black z-[3] border-black/40 font-semibold transition-all duration-200 ease-in-out cursor-pointer
   }
 
   .statMain {
     @apply text-4xl lg:text-5xl
   }
+
   .h1, 
   .h2, 
   .h3 {
