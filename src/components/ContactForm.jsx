@@ -49,7 +49,7 @@ const ContactForm = ({ css, simplified }) => {
         </div>
 
         <div className='formDiv w-full'>
-          <textarea className='formInput max-h-[100px]= sm:min-h-[100px] !text-black placeholder:text-black/50 ' type="text" name="project" placeholder='Message' required cols="30" rows="8" />
+          <textarea className='formInput max-h-[150px] sm:min-h-[100px] h-fit !text-black placeholder:text-black/50 ' type="text" name="project" placeholder='Message' required cols="30" rows="8" />
         </div>
 
         <input type="submit"

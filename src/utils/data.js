@@ -327,7 +327,7 @@ export const contributions = [
     added:"", 
     link:"#" ,
     position:"left-[15%] top-[45%]",
-    duration: 4
+    duration: 3
   },
   { title: "industries",  
     before: "+",
@@ -335,12 +335,12 @@ export const contributions = [
     added:"", 
     link:"#" ,
     position:"left-[60%] top-[50%]",
-    duration: 4
+    duration: 3
   },
   { title: "annual donations (CFA)",  
     before: "+",
-    value:7000000000, 
-    added:"cfa", 
+    value:7, 
+    added:"billion", 
     link:"#" ,
     position:"left-[25%] top-[70%]",
     duration: 5
@@ -351,7 +351,7 @@ export const contributions = [
     added:"", 
     link:"#" ,
     position:"left-[30%] top-[25%]",
-    duration: 4
+    duration: 3
   },
 
 ]

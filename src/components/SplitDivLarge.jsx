@@ -24,7 +24,7 @@ const SplitDivLarge = ({
                     ${css}
                     `}>
 
-        <Link to={link} className={`w-full opacity-50 ========== lg:w-1/2= relative h-full flexV ${blockCSS}  start max-w-3xl= group`}>
+        <Link to={link} className={`w-full opacity-50 ========== lg:w-1/2= relative h-full flexV ${blockCSS}  start md:pl-24 group`}>
           <div className='relative flexV md:min-w-[400px] max-w-4xl w-fit self-end  p-6 py-10 md:p-14'>
             <TextLayout
               title={title}

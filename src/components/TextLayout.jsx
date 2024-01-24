@@ -17,7 +17,7 @@ const TextLayout = ({
       {hasTitle && <h4 className={`h4 tracking-[.3rem] !leading-[200%] ${titleCSS} text-left mb-4 relative uppercase`}>{title || 'Headline'}</h4>}
 
       {hasText &&
-        <p className='titleText text-left flexV relative '>
+        <div className='titleText text-left flexV relative '>
 
           {hasQuote &&
             <img
@@ -40,7 +40,7 @@ const TextLayout = ({
                       `}>
             </div>
           }
-        </p>
+        </div>
       }
 
       {hasDescr && <h4 className={`text-left mt-10 font-[400] leading-[230%] w-full ${descrCSS} `}>

@@ -25,18 +25,18 @@ const SonOfSenegal = () => {
   return (
     <div className='min-h-screen h-full relative w-screen flexV bg-white text-black pt-[75px]'>
 
-      {/* <div className='hero w-full lg:hidden= h-[50vh] min-h-[400px] center relative bg-gray-100'>
+      <div className='hero w-full lg:hidden= lg:h-[70vh] min-h-[400px]= center relative bg-gray-100'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
           <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
         </div>
         <div className='absolute absoluteAll flex center  '>
-        <h1 className='h1 text-white drop-shadow-lg'>Senegal's beloved son</h1>
+        <h1 className='h3 lg:h1 text-white drop-shadow-lg'>Senegal's beloved son</h1>
         </div>
-      </div> */}
+      </div>
 
       <div className='contentWrapper= flexV relative h-full center mx-auto bg-white'>
 
-        <div className='flex-col !lg:flex-row w-screen lg:h-[250vh]==== md:h-[100vh]== bg-gradient-to-t from-gray-200 to-white relative overflow-hidden'>
+        <div className='flex-col !lg:flex-row w-screen bg-gradient-to-t from-gray-200 to-white relative overflow-hidden'>
           <SplitDiv title="The Son of Senegal" color="white" link="/"
             hasQuote={false}
             hasTitle={true} hasText={true} hasDescr={false}
@@ -58,15 +58,11 @@ const SonOfSenegal = () => {
           {/* <img className='lg:absolute right-0 md:right-[20%] m-auto top-[30%] min-w-[300px] max-w-full lg:scale-[150%] origin-bottom  object-top scale-[120%] z-[1] left-0== top-20===== h-[80vh]== object-contain w-[400px]' src={absyellowfit} alt="senegal" /> */}
         </div>
 
-        <div className='splitText bg-white flexV md:flex-row px-4 lg:px-8 max-w-7xl py-10'>
+        <div className='splitText bg-white flexV md:flex-row px-4 lg:px-8 max-w-7xl py-10 lg:h-[60vh]'>
           <TextLayout title="Roots"
             text="His senegalese heritage"
             descr="Born and raised in Senegal, ABS takes immense pride in his roots. His journey from a humble beginning to becoming a national leader is a testament to the hard work, determination, and the values instilled in him by his Senegalese upbringing. He often speaks of how his Senegalese heritage has shaped his character, instilling in him a deep sense of community, respect for tradition, and the importance of family."
-            hasTitle={true}
-            hasText={false}
-            hasDescr={true}
-            showLines={false}
-            color="white"
+            hasTitle={true} hasText={false} hasDescr={true} showLines={false} color="white" 
             css="max-w-7xl"
           />
           <TextLayout title="values"
@@ -80,7 +76,7 @@ const SonOfSenegal = () => {
           />
         </div>
 
-        <div className='hashtags bg-gray-100 flexV center relative w-full '>
+        <div className='hashtags bg-gray-100/40 flexV center relative w-full '>
           <div className='grid grid-cols-2 lg:grid-cols-4 justify-evenly items-center mx-auto max-w-7xl lg:w-full py-6' >
             <button onClick={() => { }} className='hashtag self-start md:self-center lg:w-full'>#ABS2024</button>
             <button onClick={() => { }} className='hashtag self-end md:self-center lg:w-full'>#LeguiFiftyFiftyLeu</button>

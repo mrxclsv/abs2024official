@@ -395,13 +395,16 @@
   }
 
   .slideButtonWrapper {
-    @apply flex center absolute top-0 bottom-0 bg-black/5 min-w-[80px]
+    @apply flex center absolute top-0 bottom-0 bg-black/5 min-w-[80px] z-[100]
   }
 
   .slideButton {
-    @apply w-[40px] active:w-[55px] lg:hover:w-[55px] flex bg-white/40 center rounded-full hover:bg-white transition-all duration-200 ease-in-out cursor-pointer font-bold
+    @apply w-[44px] h-[55px] flex active:bg-black/5 center rounded-full text-black bg-white font-semibold transition-all duration-200 ease-in-out cursor-pointer
   }
 
+  .statMain {
+    @apply text-4xl lg:text-5xl
+  }
   .h1, 
   .h2, 
   .h3 {
