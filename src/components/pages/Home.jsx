@@ -227,19 +227,19 @@ const Home = () => {
         <AndTheCommunity />
 
         <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
-          <div className="flex flex-col lg:flex-row center w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
+          <div className="flex flex-col lg:flex-row start w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
               hasQuote={false}
               hasTitle={true} hasText={true} hasDescr={true}
               showLines={true}
-              mainCSS="center w-fit relative"
-              css="w-full lg:px-0 lg:mx-0 !h-full !start"
-              blockCSS="self-center center !lg:px-0 !lg:mx-0 "
+              mainCSS="center w-fit relative !lg:ml-0"
+              css="w-full lg:px-0 lg:mx-0 !h-full !start "
+              blockCSS="self-center center !lg:px-0 !lg:mx-0"
               layout={1}
               text='ABS2024'
               descr="Join us in supporting the ABS2024 campaign. Let's take decisive action to build a more resilient, equitable, and prosperous nation for all its citizens. The ABS2024 campaign serves as a guiding force, offering a comprehensive roadmap to drive positive change. Together, we can propel Senegal towards a more prosperous and sustainable future."
               hashtags={hashtagsArray}
-              wrapperCSS='hidden '
+              wrapperCSS='hidden'
               imageCSS='hidden'
               image={abswhite}
               hasLink action="Become a member"
