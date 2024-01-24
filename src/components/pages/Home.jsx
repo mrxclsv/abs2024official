@@ -19,7 +19,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0,0)
+    window.scroll(0,0)
   }, [location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -64,7 +64,7 @@ const Home = () => {
 
     <div className='flexVStart w-[100dvw] overflow-x-hidden overflow-y-auto scrollbar-hide items-center justify-start relative pt-[75px]=='>
 
-      
+
       <div id='FutureOfSenegal' className='w-screen h-[100svh] relative md:bg-gray-800 flexCenter bg-black md:bg-transpaprent'>
         <div className='w-full h-3/4 absolute -top-20 left-0 right-0 bg-gradient-to-b from-black/60 -to-transparent  z-[1]' />
         <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-80  md:opacity-100 transition duration-700' src={abshero} alt="The Future of Senegal Is Here" />

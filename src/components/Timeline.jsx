@@ -1,30 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TimelineElement } from '../utils/components'
 import { timeline } from '../utils/data'
+import ScrollTrigger from 'react-scroll-trigger'
 
 
 
-const Timeline = ({date, position, title, desc}) => {
-  
+const Timeline = ({ date, position, title, desc }) => {
+
   const bgcolor = "blakk"
+  const [showElement, setShowElement] = useState(false)
 
-  
   return (
     <div className={`w-full h-full flexV bg-${bgcolor} gap-2`}>
 
       {timeline?.map((item, index) => (
         <div key={index} className='text-blakk flex w-full md:center relative'>
 
-          <div className={`highlight absolute left-4 md:left-0 md:right-0 md:mx-auto top-5 md:top-8 !h-[12px] !w-[12px] ==translate-y-1/3 !aspect-square rounded-full bg-primary`}/>
-
-          <TimelineElement 
-            bgcolor={bgcolor}
-            layout={item.position}
-            date={item.date}
-            title={item.title}
-            descr={item.descr}
-          />
-
+          <ScrollTrigger onEnter={() => setShowElement(true)} onExit={() => setShowElement(false)}  >
+            <div className={`highlight absolute left-4 md:left-0 md:right-0 md:mx-auto top-5 md:top-8 !h-[12px] !w-[12px] ==translate-y-1/3 !aspect-square rounded-full bg-primary`} />
+            <TimelineElement
+              bgcolor={bgcolor}
+              layout={item.position}
+              date={item.date}
+              title={item.title}
+              descr={item.descr}
+            />
+          </ScrollTrigger>
         </div>
       ))}
     </div>

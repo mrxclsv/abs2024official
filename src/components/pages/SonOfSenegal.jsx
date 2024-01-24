@@ -12,7 +12,7 @@ const SonOfSenegal = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0,0)
+    window.scroll(0,0)
   }, [location])
 
   const [activateFrame, setActivateFrame] = useState(false)
@@ -87,9 +87,9 @@ const SonOfSenegal = () => {
 
         <Slide />
 
-        <div className={`flex w-screen relative overflow-hidden center p-20 max-w-7xl `}>
+        <div className={`flex w-full relative overflow-hidden center p-4 lg:p-20 max-w-7xl `}>
           <ScrollTrigger onEnter={() => setActivateFrame(true)} onExit={() => setActivateFrame(false)}>
-            <div className=' flex center border-[30px] border-blakk rounded-lg'>
+            <div className=' flex w-full center border-[10px] mx-4 lg:mx-0 lg:border-[30px] border-blakk rounded-lg'>
               <div className=''>
                 <img className='full object-cover  self-center' src={jumeaux} alt="beloved son" />
               </div>
