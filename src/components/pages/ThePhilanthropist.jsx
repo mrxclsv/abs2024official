@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ContactForm, Hero, SplitDiv, TextLayout, daara2, leket2, water } from '../../utils/components'
 import { journey, news, project } from '../../utils/data'
-import { allTransitions } from '../../utils/style'
+import { allTransitions, smallTextBox } from '../../utils/style'
 
 const ThePhilanthropist = () => {
 
@@ -47,7 +47,7 @@ const ThePhilanthropist = () => {
         <div className='TheJourney flex-row lg:flex-col= scrollbar-hide w-full items-center justify-center relative overflow-y-hidden overflow-x-scroll py-10'>
           {/* <i className='ri-arrow-right-fill p-2 m-6 rounded-full bg-neutral-500/10 aspect-square bottom-0 text-white animate-pulse absolute right-0' /> */}
           <div className='sectionCARD flexV items-start justify-start z-[1] w-full lg:w-fit h-fit sticky mx-auto top-0 px-10'>
-            <div className='flex relative w-fit py-10=== '>
+            <div className='flex relative w-fit'>
               <i className='ri-arrow-right-fill p-2 m-6 rounded-full min-w-[44px] bg-neutral-500/10 aspect-square text-blakk animate-pulse absolute bottom-0 left-0 right-0 mx-auto w-8 z-[2]' />
               <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
                 hasTitle={true} hasText={true} hasDescr={false}
@@ -55,11 +55,12 @@ const ThePhilanthropist = () => {
                 showLines={false}
                 text="The Journey"
                 descr=""
-                mainCSS="w-fit px-0 pt-0 !h-fit "
-                blockCSS="!p-0="
+                mainCSS={smallTextBox}
+                blockCSS={smallTextBox.blockCSS}
+                blockLength={true}
                 image={water}
                 wrapperCSS="hidden"
-                css="mt-0 mx-auto !h-fit"
+                css={smallTextBox.css}
                 imageCSS="hidden"
                 hasLink={false}
               />
@@ -118,12 +119,12 @@ const ThePhilanthropist = () => {
             showLines={true}
             text="ABS in the Press"
             descr=""
-            mainCSS="w-fit px-0 pt-0 !min-h-[400px]"
+            mainCSS={smallTextBox.main}
             blockLength={true}
-            blockCSS="!h-fit !py-0 "
+            blockCSS={smallTextBox.blockCSS}
             image={water}
             wrapperCSS="hidden"
-            css="mt-0 mx-auto w-full "
+            css={smallTextBox.css}
             imageCSS="hidden"
             hasLink={false}
           />

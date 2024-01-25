@@ -54,6 +54,7 @@ export { default as daara2 } from '../components/.images/daara.png'
 export { default as abs_signature } from '../components/.branding/abs_signature.svg'
 export { default as abssignature } from '../components/.branding/Abs.png'
 
+// export { default as logoWhite } from '../'
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abssuit3 } from '../components/.photos/abs_suit_3.webp'
 export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
