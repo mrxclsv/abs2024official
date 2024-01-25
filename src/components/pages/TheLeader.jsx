@@ -14,7 +14,7 @@ const TheLeader = () => {
   // var heroHeight = document.getElementById('hero').offsetHeight
 
   useEffect(() => {
-    // window.scroll(0, 0)
+    window.scroll(0, 0)
   }, [location])
 
 
