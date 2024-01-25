@@ -53,7 +53,7 @@ const Footer = () => {
             <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" />
           </Link>
 
-          <div className="md:flexV grid grid-cols-2 sm:grid-cols-1 start gap-2 pr-4 md:gap-1 w-full" id="contacts">
+          <div id="contacts" className="md:flexV grid grid-cols-2 sm:grid-cols-1 start gap-4 pr-4 md:gap-4 w-full">
             {contactInfo?.map((item, index) => (
               <Contact
                 key={index}

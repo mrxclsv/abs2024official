@@ -15,7 +15,7 @@ const SplitDiv = ({
 
 
   return (
-    <div className={`full min-h-[60vh] max-w-[100dvw] lg:max-h-[100dvh] relative flexV center z-[1] group overflow-x-hidden
+    <div className={`full min-h-[60vh] max-w-[100dvw] lg:max-h-[100vh] relative flexV center z-[1] group overflow-x-hidden
                     ${mainCSS} ${color === "white" ? "bg-white text-gray-900 z-[1]" : "bg-blakk z-[1] text-white"}
                     `}>
 
@@ -25,7 +25,7 @@ const SplitDiv = ({
                     ${css}
                     `}>
 
-        <div className={`left w-full lg:w-1/2 relative flexV p-6 pb-0 ${blockCSS} h-fit items-center justify-center group `}>
+        <div className={`left w-full lg:w-1/2 relative flexV p-6 lg:py-20 pb-0 ${blockCSS} h-fit items-center justify-center group `}>
           <div /* to={link} */ className={`relative flexV overflow-y-hidden h-full= !w-full= lg:min-w-[400px] ${layout === 2 && "!self-start md:pl-0"} lg:self-end `}>
             <TextLayout
               title={title}
@@ -57,7 +57,7 @@ const SplitDiv = ({
           </div>
         </div>
 
-        <div className={`imageWrapper w-screen h-full center items-end justify-end lg:w-1/2 ${wrapperCSS} lg:max-h-[95svh] my-0 py-0 relative`}>
+        <div className={`imageWrapper w-screen h-full center items-end justify-end lg:w-1/2 ${wrapperCSS} lg:max-h-[95svh] relative`}>
 
           <div id='blurredSHADOW'
             className={`w-56 aspect-square blur-xl scale-[130%] justify-end items-end lg:scale-[200%] 
@@ -70,10 +70,9 @@ const SplitDiv = ({
           <img src={image || '/default.jpg'}
             alt={short || "this content"}
             loading='eager'
-            className={`origin-top lg:group-hover:scale-[103%] relative w-full  lg:h-full min-h-[500px] z-[2] 
-                        object-cover object-bottom
-                        ${imageCSS || ''} ${allTransitions} !duration-[2s]
-            `} />
+            className={`origin-bottom lg:group-hover:scale-[103%] relative w-full lg:h-full== min-h-[500px]= z-[2] 
+                        object-cover object-bottom ${imageCSS || ''} ${allTransitions} !duration-[2s]
+                    `} />
 
           {title === "the business man" &&
             <div className='light w-[150px] lg:w-[200px] h-auto aspect-square rounded-full z-[1] bg-white blur-[100px] absolute right-[15%] top-[20%] lg:right-[30%] lg:top-[34%]' />

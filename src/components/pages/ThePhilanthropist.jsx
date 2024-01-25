@@ -119,7 +119,7 @@ const ThePhilanthropist = () => {
             imageCSS="hidden"
             hasLink={false}
           />
-          <div className='grid grid-cols-2 lg:grid-cols-2 gap-10 center w-full justify-between py-10'>
+          <div className={`grid grid-cols-[${news.length}] lg:grid-cols-2 gap-10 center w-full justify-between py-10`}>
 
             {/* <p>There {news.length > 1 ? 'are' : 'is'} {news.length} {news.length > 1 ? 'articles' : 'article'} about ABS in the news</p> */}
             {/* NOTIF MARK */}

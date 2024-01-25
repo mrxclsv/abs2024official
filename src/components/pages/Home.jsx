@@ -19,7 +19,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   }, [location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -107,9 +107,9 @@ const Home = () => {
           descr="When speaking of national development and visionary leadership, Abdoulaye SYLLA has no equal. Abdoulaye SYLLA (ABS) stands as a remarkable figure, whose unwavering dedication to enhancing Senegal has reshaped the nation’s destiny.
 
           His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
-          wrapperCSS='h-full relative max-h-[100vh]'
+          wrapperCSS='max-h-[100vh]='
           image={abswhite}
-          imageCSS='lg:pt-10 object-contain lg:object-cover origin-bottom md:origin-top md:object-contain pt-4'
+          imageCSS='lg:pt-10==== object-contain lg:object-cover origin-bottom md:origin-top md:object-contain pt-4======'
           hasLink
         />
 

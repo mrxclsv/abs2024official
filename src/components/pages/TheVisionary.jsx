@@ -11,15 +11,13 @@ const TheVisionary = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
-  },[location])
-  
+    // window.scroll(0,0)
+  }, [location])
+
   return (
     <div className='min-h-screen h-full= w-screen flexV bg-blakk text-black gap-10 relative scroll-smooth pt-[75px]' >
 
-      <div className='hero w-full fixed= h-[30vh] lg:h-[60vh] min-h-[400px] flex center relative bg-gray-100 group'>
-
-
+      <div className='hero w-full fixed= h-[30vh] lg:h-[100vh] min-h-[400px] flex center relative bg-gray-100 group'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
           <img className='full object-cover object-top origin-top opacity-60 lg:group-hover:opacity-100 transition duration-1000 ' src={abssit} alt="ABS The Visionary" />
         </div>
@@ -29,33 +27,33 @@ const TheVisionary = () => {
       </div>
 
       <SplitDiv title="#ABS2024 #BoromTerangaYi" color="black" link="#"
-        hasTitle={true} hasText={true}  hasDescr={false}
-        layout={1} 
+        hasTitle={true} hasText={true} hasDescr={false}
+        layout={1}
         showLines={false}
         text="Timeline"
         descr=""
         image={water}
-        wrapperCSS="hidden px-0 mx-0 h-fit"
-        css="mt-0 mx-auto !pl-0 !ml-0 w-full center h-fit"
-        blockCSS="px-0 pt-0 ml-0 lg:mx-auto w-full center text-center h-fit"
+        wrapperCSS="hidden"
+        css="w-fit relative"
+        blockCSS="absolute mx-auto !w-fit !center !py-0 left-0 right-0"
         hasLink={false}
-        mainCSS="mt-0 pt-0 !ml-0 !pl-0 h-fit"
+        mainCSS="!h-fit !min-h-2 !py-0 lg:h-[200px]"
       />
 
       <div className='flexV center w-full relative h-full bg-blakk overflow-hidden lg:mt-10 mb-20'>
-          <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-6 left-0 ml-5' />
+        <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-6 left-0 ml-5' />
         <div className='wrapper max-w-7xl relative w-full flex center py-6 '>
           <div className='lineDesk w-[3px] bg-primary/50 h-full hidden md:flex absolute z-[1] top- bottom-4 left-0 right-0 mx-auto ' />
-          <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-3 mx-auto' />
+          <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-0 lg:bottom-3 mx-auto' />
           <Timeline />
         </div>
 
       </div>
 
-    <div className='flex w-screen bg-gray-100 center h-fit'>
-    <ContactForm />
-    </div>
-    
+      <div className='flex w-screen bg-gray-100 center h-fit'>
+        <ContactForm />
+      </div>
+
 
     </div>
   )

@@ -15,8 +15,8 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
   const notActiveCSS = 'flex flex-row-reverse gap-2 relative center text-xs font-semibold text-neutral-700 hover:text-primary cursor-pointer w-full h-full rounded-lg capitalize px-3 relative z-[2] duration-500'
   const activeCSS = `${notActiveCSS} font-bold underline text-black z-[2] md:text-black ${allTransitions} `
 
-  const headerNotActiveCSS = `flexV justify-end items-end w-full capitalize hover:text-primary pr-4 end group h-fit py-4= lg:py-0 relative ${allTransitions}`
-  const headerActiveCSS = `${headerNotActiveCSS} pr-4 underline=underline-offset-[10px]= opacity-100 font-semibold !text-black z-[2] !md:text-black ${allTransitions} `
+  const headerNotActiveCSS = `flexV justify-end items-end w-full capitalize pr-4 end group h-fit py-4= lg:py-0 relative ${allTransitions}`
+  const headerActiveCSS = `${headerNotActiveCSS} pr-4 underline lg:no-underline underline-offset-[10px] opacity-100 font-semibold !text-black z-[2] !md:text-black ${allTransitions} `
 
 
 
@@ -68,7 +68,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
                 onClick={() => setMenu(false)}
                 className={({ isActive }) => isActive ? headerActiveCSS : headerNotActiveCSS}
               >
-                <h2 className={`h3 md:h2 text-gray-700 text-right self-start w-full whitespace-nowrap h-20 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h2>
+                <h2 className={`h3 md:text-5xl text-gray-700 text-right self-start w-full whitespace-nowrap h-20 md:h-full py-4 group-hover:text-blakk overflow-visible ${allTransitions} `}>{item.name}</h2>
 
                 <div className={`w-fit -translate-y-2 h-full flex center text-center text-gray-400 object-center opacity-0 relative group-hover:opacity-100 ${allTransitions} `}>
                   <p className={`hidden lg:flex text-right lg:whitespace-nowrap translate-y-[-50%] pl-10 h-fit w-full group-hover:translate-y-[0px] ${allTransitions} font-normal duration-[.5s]`}>{item.descr}</p>

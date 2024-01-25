@@ -108,7 +108,7 @@ const Slide = () => {
             transition duration-1000 ease-in-out 
           `}>
             {slider.map((item, index) => (
-              <div key={item.number} className={`flex !items-start !justify-start left relative group overflow-hidden scrollbar-hide w-full h-full flex-grow-0 shrink-0 snap-x snap-center animate-slowfade min-h-[400px] lg:min-h-[70vh] bg-gray-100 lg:bg-transparent max-h-[1200px] max-w-7xl`}>
+              <div key={item.number} className={`flex !items-start !justify-start left relative group overflow-hidden overflow-y-hidden scrollbar-hide w-full h-full flex-grow-0 shrink-0 snap-x snap-center animate-slowfade min-h-[400px] lg:min-h-[70vh] bg-gray-100 lg:bg-transparent max-h-[1200px] max-w-7xl`}>
                 <img className={`inset-0 my-auto h-full absolute sideZero object-cover lg:object-contain transition  ${item.css} `} src={item.image} alt="photos" />
               </div>
             ))}

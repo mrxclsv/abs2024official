@@ -14,7 +14,7 @@ const TheLeader = () => {
   // var heroHeight = document.getElementById('hero').offsetHeight
 
   useEffect(() => {
-    window.scroll(0, 0)
+    // window.scroll(0, 0)
   }, [location])
 
 
@@ -22,7 +22,7 @@ const TheLeader = () => {
   const heroRef = useRef()
   const [elementWidth, setElementWidth] = useState(0)
   const [elementHeight, setElementHeight] = useState(0)
-  const [position, setPosition] = useState({ x:0, y:0})
+  const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useLayoutEffect(() => {
     function handleResize() {
@@ -34,7 +34,7 @@ const TheLeader = () => {
         const scrollY = heroRef.current.getBoundingBoxClient
         setElementHeight(height)
         setElementWidth(width)
-        setPosition({x, y})
+        setPosition({ x, y })
       }
     }
 
@@ -44,19 +44,20 @@ const TheLeader = () => {
   }, [heroRef])
 
   useEffect(() => {
-    if(heroRef.current.offsetTop > 200) {
+    if (heroRef.current.offsetTop > 200) {
 
     }
   }, [])
-  
+
   console.log("Hero section dimension is " + elementHeight + ' and position is' + position.x + " " + position.y)
+
 
   return (
     <div className='min-h-screen w-screen relative flexV start bg-white text-black'>
 
       <div ref={heroRef} id="hero" className='hero w-screen h-[110vh] min-h-[400px] flex center relative bg-gray-100 z-[0] '>
         <div className='full flex min-w-[100dvw] center overflow-hidden relative bg-white text-white'>
-          <img className='min-w-[100dvw] min-h-[100dvh] pt-4 top-16= h-full object-contain origin-bottom opacity-100 fixed hover:scale-110 duration-[4s]' src={absleader} alt="xam sa bopp" />
+          <img className='min-w-[100dvw] min-h-[100vh] pt-4 top-16= h-full object-cover lg:!object-contain origin-bottom opacity-100 fixed hover:scale-110 transition duration-[4s]' src={absleader} alt="xam sa bopp" />
         </div>
         <div className='absolute absoluteAll flex center left-0 right-0 px-4 -translate-y-20=  '>
           <h1 className='h1 leading-[100%] font-normal text-left text-[100px] uppercase md:absolute md:left-20 md:my-auto text-white lg:text-blakk'>
@@ -67,20 +68,29 @@ const TheLeader = () => {
       </div>
 
       <div className='z-[2] flexV start w-full relative'>
-        <div className='w-full flex center py-20 p-10 bg-gradient-to-b from-gray-200 to-gray-100'>
-          {/* <image className="w-10 h-10 ========= signal" width="96" height="96" src={abs_signature} /> */}
-          <div className='flexV center max-w-xl leading-[200%] gap-10'>
-            {/* <span className='text-sm'>Abdoulaye SYLLA</span> */}
-            <img className='flex object-contain h-20' src={abssignature} alt='Abs signature' />
-            <h4 className='text-lg'>Building a Better Future Through Local <br /> and Global Talent.</h4>
+
+        <div id='text' className='w-full relative flex center h-[100svh] overflow-hidden bg-primary bg-gradient-to-b= =from-gray-200 to-gray-='>
+          <div className='flexV full center relative py-20 p-10'>
+            <div className='flexV center max-w-xl leading-[200%] gap-10 relative'>
+              {/* <span className='text-sm'>Abdoulaye SYLLA</span> */}
+              <img className='flex object-contain h-24 relative' src={abssignature} alt='Abs signature' />
+              <h4 className='text-lg z-[2] relative'> Building a Better Future Through Local <br /> and Global Talent.</h4>
+            </div>
+
+            <img src={absleader}
+              className=' absolute z-[1] opacity-40 translate-x-1/2 saturate-0 top-0 bottom-0 h-full my-auto object-top scale-[200%] object-cover right-0 self-end w-fit mix-blend-multiply transition duration-[4s] translate-y-1/2 '
+              // origin-right object-right
+              alt="xam sa bopp" />
+
           </div>
+          {/* <image className="w-10 h-10 ========= signal" width="96" height="96" src={abs_signature} /> */}
         </div>
 
         <div id="Slides" className='flexV center overflow-hidden bg-white z-[1] w-sceen'>
 
           <div className='TheWorkforce relative'>
             <SplitDiv title="Yoon Wi" color="black" link="/"
-              hasTitle={true} hasText={true} hasDescr={true}
+              hasTitle={true} hasText={true} hasDescr={false}
               showLines={true}
               layout={1}
               mainCSS="w-[100vw]"
@@ -125,7 +135,7 @@ const TheLeader = () => {
             hasTitle={true} hasText={true} hasDescr={true}
             showLines={false}
             layout={1}
-            mainCSS="overflow-hidden min-h-[50vh] max-w-7xl lg:max-h-[800px] my-20 rounded-lg overflow-hidden"
+            mainCSS="overflow-hidden min-h-[50vh] max-w-7xl lg:max-h-[800px] my-20= rounded-lg overflow-hidden"
             blockCSS="h-full"
             css="group "
             text='Policy of Inclusivity'
@@ -135,7 +145,7 @@ const TheLeader = () => {
             image={absstand} wrapperCSS="md:object-right center object-center h-full overflow-hidden  md:scale-80"
           />
 
-          <div className='splitText flexV lg:flex-row px-8 max-w-7xl py-10'>
+          <div className='splitText flexV lg:flex-row px-6 lg:px-0 max-w-7xl py-10'>
             <TextLayout title="Beyond business"
               text='Social & Community Service'
               descr="What truly marks ABS as a leader is his unwavering commitment to social & community service. For over 2 decades ABS has actively supported community development projects and initiatives, supporting education, healthcare, and infrastructure in Senegal donating over 2 billion each year.
@@ -170,7 +180,6 @@ const TheLeader = () => {
         </div>
       </div>
 
-      <ContactForm />
 
     </div>
   )
