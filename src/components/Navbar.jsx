@@ -36,7 +36,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
           {navbar.map((item, index) => (
             <NavLink to={item.link} key={index} onClick={() => setMenu(false)} className={({ isActive }) => isActive ? activeCSS : notActiveCSS}>
               <p className='whitespace-nowrap'>{item.name}</p>
-              <i className={`ri-${item.icon}-fill text-lg `} />
+              {/* <i className={`ri-${item.icon}-fill text-lg `} /> */}
             </NavLink>
           ))}
 

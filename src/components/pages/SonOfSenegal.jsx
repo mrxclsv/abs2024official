@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { AndTheCommunity, Slide, SplitDiv, TextLayout, absyellowfit, jumeaux, senegalHero } from '../../utils/components'
+import { AndTheCommunity, Hero, Slide, SplitDiv, TextLayout, absyellowfit, flagsenegal2, jumeaux, senegalHero, senegalflag } from '../../utils/components'
 import { project } from '../../utils/data'
 import ScrollTrigger from 'react-scroll-trigger'
 
@@ -24,7 +24,7 @@ const SonOfSenegal = () => {
 
   return (
     <div className='min-h-screen h-full relative w-screen flexV bg-white text-black pt-[75px]'>
-
+{/* 
       <div className='hero w-full lg:hidden= lg:h-[70vh] min-h-[400px]= center relative bg-gray-100'>
         <div className='full flex center overflow-hidden relative bg-black text-white'>
           <img className='full object-cover origin-top opacity-60' src={senegalHero} alt="beloved son" />
@@ -32,7 +32,15 @@ const SonOfSenegal = () => {
         <div className='absolute absoluteAll flex center  '>
         <h1 className='h3 lg:h1 text-white drop-shadow-lg'>Senegal's beloved son</h1>
         </div>
-      </div>
+      </div> */}
+      <Hero 
+        image={senegalflag} 
+        page={page} 
+        title={'Doomu Sunugal'} 
+        imageCSS='!object-cover !h-full origin-bottom object-center !opacity-80'
+        css='bg-gradient-to-t from-gray-200 to-gray-200= relative full'
+        hasGradient={false}/>
+
 
       <div className='contentWrapper= flexV w-full relative h-full center mx-auto bg-white'>
 

@@ -18,7 +18,8 @@ const ThePhilanthropist = () => {
   return (
     <div className='min-h-screen h-full w-screen center flexV bg-white text-black gap-10 relative pt-[75px]' >
 
-      <Hero image={leket2} title={page} />
+      <Hero image={leket2} page={page} title={''} hasGradient={false}/>
+
 
       <div className='mt-0 flexV center w-full h-full relative text-black  '>
 

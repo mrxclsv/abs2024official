@@ -1,9 +1,9 @@
-import React /* , { useRef } */ from 'react';
+import React, { useState } /* , { useRef } */ from 'react';
 import { Link, /* useLocation */ } from 'react-router-dom'
 import { contactInfo, social } from '../utils/data'
 // import { allTransitions } from '../utils/style'
 
-import { Contact, Button } from "../utils/components"
+import { Contact, Button, abssignature } from "../utils/components"
 
 import abslogoblack from '../components/.branding/abslogo_black.svg'
 import { allTransitions } from '../utils/style';
@@ -37,10 +37,35 @@ const Footer = () => {
   // const location = useLocation()
   // var pageTitle = String(location.pathname).substring(6)/* .replace(/\/$/, ''); */ 
 
+  const [emailSent, setEmailSent] = useState(false)
+  
+  // function emailModal() {
+  //   useEffect(() => {
+  //     setEmailSent(true)
+  //   }, [emailSent])
+  // }
 
   return (
 
     <footer className={`w-screen flexV center relative z-[200]  bg-gray-50 text-black`}>
+
+      {emailSent &&
+        <div className='fixed inset-0 bg-white/90 flex center p-4 z-[40]'>
+
+          <div className='relative inset-10 signal h-1/2 rounded m-auto aspect-4/6 z-[42]'>
+            <div className='relative flexV gap-4 center full signal ======'>
+              <button className='ri-close-line w-[44px] aspect-square text-2xl bg-gray-100 group-hover:bg-gray-200 rounded-full absolute right-4 top-4'/>
+
+              <img src={abssignature} className='absolute bottom-6 h-10 mix-blend-difference' alt="absisgnature" />
+              
+              <h3>Your email has been added to our list.</h3>
+              <h4>We won't spam you.</h4>
+
+            </div>
+          </div>
+
+        </div>
+      }
 
       <div className="wrapper w-full flexV items-start max-w-7xl pt-14 pb-6    
                       sm:flex-row sm:items-end
@@ -49,7 +74,7 @@ const Footer = () => {
                       ">
 
         <div className='section1 w-full md:w-1/2 flexV start relative pl-2 lg:pl-10 h-fit mt-[6rem] ml-2'>
-          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-10 -top-[65%] sm:-top-[35%] md:-top-[70%]'>
+          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-10 -top-[50%] sm:-top-[35%] md:-top-[70%]'>
             <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" />
           </Link>
 
@@ -65,17 +90,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div id="Subscribe" className='section2  md:flexV start paddingX w-full md:w-fit mt-8 md:mt-[2rem] px-6 mb-2'>
+        <div id="Subscribe" className='section2  md:flexV start paddingX w-full md:w-1/2 mt-8 md:mt-[2rem] px-6 mb-2'>
           <h3 className='md:h3 ml-2 w-fit'>Subscribe</h3>
-          <div className='flexV start gap-2 w-full px-2 md:w-fit text-left mt-2'>
+          <div className='flexV start gap-2 w-full px-2 md:w-fit= text-left mt-2'>
             Sign up to receive ABS 2024 news and updates.
-            <form action="type" className='flex items-start justify-center h-full w-full bg-white start border mt-4'>
-              <input type="text" className='flex center my-auto bg-none bg-transparent border-none px-4 outline-none rounded-lg focus:outline-none full lg:w-full grow' placeholder='Enter your email' />
-              <button className='' type='submit'>
-                <Button
-                  label="Subscribe"
-                  type="primary"
-                />
+            <form action="type" className='flex items-start justify-center h-full w-full lg:max-w-[500px] bg-white start border mt-4'>
+              <input type="email" className='flex center my-auto bg-none bg-transparent border-none px-4 outline-none rounded-lg focus:outline-none full lg:w-full grow' placeholder='Enter your email' />
+              <button className='bg-blakk hover:bg-primary text-white py-3 px-6 transition' type='submit'>
+                Subscribe
               </button>
             </form>
 
