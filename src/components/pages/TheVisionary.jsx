@@ -35,18 +35,18 @@ const TheVisionary = () => {
         text="Timeline"
         descr=""
         image={water}
-        wrapperCSS="hidden px-0 mx-0"
-        css="mt-0 mx-auto !pl-0 !ml-0 w-full center"
-        blockCSS="px-0 pt-0 ml-0 lg:mx-auto center text-center"
+        wrapperCSS="hidden px-0 mx-0 h-fit"
+        css="mt-0 mx-auto !pl-0 !ml-0 w-full center h-fit"
+        blockCSS="px-0 pt-0 ml-0 lg:mx-auto w-full center text-center h-fit"
         hasLink={false}
-        mainCSS="mt-0 pt-0 !ml-0 !pl-0"
+        mainCSS="mt-0 pt-0 !ml-0 !pl-0 h-fit"
       />
 
       <div className='flexV center w-full relative h-full bg-blakk overflow-hidden lg:mt-10 mb-20'>
           <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-6 left-0 ml-5' />
         <div className='wrapper max-w-7xl relative w-full flex center py-6 '>
           <div className='lineDesk w-[3px] bg-primary/50 h-full hidden md:flex absolute z-[1] top- bottom-4 left-0 right-0 mx-auto ' />
-          <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-0 mx-auto' />
+          <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-3 mx-auto' />
           <Timeline />
         </div>
 

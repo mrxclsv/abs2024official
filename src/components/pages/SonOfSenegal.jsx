@@ -12,7 +12,7 @@ const SonOfSenegal = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   }, [location])
 
   const [activateFrame, setActivateFrame] = useState(false)
@@ -34,7 +34,7 @@ const SonOfSenegal = () => {
         </div>
       </div>
 
-      <div className='contentWrapper= flexV relative h-full center mx-auto bg-white'>
+      <div className='contentWrapper= flexV w-full relative h-full center mx-auto bg-white'>
 
         <div className='flex-col !lg:flex-row w-screen bg-gradient-to-t from-gray-200 to-white relative overflow-hidden'>
           <SplitDiv title="The Son of Senegal" color="white" link="/"
@@ -49,7 +49,7 @@ const SonOfSenegal = () => {
             wrapperCSS='h-full max-h-[80vh] h-fit '
             image={absyellowfit}
             imageCSS='pt-4 !h-full object-bottom origin-bottom object-contain '
-            hasLink
+            hasLink={false}
           />
           {/* lg:min-h-[900px] md:min-h-[600px] w-screen px-0 justify-end items-end w-full md:max-w-4xl h-full md:w-full !overflow-hidden */}
 
@@ -87,11 +87,14 @@ const SonOfSenegal = () => {
 
         <Slide />
 
-        <div className={`flex w-full relative overflow-hidden center p-4 lg:p-20 max-w-7xl `}>
-          <ScrollTrigger onEnter={() => setActivateFrame(true)} onExit={() => setActivateFrame(false)}>
-            <div className=' flex w-full center border-[10px] mx-4 lg:mx-0 lg:border-[30px] border-blakk rounded-lg'>
-              <div className=''>
-                <img className='full object-cover  self-center' src={jumeaux} alt="beloved son" />
+        <div className={`flex w-full center relative overflow-hidden center lg:p-20==== max-w-7xl pb-20 `}>
+          <ScrollTrigger  className="flex center w-full px-10" 
+                          onEnter={() => setActivateFrame(true)} 
+                          onExit={() => setActivateFrame(false)}
+          >
+            <div className='flex w-full center border-[6px] lg:border-[30px] border-blakk/80'>
+              <div className='flex center relative w-full'>
+                <img className='full object-cover self-center relative' src={jumeaux} alt="beloved son" />
               </div>
             </div>
           </ScrollTrigger>

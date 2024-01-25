@@ -51,6 +51,7 @@ export { default as workforce } from '../components/.images/workforce.jpg'
 export { default as daara2 } from '../components/.images/daara.png'
 
 export { default as abs_signature } from '../components/.branding/abs_signature.svg'
+export { default as abssignature } from '../components/.branding/Abs.png'
 
 export { default as abssuit1 } from '../components/.photos/abs_suit_2.JPG'
 export { default as abssuit3 } from '../components/.photos/abs_suit_3.webp'
@@ -58,7 +59,7 @@ export { default as abswhite } from '../components/.photos/abs_white_arms.PNG'
 export { default as abssit } from '../components/.photos/abs_sit.png'
 export { default as abssit2 } from '../components/.photos/abs_sit_.png'
 export { default as abshero } from '../components/.photos/abs_blue_.jpg'
-export { default as absleader } from '../components/.photos/abs_blue.JPG'
+export { default as absleader } from '../components/.photos/abs_blue_3.PNG'
 export { default as absstand } from '../components/.photos/abs_white_wall.jpg'
 export { default as absyellowfit } from '../components/.photos/abs_yellow_fit.PNG'
 
