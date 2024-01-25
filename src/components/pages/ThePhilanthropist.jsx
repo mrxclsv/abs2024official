@@ -12,18 +12,24 @@ const ThePhilanthropist = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   }, [location])
 
   return (
     <div className='min-h-screen h-full w-screen center flexV bg-white text-black gap-10 relative pt-[75px]' >
 
-      <Hero image={leket2} page={page} title={''} hasGradient={false}/>
+      <Hero 
+        image={leket2} 
+        page={page} 
+        title={'A man for the people'} 
+        imageCSS='!object-cover !h-full origin-bottom object-bottom brightness-[.7]'
+        css='bg-black to-gray-200= relative full'
+        hasGradient={false}/>
 
 
       <div className='mt-0 flexV center w-full h-full relative text-black  '>
 
-        <div className='#ABS2024 #BoromTerangaYi max-w-7xl flex center w-full relative h-full pt-6 pb-10'>
+        <div className='#ABS2024 #BoromTerangaYi max-w-6xl flex center w-full relative h-full pt-6 pb-10'>
           <SplitDiv title="#ABS2024 #BoromTerangaYi" color="white" link=""
             hasTitle={true} hasText={true} hasDescr
             layout={1}
@@ -38,22 +44,22 @@ const ThePhilanthropist = () => {
           />
         </div>
 
-        <div className='TheJourney flex-row lg:flex-col scrollbar-hide  w-full start  relative overflow-y-hidden overflow-x-scroll py-10 md:p-[200px]=  lg:h-[100vh]='>
+        <div className='TheJourney flex-row lg:flex-col= scrollbar-hide w-full items-center justify-center relative overflow-y-hidden overflow-x-scroll py-10'>
           {/* <i className='ri-arrow-right-fill p-2 m-6 rounded-full bg-neutral-500/10 aspect-square bottom-0 text-white animate-pulse absolute right-0' /> */}
-          <div className='sectionCARD flexV items-start justify-start z-[1] w-full lg:w-fit h-fit sticky top-0 px-10'>
-            <div className='flex relative w-fit py-10'>
-              <i className='ri-arrow-right-fill p-2 m-6 rounded-full min-w-[44px] bg-neutral-500/10 aspect-square text-blakk animate-pulse absolute bottom-0 left-0 right-0 mx-auto w-8 =rotate-90 lg:rotate-0= z-[2]' />
+          <div className='sectionCARD flexV items-start justify-start z-[1] w-full lg:w-fit h-fit sticky mx-auto top-0 px-10'>
+            <div className='flex relative w-fit py-10=== '>
+              <i className='ri-arrow-right-fill p-2 m-6 rounded-full min-w-[44px] bg-neutral-500/10 aspect-square text-blakk animate-pulse absolute bottom-0 left-0 right-0 mx-auto w-8 z-[2]' />
               <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
                 hasTitle={true} hasText={true} hasDescr={false}
                 layout={1}
                 showLines={false}
                 text="The Journey"
                 descr=""
-                mainCSS="w-fit px-0 pt-0"
+                mainCSS="w-fit px-0 pt-0 !h-fit "
                 blockCSS="!p-0="
                 image={water}
-                wrapperCSS="hidden== =absolute"
-                css="mt-0 mx-auto"
+                wrapperCSS="hidden"
+                css="mt-0 mx-auto !h-fit"
                 imageCSS="hidden"
                 hasLink={false}
               />
@@ -105,22 +111,23 @@ const ThePhilanthropist = () => {
           </div>
         </div>
 
-        <div className="inThePress flex center relative max-w-7xl h-[60vh] max-h-[1000px] w-full" id="Press">
+        <div className="inThePress flexV start relative max-w-6xl h-[60vh]= max-h-[1000px] w-full" id="Press">
           <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
             hasTitle={true} hasText={true} hasDescr={false}
             layout={1}
             showLines={true}
             text="ABS in the Press"
             descr=""
-            mainCSS="w-full px-0 pt-0 h-fit"
-            blockCSS="!p-0 w-fit self-start"
+            mainCSS="w-fit px-0 pt-0 !min-h-[400px]"
+            blockLength={true}
+            blockCSS="!h-fit !py-0 "
             image={water}
             wrapperCSS="hidden"
             css="mt-0 mx-auto w-full "
             imageCSS="hidden"
             hasLink={false}
           />
-          <div className={`grid grid-cols-[${news.length}] lg:grid-cols-2 gap-10 center w-full justify-between py-10`}>
+          <div className={`grid grid-cols-2 px-6 lg:px-0 lg:grid-cols-4 gap-10 lg:gap-32 center w-full justify-between py-10`}>
 
             {/* <p>There {news.length > 1 ? 'are' : 'is'} {news.length} {news.length > 1 ? 'articles' : 'article'} about ABS in the news</p> */}
             {/* NOTIF MARK */}
@@ -135,7 +142,7 @@ const ThePhilanthropist = () => {
                   <div /* {item.link} */ key={index} className=' flexV center relative overflow-hidden lg:w-[20vw]= lg:max-w-[200px]= aspect-16/9 p-6 group cursor-context-menu'>
                     <img
                       src={`/press/${item.image}`}
-                      className="newsElement w-full scale-[.95] opacity-[.7] saturate-0 group-hover:opacity-100 group-hover:scale-100 group-hover:saturate-100 transition duration-700"
+                      className="newsElement w-full scale-[.92] opacity-[.7] saturate-0 cursor-pointer group-hover:opacity-100 group-hover:scale-100 group-hover:saturate-100 transition duration-700"
                       alt={`ABS in ${item.title}`}
                     />
                   </div>

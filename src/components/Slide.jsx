@@ -68,7 +68,7 @@ const Slide = () => {
   // console.log(slider.length + ' for slider length and displays image ' + imageIndex)
 
   return (
-    <div className='w-full flexV center py-20 max-w-7xl bg-white relative z-[2]'>
+    <div className='w-full flexV center py-20 max-w-6xl bg-white relative z-[2]'>
 
       <div className='flex w-full center py-6'> <TextLayout title="A dedicated father "
         text=""
@@ -84,8 +84,8 @@ const Slide = () => {
 
       </div>
 
-      <div className='flexV  start w-full relative h-full max-w-7xl'>
-        {/* <div className='thumbnails flex justify-between max-w-7xl gap-20 mx-auto py-20'>
+      <div className='flexV  start w-full relative h-full max-w-6xl'>
+        {/* <div className='thumbnails flex justify-between max-w-6xl gap-20 mx-auto py-20'>
           {slider.map((item, index) => (
             <div 
               key={index} 
@@ -108,7 +108,7 @@ const Slide = () => {
             transition duration-1000 ease-in-out 
           `}>
             {slider.map((item, index) => (
-              <div key={item.number} className={`flex !items-start !justify-start left relative group overflow-hidden overflow-y-hidden scrollbar-hide w-full h-full flex-grow-0 shrink-0 snap-x snap-center animate-slowfade min-h-[400px] lg:min-h-[70vh] bg-gray-100 lg:bg-transparent max-h-[1200px] max-w-7xl`}>
+              <div key={item.number} className={`flex !items-start !justify-start left relative group overflow-hidden overflow-y-hidden scrollbar-hide w-full h-full flex-grow-0 shrink-0 snap-x snap-center animate-slowfade min-h-[400px] lg:min-h-[70vh] bg-gray-100 lg:bg-transparent max-h-[1200px] max-w-6xl`}>
                 <img className={`inset-0 my-auto h-full absolute sideZero object-cover lg:object-contain transition  ${item.css} `} src={item.image} alt="photos" />
               </div>
             ))}

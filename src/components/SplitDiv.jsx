@@ -5,7 +5,7 @@ import { allTransitions } from '../utils/style'
 import { Link } from 'react-router-dom'
 
 const SplitDiv = ({
-  layout, title, text, descr, image, short, css, color, hashtags, hasQuote, imageCSS, wrapperCSS, link, hasLink, mainCSS, action, hasShadow, coordinates, hasTitle, hasText, hasDescr, showLines, blockCSS
+  layout, title, text, descr, image, short, css, color, hashtags, hasQuote, imageCSS, wrapperCSS, link, hasLink, mainCSS, action, hasShadow, coordinates, hasTitle, hasText, hasDescr, showLines, blockCSS, blockLength
 
 
 }) => {
@@ -19,14 +19,14 @@ const SplitDiv = ({
                     ${mainCSS} ${color === "white" ? "bg-white text-gray-900 z-[1]" : "bg-blakk z-[1] text-white"}
                     `}>
 
-      <div className={`flex center h-full relative ${layout === 1 && 'gap-6'} overflow-y-hidden justify-center max-w-7xl= mx-auto 
+      <div className={`flex center h-full relative ${layout === 1 && 'gap-6'} overflow-y-hidden justify-center max-w-6xl= mx-auto 
                     ${layout === 1 && "flexV lg:flex-row lg:gap-0  "}
                     ${layout === 2 && "flexV lg:flex-row-reverse   "} 
                     ${css}
                     `}>
 
-        <div className={`left w-full lg:w-1/2 relative flexV p-6 lg:py-20 pb-0 ${blockCSS} h-fit items-center justify-center group `}>
-          <div /* to={link} */ className={`relative flexV overflow-y-hidden h-full= !w-full= lg:min-w-[400px] ${layout === 2 && "!self-start md:pl-0"} lg:self-end `}>
+        <div className={`left  ${blockLength ? '!lg:w-full' : 'w-full lg:w-1/2'} relative flexV p-6 lg:py-20 ${blockCSS} h-fit items-center justify-center group `}>
+          <div /* to={link} */ className={`relative flexV overflow-y-hidden lg:min-w-[400px] ${layout === 2 && "!self-start md:pl-0"} lg:self-end `}>
             <TextLayout
               title={title}
               text={text}

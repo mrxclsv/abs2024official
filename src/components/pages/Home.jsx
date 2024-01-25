@@ -119,7 +119,7 @@ const Home = () => {
           hasLink
           hasTitle={false} hasText={true} hasDescr={true}
           showLines={false}
-          mainCSS=" mx-auto max-w-7xl"
+          mainCSS=" mx-auto max-w-6xl"
           layout={2}
           css="center gap-0 w-full "
           blockCSS=""
@@ -174,7 +174,7 @@ const Home = () => {
             className='
           '>
             {/* w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 pt-14 lg:absolute top-0 lg:hidden   */}
-            <div className='flex flex-col lg:flex-row w-full max-w-7xl center relative pb-4 md:pb-0'>
+            <div className='flex flex-col lg:flex-row w-full max-w-6xl center relative pb-4 md:pb-0'>
 
               <div className='image flex w-full lg:w-1/2 full min-h-[40vh] h-fit relative '>
                 {contributions?.map((item, index) => (
@@ -228,7 +228,7 @@ const Home = () => {
         <AndTheCommunity />
 
         <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
-          <div className="flex flex-col lg:flex-row start w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
+          <div className="flex flex-col lg:flex-row start w-full max-w-6xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
               hasQuote={false}
               hasTitle={true} hasText={true} hasDescr={true}

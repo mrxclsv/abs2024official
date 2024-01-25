@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <div className='w-screen min-h-screen flexV center h-full overflow-x-hidden'>
       <div className='page relative'>
-        <div className='relative flex start max-w-7xl'>
+        <div className='relative flex start max-w-6xl'>
 
           Projects 
 

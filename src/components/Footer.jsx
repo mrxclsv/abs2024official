@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       }
 
-      <div className="wrapper w-full flexV items-start max-w-7xl pt-14 pb-6    
+      <div className="wrapper w-full flexV items-start max-w-6xl pt-14 pb-6    
                       sm:flex-row sm:items-end
                       md:flex md:justify-around===
                       lg:items-end=== lg:flex=== 
@@ -106,7 +106,7 @@ const Footer = () => {
 
       </div>
 
-      <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full max-w-7xl mt-6 lg:pb-4 pb-16'>
+      <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full max-w-6xl mt-6 lg:pb-4 pb-16'>
         <p className='whitespace-nowrap lg:w-1/2 w-full relative text-center lg:text-left lg:pl-10 fit mx-auto md:opacity-70 p-6 md:hover:opacity-100 text-sm  text-blakk'>© Copyright 2024, ABS2024 #YoonWi</p>
         <div className='socialNetworks lg:w-1/2 w-full lg:start center lg:pl-10 relative flex gap-2 self-center !text-black '>
           {social?.map((item, index) => (

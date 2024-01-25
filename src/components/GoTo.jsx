@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const GoTo = () => {
   return (
-    <div className='w-full h-full max-w-7xl grid grid-cols-2 lg:grid-cols-4 center justify-around gap-6 lg:gap-20 mt-20 p-6 lg:p-10'>
+    <div className='w-full h-full max-w-6xl grid grid-cols-2 lg:grid-cols-4 center justify-around gap-6 lg:gap-20 mt-20 p-6 lg:p-10'>
     {navbar?.map((item, index) => (
       <Link key={index} to={item.link} className='w-auto rounded-lg bg-gray-400 aspect-6/4 overflow-hidden relative group hover:shadow-lg shadow-black/30'>
           

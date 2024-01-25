@@ -19,9 +19,9 @@ const ContactForm = ({ css, simplified }) => {
 
 
   return (
-    <div className={`w-full bg-gray-100 ${simplified && '!w-fit !bg-transparent'} flex center`}>
+    <div className={`w-full bg-gray-100 py-8 ${simplified && '!w-fit py-0 !bg-transparent'} flex center`}>
       <form
-        className="Form flexV fit items-start justify-center bg-gray-100 shrink-0  text-black lg:max-w-7xl rounded-lg p-8 m-auto gap-4"
+        className="Form flexV fit items-start justify-center bg-gray-100 shrink-0  text-black lg:max-w-6xl rounded-lg p-8 m-auto gap-4"
         onSubmit={sendEmail}>
 
         <h2 className='text-4xl lg:h2 lg:pl-6=== text-black mb-8'>Get in touch</h2>

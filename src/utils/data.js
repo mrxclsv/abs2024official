@@ -375,3 +375,11 @@ export const document = {
   extension: ' — ABS2024',
   extension2: project.name,
 }
+
+export const press = [
+  {
+    source: '',
+    link:'https://www.youtube.com/watch?v=eqlK_X1exoE'
+
+  }
+]
