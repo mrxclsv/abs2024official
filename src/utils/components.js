@@ -7,7 +7,7 @@ export { default as SonOfSenegal } from '../components/pages/SonOfSenegal'
 export { default as TheLeader } from '../components/pages/TheLeader'
 export { default as TheVisionary } from '../components/pages/TheVisionary'
 export { default as ThePhilanthropist } from '../components/pages/ThePhilanthropist'
-export { default as Projects } from '../components/pages/Projects'
+export { default as Projects } from '../components/pages/Portfolio'
 
 export { default as SplitDiv } from '../components/SplitDiv'
 export { default as TextLayout } from '../components/TextLayout'
@@ -24,7 +24,7 @@ export { default as TimelineElement } from '../components/TimelineElement'
 export { default as AndTheCommunity } from '../components/AndTheCommunity'
 export { default as Links } from '../components/Links'
 
-export { default as ProjectCard } from '../components/Projects/ProjectCard'
+export { default as PortfolioPage } from '../components/Projects/PortfolioPage'
 export { default as Button } from '../components/Button'
 
 export { default as NotFound } from '../components/NotFound'

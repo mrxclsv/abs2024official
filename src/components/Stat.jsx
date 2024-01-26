@@ -9,7 +9,7 @@ const Stat = ({
 
   return (
 
-    <Link className={`flexV md:start relative w-fit min-w-[200px] px-4 md:pl-10 group`}>
+    <Link className={`flexV md:start relative w-full min-w-[210px] px-6 md:pl-10 group`}>
       {/* ${added !== "" && "md:col-span-2 w-full max-w-[300px]"}  */}
 
       <div className='flex items-center relative w-full mb-4 font-normal tracking-wide'>
@@ -31,7 +31,7 @@ const Stat = ({
 
         }
         {added !== "" &&
-          <p className='statMain capitalize whitespace-nowrap animate-slideleft w-fit ml-2 text-left'>
+          <p className='statMain capitalize whitespace-nowrap animate-slideleft w-fit ml-1 text-left'>
             {added}
           </p>
         }
@@ -49,7 +49,7 @@ const Stat = ({
                         :
                         'translate-x-[0px] opacity-100 transition duration-[2000]'}   */}
       </div>
-      <h4 className='h4 md:h4 capitalize whitespace-nowrap w-fit text-black font-normal group-hover:font-[400] mt-2 opacity-80 group-hover:opacity-100 transition text-left'>{title || "2000"}</h4>
+      <h4 className='h4 md:h4 capitalize whitespace-nowrap w-full text-black font-normal group-hover:font-[400] mt-2 opacity-80 group-hover:opacity-100 transition text-left'>{title || "2000"}</h4>
 
     </Link>
   )

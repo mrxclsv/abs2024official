@@ -19,10 +19,10 @@ const Hero = ({ image, imageCSS, page, title, css, hasGradient }) => {
       }
       <img className={`full flex object-cover origin-bottom object-bottom scale-110 opacity-80  md:opacity-100 transition duration-700 ${imageCSS} `} src={image} alt="The Future of Senegal Is Here" />
 
-      <div className='flexV center absolute absoluteAll sm:max-w-3/4 lg:max-w-[1024px] mx-auto gap-4 text-white z-[2]'>
+      <div className='flexV center absolute absoluteAll sm:max-w-3/4 lg:max-w-7xl mx-auto gap-4 text-white z-[2]'>
         <h1 className='leading-[110%] px-6 md:px-10 text-4xl font-normal md:text-7xl md:font-light md:font-semibold== uppercase'>{page}</h1>
         <div className='flex flex-col lg:flex-row gap-0 lg:gap-4 center h4 lg:h3 font-normal'>
-          <p>{title}</p>
+          <div className='lg:h3 font-normal'>{title}</div>
           {/* <p>{title}</p> */}
         </div>
       </div>

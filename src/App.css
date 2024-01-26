@@ -394,7 +394,7 @@
   }
 
   .statMain {
-    @apply text-4xl lg:text-5xl
+    @apply text-3xl font-[500] lg:text-5xl
   }
 
   .h1, 

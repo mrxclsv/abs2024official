@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from "react-router-dom"
-import { SplitDiv, TextLayout, workforce, absstand, absleader, ContactForm, AndTheCommunity, abssignature, } from '../../utils/components'
+import { SplitDiv, TextLayout, workforce, absstand, absleader, AndTheCommunity, abssignature, } from '../../utils/components'
 import { project } from '../../utils/data'
 import { allTransitions } from '../../utils/style'
 
@@ -10,8 +10,6 @@ const TheLeader = () => {
   const page = location.pathname.substring(1).replaceAll('-', " ").toUpperCase()
   const thisPage = `${project.name} — ${location !== "/" ? page : project.tagline}`
   document.title = thisPage
-
-  // var heroHeight = document.getElementById('hero').offsetHeight
 
   useEffect(() => {
     window.scroll(0, 0)
@@ -49,8 +47,6 @@ const TheLeader = () => {
     }
   }, [])
 
-  console.log("Hero section dimension is " + elementHeight + ' and position is' + position.x + " " + position.y)
-
 
   return (
     <div className='min-h-screen w-screen relative flexV start bg-white text-black'>
@@ -74,7 +70,7 @@ const TheLeader = () => {
             <div className='flexV center max-w-xl leading-[200%] gap-10 relative'>
               {/* <span className='text-sm'>Abdoulaye SYLLA</span> */}
               <img className='flex object-contain h-24 relative' src={abssignature} alt='Abs signature' />
-              <h4 className='text-lg z-[2] relative'> Building a Better Future Through Local <br /> and Global Talent.</h4>
+              <h4 className='text-2xl font-bold z-[2] relative'> Building a Better Future Through Local and Global Talent.</h4>
             </div>
 
             <img src={absleader}
@@ -107,7 +103,7 @@ const TheLeader = () => {
 
           <div className='splitText flexV w-screen center bg-gradient-to-b from-blakk to-neutral-900'>
 
-            <div className='flexV max-w-6xl justify-between lg:flex-row px-10 py-10'>
+            <div className='flexV max-w-7xl justify-between lg:flex-row px-10 py-10'>
               <TextLayout title="A leader by example"
                 text='Diversity & Inclusivity'
                 descr="In the modern world, diversity and inclusivity are the foundations of successful organizations, Abdoulaye SYLLA's Ecotra stands as an example of how a company can leverage the strengths of both local and foreign talent to create, innovate, and build the nation . With a workforce of 1300 people, including 800 Senegalese, representatives from 20 nations around the world, and 6% disabled individuals"
@@ -135,7 +131,7 @@ const TheLeader = () => {
             hasTitle={true} hasText={true} hasDescr={true}
             showLines={false}
             layout={1}
-            mainCSS="overflow-hidden min-h-[50vh] max-w-6xl lg:max-h-[800px] my-20= rounded-lg overflow-hidden"
+            mainCSS="overflow-hidden min-h-[50vh] max-w-7xl lg:max-h-[800px] my-20= rounded-lg overflow-hidden"
             blockCSS="h-full"
             css="group "
             text='Policy of Inclusivity'
@@ -145,7 +141,7 @@ const TheLeader = () => {
             image={absstand} wrapperCSS="md:object-right center object-center h-full overflow-hidden  md:scale-80"
           />
 
-          <div className='splitText flexV lg:flex-row px-6 lg:px-0 max-w-6xl py-10'>
+          <div className='splitText flexV lg:flex-row px-6 lg:px-0 max-w-7xl py-10'>
             <TextLayout title="Beyond business"
               text='Social & Community Service'
               descr="What truly marks ABS as a leader is his unwavering commitment to social & community service. For over 2 decades ABS has actively supported community development projects and initiatives, supporting education, healthcare, and infrastructure in Senegal donating over 2 billion each year.
@@ -155,7 +151,7 @@ const TheLeader = () => {
               hasDescr={true}
               showLines={false}
               color="white"
-              css="max-w-6xl"
+              css="max-w-7xl"
             />
             <TextLayout title="20 years of social service"
               text="Better future for Senegal"
@@ -170,7 +166,7 @@ const TheLeader = () => {
 
           <div className="&TheCommunity h-full lg:h-fit w-screen flexV lg:flex center relative bg-blakk">
 
-            <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-6xl'>
+            <div className='flexV lg:flex-row center w-full lg:h-[80vh] relative max-w-7xl'>
               <AndTheCommunity />
             </div>
 

@@ -64,7 +64,7 @@ const ABSFacts = () => {
               hasTitle={true} hasText={true} hasDescr={false}
               showLines={true}
               mainCSS='my-40 sticky top-10 animate-slidedown !bg-transparent z-[3]'
-              css="w-screen lg:max-w-6xl h-full"
+              css="w-screen lg:max-w-7xl h-full"
               layout={1}
               text='100 facts about abs'
               descr=""
@@ -77,8 +77,8 @@ const ABSFacts = () => {
             <img src={abssuit1} className='absolute object-cover origin-center= object-center opacity-30 inset-0 full' alt="100AboutABS" />
           </div>
 
-          {/* <div className={` flexV h-[100dvh]= items-start grid= grid-cold-2 =lg:grid-cols-4 start =h-fit text gap-6 max-w-6xl mb-20===== relative top-56==== `}> */}
-          <div className={` flexV= h-[100dvh]= items-start  grid grid-col-2 lg:grid-cols-4 mx-auto w-full start text gap-6 max-w-6xl mb-20 relative top-56==== `}>
+          {/* <div className={` flexV h-[100dvh]= items-start grid= grid-cold-2 =lg:grid-cols-4 start =h-fit text gap-6 max-w-7xl mb-20===== relative top-56==== `}> */}
+          <div className={` flexV= h-[100dvh]= items-start  grid grid-col-2 lg:grid-cols-4 mx-auto w-full start text gap-6 max-w-7xl mb-20 relative top-56==== `}>
 
             {ABS100FACTS?.slice(0, ABS100FACTS.length).map((item, index) => (
               <Card

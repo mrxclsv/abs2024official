@@ -19,7 +19,7 @@ const SplitDiv = ({
                     ${mainCSS} ${color === "white" ? "bg-white text-gray-900 z-[1]" : "bg-blakk z-[1] text-white"}
                     `}>
 
-      <div className={`flex center h-full relative ${layout === 1 && 'gap-6'} overflow-y-hidden justify-center max-w-6xl= mx-auto 
+      <div className={`flex center h-full relative ${layout === 1 && 'gap-6'} overflow-y-hidden justify-center max-w-7xl= mx-auto 
                     ${layout === 1 && "flexV lg:flex-row lg:gap-0  "}
                     ${layout === 2 && "flexV lg:flex-row-reverse   "} 
                     ${css}

@@ -42,7 +42,7 @@ const TheVisionary = () => {
 
       <div className='flexV center w-full relative h-full bg-blakk overflow-hidden lg:mt-10 mb-20'>
         <div className='lineMob md:hidden w-[3px] bg-primary/50 h-full absolute z-[1] top-6 left-0 ml-5' />
-        <div className='wrapper max-w-6xl relative w-full flex center py-6 '>
+        <div className='wrapper max-w-7xl relative w-full flex center py-6 '>
           <div className='lineDesk w-[3px] bg-primary/50 h-full hidden md:flex absolute z-[1] top- bottom-4 left-0 right-0 mx-auto ' />
           <div className='w-3 h-1 bg-primary absolute left-4 lg:right-0 lg:left-0 bottom-0 lg:bottom-3 mx-auto' />
           <Timeline />

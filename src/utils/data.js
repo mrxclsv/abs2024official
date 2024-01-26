@@ -356,6 +356,42 @@ export const contributions = [
 
 ]
 
+export const portfolioData = [
+  { title: "Mosque Mawa Sylla",  
+    descr: '',
+    before: "",
+    link:"mawa-sylla-mosque" ,
+    position:"left-[15%] top-[45%]",
+    color: 'bg-yellow-900',
+    duration: 3
+  },
+  { title: "Mausole Serigne Fallou Macke",  
+    descr: '',
+    before: "+",
+    link:"" ,
+    position:"left-[60%] top-[50%]",
+    color: 'bg-primary',
+    duration: 3
+  },
+  { title: "",  
+    descr: '',
+    before: "+",
+    link:"" ,
+    position:"left-[25%] top-[70%]",
+    color: 'bg-primary',
+    duration: 5
+  },
+  { title: "",  
+    descr: '',
+    before: "",
+    link:"" ,
+    position:"left-[30%] top-[25%]",
+    color: 'bg-red-400',
+    duration: 3
+  },
+
+]
+
 export const project = {
   name: "ABS2024",
   tagline: "Yoon Wi Ubbi Buntu Koom",

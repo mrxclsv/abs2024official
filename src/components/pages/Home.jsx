@@ -6,7 +6,7 @@ import {
   abssuit3, flagsenegal,
 } from '../../utils/components';
 import { Link, useLocation } from 'react-router-dom';
-import { contributions, project } from '../../utils/data';
+import { contributions, portfolioData, project } from '../../utils/data';
 import { allTransitions } from '../../utils/style';
 import ScrollTrigger from 'react-scroll-trigger'
 
@@ -19,7 +19,7 @@ const Home = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0,0)
+    // window.scroll(0,0)
   }, [location])
 
   const [toggleRead, setToggleRead] = useState(false)
@@ -43,10 +43,10 @@ const Home = () => {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
-      if(counterOn) 
-      setIsLoading(false)
+      if (counterOn)
+        setIsLoading(false)
     }, 1000);
-    }, [counterOn])
+  }, [counterOn])
 
   const handleCounter = useEffect(() => {
     setTimeout(() => {
@@ -64,7 +64,6 @@ const Home = () => {
 
     <div className='flexVStart w-[100dvw] overflow-x-hidden overflow-y-auto scrollbar-hide items-center justify-start relative pt-[75px]=='>
 
-
       <div id='FutureOfSenegal' className='w-screen h-[100svh] relative md:bg-gray-800 flexCenter bg-black md:bg-transpaprent'>
         <div className='w-full h-3/4 absolute -top-20 left-0 right-0 bg-gradient-to-b from-black/60 -to-transparent  z-[1]' />
         <img className='screen flex object-cover origin-bottom object-bottom scale-110 opacity-80  md:opacity-100 transition duration-700' src={abshero} alt="The Future of Senegal Is Here" />
@@ -78,7 +77,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="Slides" className='flexV center overflow-hidden bg-gray-100 w-full'>
+      <div id="Slides" className='flexV center overflow-hidden bg-white w-full'>
 
         <SplitDiv title="The Leader" color="black" link=""
           hasQuote={false}
@@ -119,7 +118,7 @@ const Home = () => {
           hasLink
           hasTitle={false} hasText={true} hasDescr={true}
           showLines={false}
-          mainCSS=" mx-auto max-w-6xl"
+          mainCSS=" mx-auto max-w-7xl"
           layout={2}
           css="center gap-0 w-full "
           blockCSS=""
@@ -174,14 +173,18 @@ const Home = () => {
             className='
           '>
             {/* w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 pt-14 lg:absolute top-0 lg:hidden   */}
-            <div className='flex flex-col lg:flex-row w-full max-w-6xl center relative pb-4 md:pb-0'>
+            <div className='flex flex-col lg:flex-row w-full max-w-7xl center relative pb-4 md:pb-0'>
 
               <div className='image flex w-full lg:w-1/2 full min-h-[40vh] h-fit relative '>
-                {contributions?.map((item, index) => (
-                  <Link to="/projects" key={index} className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full absolute absoluteAll flex center my-auto= ${item.position} `}>
+                {portfolioData?.map((item, index) => (
+                  <Link
+                    to={`/portfolio/${item.link}}`}
+                    key={index}
+                    className={`cursor-pointer z-10 hover:scale-125 transition w-[20px] h-[20px] rounded-full absolute absoluteAll flex center my-auto= ${item.position} 
+                  `}>
                     <p className='h5 text-white absolute z-[3]'>{index + 1}</p>
-                    <div className='bg-black/90 full p-2 z-[2] rounded-full absolute animate-pulse delay-75' />
-                    <div className='bg-black/60 full p-6 opacity-50 rounded-full absolute animate-pulse delay-200' />
+                    <div className={`bg-black hover:${item.color} opacity-80 full p-2 z-[2] rounded-full absolute animate-pulse delay-75 `} />
+                    <div className={`bg-black hover:${item.color} full p-6 opacity-20 rounded-full absolute animate-pulse delay-200 `} />
                   </Link>
                 ))}
                 <img className='h-full lg:w-full object-contain mix-blend-multiply p-5' src={mapsenegal} alt="senegal" />
@@ -203,7 +206,7 @@ const Home = () => {
                   />
                 </div>
                 <div className='flex w-full start'>
-                  <div className='contributions grid grid-cols-2 w-full center gap-x-0 gap-y-10 py-6 text-black justify-around'>
+                  <div className='contributions grid grid-cols-2 w-full center gap-x-0 gap-y-10 py-6 text-black justify-around='>
                     {contributions?.map((item, index) => (
                       <Stat key={index}
                         title={item.title}
@@ -227,8 +230,8 @@ const Home = () => {
 
         <AndTheCommunity />
 
-        <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10 lg:pb-0'>
-          <div className="flex flex-col lg:flex-row start w-full max-w-6xl h-full relative gap-10 md:gap-0 overflow-hidden">
+        <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10= lg:pb-0'>
+          <div className="flex flex-col lg:flex-row start w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
               hasQuote={false}
               hasTitle={true} hasText={true} hasDescr={true}
@@ -261,15 +264,9 @@ const Home = () => {
                   hashtags={true}
                   hasQuote={false}
                 /> */}
-
-
           </div>
-
         </div>
-
       </div>
-
-
     </div >
   )
 }

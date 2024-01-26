@@ -7,6 +7,7 @@ import {
   Projects,
   ABSFacts,
   ScrollToTop,
+  PortfolioPage,
 }
   from './utils/components';
 
@@ -75,14 +76,11 @@ function App() {
 
     <div className="APP flexV  relative overflow-x-hidden overflow-y-auto== ==scrollbar-hide scroll-smooth">
 
-      <Navbar nawW={navW} menu={menu} setMenu={setMenu}
-        toggleNav={toggleNav} toggleMenu={toggleMenu}
-      />
+      <Navbar nawW={navW} menu={menu} setMenu={setMenu} toggleNav={toggleNav} toggleMenu={toggleMenu} />
 
       <ScrollToTop scrollTop={scrollTop} toggleScroll={toggleScroll} scrollToTop={scrollToTop} />
 
       <main className='flex w-[100dvw] min-h-[100dvh] overflow-x-hidden items-center justify-start relative scrollbar-hide scroll-smooth'>
-
         <Routes>
 
           <Route exact path="/" element={<Home />} />
@@ -91,13 +89,11 @@ function App() {
           <Route exact path="/the-philanthropist" element={<ThePhilanthropist />} />
           <Route exact path="/the-visionary" element={<TheVisionary />} />
           <Route exact path="/100facts" element={<ABSFacts />} />
-          <Route exact path="/projects" element={<Projects />} />
-
+          <Route exact path="/portfolio" element={<Projects />} />
+          <Route exact path="/portfolio/:portfolioId" element={<PortfolioPage />} />
           <Route exact path="/*" element={<NotFound />} />
 
-
         </Routes>
-
       </main>
 
 
