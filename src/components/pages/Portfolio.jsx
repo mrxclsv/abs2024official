@@ -13,7 +13,7 @@ const Portfolio = () => {
   document.title = thisPage
 
   useEffect(() => {
-    window.scroll(0, 0)
+    // window.scroll(0, 0)
   }, [location])
 
 
@@ -39,14 +39,14 @@ const Portfolio = () => {
         <div className='flex justify-start items-start py-10 lg:max-w-7xl w-full h-full mx-auto relative'>
 
           {portfolioData.length > 1 &&
-            <div className='portfolioItems grid grid-cols-2  5xl:grid-cols-3 gap-6 lg:gap-14 lg:gap-y-40 justify-between items-start relative w-full px-5 py-10'>
+            <div className='portfolioItems grid grid-cols-1 lg:grid-cols-2  5xl:grid-cols-3 gap-6 lg:gap-14 lg:gap-y-40 justify-between items-start relative w-full px-6 py-10'>
 
               {/* PORTFOLIO ITEMS */}
               {portfolioData?.map((item, index) => (
                 <Link to={`/portfolio/${item.title.replaceAll(' ', '-').toLowerCase()}`} key={index} className='flexV animate-slidedown center relative w-full h-full group
-                text-black  '>
+                text-black overflow-hidden  '>
 
-                  <div className="coverWrapper full flex center group relative bg-black aspect-4/5 lg:aspect-16/9">
+                  <div className="coverWrapper full rounded flex center group relative bg-black aspect-6/3 lg:aspect-16/9">
                     <img
                       src="/default.jpg"
                       alt={item.title}
@@ -57,13 +57,16 @@ const Portfolio = () => {
                   <div className='infoDesktop hidden lg:flex absolute inset-0 absoluteAll center'>
                     <div className="infoWrapper opacity-10 translate-y-8 group-hover:translatey-y-0 group-hover:opacity-100 duration-700 ease-in-out flexV center full">
                       <div className='bg-gradient-to-t from-blakk to-transparent absolute bottom-0 h-[25%]z-[2]' />
-                      <p className=''>{item.title || 'Project Title Placeholder'}</p>
+                      <h3 className=''>{item.title || 'Project Title Placeholder'}</h3>
                     </div>
                   </div>
 
-                  <div className='infoMobile relative flexV lg:hidden mt-2 '>
-                    <p className=''>{item.title || 'Project Title Placeholder'}</p>
-                    <p className=''>{item.location || 'This location, Senegal'}</p>
+                  <div className='infoMobile text-left start relative flexV w-full pt-2 gap-2 pb-4 lg:hidden mt-2 text-white mix-blend-difference'>
+                    <div id="row1" className='flex justify-between w-full items-center'>
+                      <p className='font-[500] w-full flex-grow'>{item.title || 'Project Title Placeholder'}</p>
+                      <p className='text-left text-sm muted'>2023 {/* {item.year} */}</p>
+                    </div>
+                    <h4 className='w-full opacity-70 '><i className='ri-map-pin-line mr-1' />{item.location || 'This location, Senegal'}</h4>
                   </div>
                   {/* <p>{item.descr}</p> */}
                 </Link>
