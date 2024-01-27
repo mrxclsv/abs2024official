@@ -13,7 +13,7 @@ const Portfolio = () => {
   document.title = thisPage
 
   useEffect(() => {
-    // window.scroll(0, 0)
+    window.scroll(0, 0)
   }, [location])
 
 

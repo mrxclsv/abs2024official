@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { portfolioData } from '../../utils/data'
 
 
@@ -10,12 +10,18 @@ const PortfolioPage = () => {
   const slug = 'portfolio'
   const { portfolioId } = useParams()
 
+  const location = useLocation()
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     })
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [location])
 
   // const location = useLocation()
   // console.log(portfolioId + ' ' + location.pathname)
@@ -47,7 +53,7 @@ const PortfolioPage = () => {
                   <img src={item.cover} className='full object-cover relative ' alt={item.title} />
                 </div>
 
-                <div className='projectInfo flex center relative w-full lg:w-1/2 h-full text-white mix-blend-difference'>
+                <div className='projectInfo flex center relative w-full lg:w-1/2 h-full text-white mix-blend-difference animate-slideup'>
                   <div className='infoWrapper full flexV text-left start p-6'>
                     <h4 className='w-full text-xl font-[500]'>{item.title}</h4>
                     <h4 className='my-3'>{item.descr || `This is a description for project ${item.title}. Kindly find and edit it in data.js at const portfolioData.descr`}</h4>
