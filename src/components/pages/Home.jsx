@@ -45,7 +45,7 @@ const Home = () => {
     setTimeout(() => {
       if (counterOn)
         setIsLoading(false)
-    }, 1000);
+    }, 500);
   }, [counterOn])
 
   const handleCounter = useEffect(() => {
@@ -108,7 +108,7 @@ const Home = () => {
           His leadership is marked by an extraordinary vision and an unyielding sense of purpose, setting him apart as a true catalyst for transformative change."
           wrapperCSS='max-h-[100vh]='
           image={abswhite}
-          imageCSS='lg:pt-10==== object-contain lg:object-cover origin-bottom md:origin-top md:object-contain pt-4======'
+          imageCSS='lg:pt-10==== !object-contain !lg:object-contain origin-bottom md:origin-top !lg:h-full !md:object-contain pt-4======'
           hasLink
         />
 
@@ -118,7 +118,7 @@ const Home = () => {
           hasLink
           hasTitle={false} hasText={true} hasDescr={true}
           showLines={false}
-          mainCSS=" mx-auto max-w-7xl"
+          mainCSS=" mx-auto lg:max-w-7xl"
           layout={2}
           css="center gap-0 w-full "
           blockCSS=""
@@ -134,7 +134,7 @@ const Home = () => {
           hasTitle={false} hasText={true} hasDescr={true}
           showLines={false}
           layout={1}
-          mainCSS="overflow-hidden max-h-[1000px] lg:h-[100dvh] lg:max-h-[800px]"
+          mainCSS="overflow-hidden max-h-[1000px] lg:h-[100svh] lg:max-h-[800px]"
           blockCSS="h-full"
           css="group"
           text='Ci La Bokk'
@@ -145,21 +145,21 @@ const Home = () => {
           image={mapafrica}
         />
 
-        <div className='TheBusinessMan relative'>
+        <div className='TheBusinessMan relative overflow-hidden lg:max-h-[100vh]'>
           <SplitDiv title="the business man" color="black" link="/projects"
             hasQuote={false}
             hasTitle={true} hasText={true} hasDescr={true}
             showLines={true}
             layout={1}
-            mainCSS="w-[100dvw]"
-            css='group bg-gradient-to-t from-gray-600 to-gray-900 relative flex items-start justify-end md:pr-0 lg:h-[85vh]   lg:min-h-[800px] overflow-hidden !lg:px-0  '
+            mainCSS="w-[100dvw] lg:max-h-[100vh] overflow-y-hidden"
+            css='group bg-gradient-to-t from-gray-600 to-gray-900 relative flex items-end justify-end md:pr-0 lg:h-[85vh]   lg:min-h-[800px] overflow-hidden !lg:px-0  '
             blockCSS="lg:bg-gradient-to-r from-black to-transparent z-[3] pl-6 lg:absolute left-0 lg:full =3xl:ml-[15vw]"
             hasLink
             text='A different approach to entrepreneurship'
             image={abssit2}
-            wrapperCSS={`lg:w-screen  !overflow-visible !scrollbar-hide    `}
+            wrapperCSS={`lg:w-screen !lg:h-full !overflow-visible !scrollbar-hide    `}
             imageCSS={`h-full pt-3 !lg:w-screen object-top  
-              md:origin-top-right md:h-full md:pr-0 hover:scale-90 group-hover:scale-[100%] group-hover:brightness-[.9] 
+              md:origin-top-right !md:h-full md:pr-0 hover:scale-90 group-hover:scale-[100%] group-hover:brightness-[.9] 
               lg:object-top lg:mt-2 lg:pt-8 
               translate-y-[.4rem] duration-2000`}
             descr="
@@ -173,9 +173,9 @@ const Home = () => {
             className='
           '>
             {/* w-full grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 pt-14 lg:absolute top-0 lg:hidden   */}
-            <div className='flex flex-col lg:flex-row w-full max-w-7xl center relative pb-4 md:pb-0'>
+            <div className='flex flex-col lg:flex-row w-full lg:max-w-7xl center relative pb-4 md:pb-0'>
 
-              <div className='image flex w-full lg:w-1/2 full min-h-[40vh] h-fit relative '>
+              <div id="mapImage" className='flex w-full lg:w-1/2 full min-h-[40vh] h-fit relative '>
                 {portfolioData?.map((item, index) => (
                   <Link
                     to={`/portfolio/${item.link}}`}
@@ -190,9 +190,10 @@ const Home = () => {
                 <img className='h-full lg:w-full object-contain mix-blend-multiply p-5' src={mapsenegal} alt="senegal" />
               </div>
 
-              <div className='flexV lg:w-1/2 center relative start pl-0 lg:pl-0'>
+              <div id="contributionsData" className='flexV lg:w-1/2 center relative start pl-0 lg:pl-0'>
 
                 <div className='sectionTITLE relative flexV w-full mb-8'>
+
                   <div className='translate-x-4 lg:translate-x-10 w-16 z-[3] translate-y- lg:translate-y-8 rounded h-[3px] bg-blakk' />
                   <TextLayout title="Homme Social 2023"  /* &#127942; */
                     text="Contributions "
@@ -226,12 +227,21 @@ const Home = () => {
             </div>
 
           </ScrollTrigger>
+
+          <div className='px-6 flex relative w-full center'>
+            <Link id="GoToPortfolio" to='/portfolio'
+              className='bg-black/60 lg:hover:bg-black/90 active:bg-black transition text-white paddingX bottom-2 py-3 z-[2] mb-20 mx-10 lg:max-w-[200px] w-full rounded-lg'
+            >
+              See portfolio
+            </Link>
+
+          </div>
         </div>
 
         <AndTheCommunity />
 
-        <div className='JoinTheMovement w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10= lg:pb-0'>
-          <div className="flex flex-col lg:flex-row start w-full max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
+        <div id="JoinTheMovement" className='w-full min-h-[100vh] flexV center bg-white relative overflow-hidden pb-10= lg:pb-0'>
+          <div className="flex flex-col lg:flex-row start  w-full lg:max-w-7xl h-full relative gap-10 md:gap-0 overflow-hidden">
             <SplitDiv title="Join The Movement" color="white" link=""
               hasQuote={false}
               hasTitle={true} hasText={true} hasDescr={true}
@@ -251,22 +261,11 @@ const Home = () => {
 
             <ContactForm simplified />
 
-            {/* <TextLayout
-                  title="Title"
-                  text="Text"
-                  descr="Hello"
-                  hasTitle={true}
-                  hasText={true}
-                  hasDescr={true}
-                  showLines={true}
-                  color='white'
-                  css={` ${title !== "black" | "white" && "!border-gray-400/40"}`}
-                  hashtags={true}
-                  hasQuote={false}
-                /> */}
           </div>
         </div>
+
       </div>
+
     </div >
   )
 }

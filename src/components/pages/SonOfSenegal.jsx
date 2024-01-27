@@ -63,7 +63,7 @@ const SonOfSenegal = () => {
                 hasTitle={true} hasText={true} hasDescr={false}
                 showLines={true}
                 mainCSS='bg-gradient-to-t from-gray-200 to-white'
-                css="w-screen lg:max-w-7xl h-full"
+                css="w-screen lg:lg:max-w-7xl h-full"
                 layout={1}
                 text='Fétë fétë biiy xaalë yoonu sopi, Yoonu koom.'
                 descr=""
@@ -79,12 +79,12 @@ const SonOfSenegal = () => {
               {/* <img className='lg:absolute right-0 md:right-[20%] m-auto top-[30%] min-w-[300px] max-w-full lg:scale-[150%] origin-bottom  object-top scale-[120%] z-[1] left-0== top-20===== h-[80vh]== object-contain w-[400px]' src={absyellowfit} alt="senegal" /> */}
             </div>
 
-            <div className='splitText bg-white flexV md:flex-row px-4 lg:px-8 max-w-7xl py-10 lg:h-[60vh]'>
+            <div className='splitText bg-white flexV md:flex-row px-4 lg:px-8 lg:max-w-7xl py-10 lg:h-[60vh]'>
               <TextLayout title="Roots"
                 text="His senegalese heritage"
                 descr="Born and raised in Senegal, ABS takes immense pride in his roots. His journey from a humble beginning to becoming a national leader is a testament to the hard work, determination, and the values instilled in him by his Senegalese upbringing. He often speaks of how his Senegalese heritage has shaped his character, instilling in him a deep sense of community, respect for tradition, and the importance of family."
                 hasTitle={true} hasText={false} hasDescr={true} showLines={false} color="white"
-                css="max-w-7xl"
+                css="lg:max-w-7xl"
               />
               <TextLayout title="values"
                 text="The family man"
@@ -98,7 +98,7 @@ const SonOfSenegal = () => {
             </div>
 
             <div className='hashtags bg-gray-100/40 flexV center relative w-full '>
-              <div className='grid grid-cols-2 lg:grid-cols-4 justify-evenly items-center mx-auto max-w-7xl lg:w-full py-6' >
+              <div className='grid grid-cols-2 lg:grid-cols-4 justify-evenly items-center mx-auto lg:max-w-7xl lg:w-full py-6' >
                 <button onClick={() => { }} className='hashtag self-start md:self-center lg:w-full'>#ABS2024</button>
                 <button onClick={() => { }} className='hashtag self-end md:self-center lg:w-full'>#LeguiFiftyFiftyLeu</button>
                 <button onClick={() => { }} className='hashtag self-start md:self-center lg:w-full'>#YoonWi</button>
@@ -108,7 +108,7 @@ const SonOfSenegal = () => {
 
             <Slide />
 
-            <div className={`flex w-full center relative overflow-hidden center lg:p-20==== max-w-7xl pb-20 `}>
+            <div className={`flex w-full center relative overflow-hidden center lg:p-20==== lg:max-w-7xl pb-20 `}>
               <ScrollTrigger className="flex center w-full px-10"
                 onEnter={() => setActivateFrame(true)}
                 onExit={() => setActivateFrame(false)}

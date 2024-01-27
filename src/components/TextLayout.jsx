@@ -22,15 +22,15 @@ const TextLayout = ({
           {hasQuote &&
             <img
               src="/icons/quote.svg"
-              className='w-10 h-10 -translate-x-2 md:translate-x-0  fill-primary opacity-50 
-                        scale-50 md:scale-100 self-start mix-blend-exclusion mt-10 brightness-[.1] '
+              className='w-10 h-10 -translate-x-2 md:translate-x-0  fill-primary opacity-20 
+                        scale-50 md:scale-100 self-start mix-blend-exclusion  brightness-[.1] '
               alt="quote" />}
 
           {text || "This is text for this section"}
 
           {/* {hasQuote && <img className='w-10 h-10 scale-50 md:scale-100 self-start inline mix-blend-exclusion fill-primary opacity-50 mt-2 rotate-180 brightness-[.1] =absolute bottom-4 md:right-8 right-0 ' src="/icons/quote.svg" alt="quote"  />
         } */}
-          {hasQuote && <span className='text-sm origin-bottom-left scale-[70%] font-[400] whitespace-nowrap'>— Abdoulaye SYLLA</span>}
+          {/* {hasQuote && <span className='text-sm origin-bottom-left scale-[70%] font-[400] whitespace-nowrap'>— Abdoulaye SYLLA</span>} */}
 
           {showLines &&
             <div className={`highlighter absolute -left-6 lg:-left-10 top-0 h-full min-h-[10px] -translate-x-1/2 scale-y-110==  

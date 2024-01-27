@@ -29,7 +29,7 @@ const ThePhilanthropist = () => {
 
       <div className='mt-0 flexV center w-full h-full relative text-black  '>
 
-        <div className='#ABS2024 #BoromTerangaYi max-w-7xl flex center w-full relative h-full pt-6 pb-10'>
+        <div className='#ABS2024 #BoromTerangaYi lg:max-w-7xl flex center w-full relative h-full pt-6 pb-10'>
           <SplitDiv title="#ABS2024 #BoromTerangaYi" color="white" link=""
             hasTitle={true} hasText={true} hasDescr
             layout={1}
@@ -112,7 +112,7 @@ const ThePhilanthropist = () => {
           </div>
         </div>
 
-        <div className="inThePress flexV start relative max-w-7xl h-[60vh]= max-h-[1000px] w-full" id="Press">
+        <div className="inThePress flexV start relative lg:max-w-7xl h-[60vh]= max-h-[1000px] w-full" id="Press">
           <SplitDiv title="#ABS2024 #ThePhilanthropist #ABSHommeSocial2023" color="white" link=""
             hasTitle={true} hasText={true} hasDescr={false}
             layout={1}

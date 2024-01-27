@@ -3,6 +3,7 @@
 import { Link, NavLink, /* useLocation */ } from 'react-router-dom'
 import { headers, navbar, social } from '../utils/data'
 import { allTransitions } from '../utils/style'
+import { Logo } from '../utils/components'
 
 
 
@@ -29,7 +30,8 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
       <div className='flex relative w-full max-w-7xl items-center justify-between'>
 
         <Link to='/' onClick={() => setMenu(false)} className='absLOGO ml-6 absolute--- left-10 z-[300] p-6--- animate-slideleft group '>
-          <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" />
+          <Logo />
+          {/* <img className='w-full object-contain scale-[75%] group-hover:scale-[80%] duration-500' src="/abslogo_black.svg" alt="lawwd" /> */}
         </Link>
 
         <div className={`navLinks flex= center gap-4 z-[300] animate-slidedown h-full hidden lg:flex lg:mr-36  `}>
@@ -58,7 +60,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
       <div className={`flexV lg:flex-row absolute inset-0 screen max-h-[100dvh] =transition-transform duratuion-[300] max-w-[100dvw] items-end bg-white z-[299] gap-10 
                       ${menu ? '' : 'opacity-90  overflow-hidden translate-x-[120%]'} ${allTransitions} duration-[.7s] `}>
 
-        <div className="headersBIGMENU flexV h-full justify-center items-end mx-auto lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
+        <div className="headersBIGMENU flexV h-full justify-center items-end mx-auto lg:lg:max-w-7xl w-full relative gap-8 px-10 =ml-20 mr-10=">
 
           <div className='flexV w-fit h-full mt-20 lg:mt-0 center relative'>
             {headers.map((item, index) => (

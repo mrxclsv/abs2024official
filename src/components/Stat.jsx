@@ -14,14 +14,14 @@ const Stat = ({
 
       <div className='flex items-center relative w-full mb-4 font-normal tracking-wide'>
         {before !== "" &&
-          <p className='statMain relative w-fit text-blakk z-[2] animate-slideleft'>
+          <p className='statMain relative w-fit text-blakk z-[2] animate-slideleft='>
             {before}
           </p>
         }
 
         {counterOn &&
           <CountUp
-            className={`statMain w-fit flex relative text-left whitespace-nowrap opacity-80 group-hover:opacity-100 animate-slideleft ${before !== "" && "ml-1"} items-center`}
+            className={`statMain w-fit flex relative text-left whitespace-nowrap opacity-80 group-hover:opacity-100 ==animate-slideleft ${before !== "" && "ml-1"} items-center`}
             start={0}
             end={value}
             duration={duration}
@@ -40,7 +40,7 @@ const Stat = ({
 
       <div className='w-full h-[2px] relative bg-neutral-500/30 mt-2 mb-2'>
         <div className={`!w-8 h-[3px] rounded absolute left-0 my-auto bottom-0
-                        ${isLoading ? 'translate-x-[40px] opacity-0' : '!translate-x-[0px] opacity-100 transition duration-[2s] ease-out'} 
+                        ${isLoading ? 'translate-x-[40px] opacity-0 duration-[2s]' : '!translate-x-[0px] opacity-100 transition duration-[2s] ease-out'} 
                         z-[5] bg-white mix-blend-difference `}
                         />
                         {/* } */}

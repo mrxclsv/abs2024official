@@ -17,7 +17,7 @@ const TimelineElement = ({
         transition-all duration-[1.5s] ease-in-out
       `}>
 
-      <div className={`flex relative w-full max-w-7xl= lg:max-w-[1200px] lg:min-w-[600px] center ${layout === "left" ? "" : "md:flex-row-reverse"}`}>
+      <div className={`flex relative w-full lg:max-w-7xl= lg:max-w-[1200px] lg:min-w-[600px] center ${layout === "left" ? "" : "md:flex-row-reverse"}`}>
         <div className={`1 flex-col relative w-full md:w-1/2 px-6 text-left ${layout === "left" && "text-left md:text-right items-end self-end justify-end"}`}>
           <h4 className={`h4 w-full relative uppercase text-primary font-normal tracking-widest`}>{date || 'date'}</h4>
           <h4 className={`h4 title_small w-full mt-2 mb-4 relative uppercase opacity-60`}>{title || 'this event'}</h4>

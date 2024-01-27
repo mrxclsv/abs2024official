@@ -3,7 +3,7 @@ import { Link, /* useLocation */ } from 'react-router-dom'
 import { contactInfo, social } from '../utils/data'
 // import { allTransitions } from '../utils/style'
 
-import { Contact, Button, abssignature } from "../utils/components"
+import { Contact, Button, abssignature, Logo } from "../utils/components"
 
 import abslogoblack from '../components/.branding/abslogo_black.svg'
 import { allTransitions } from '../utils/style';
@@ -67,15 +67,16 @@ const Footer = () => {
         </div>
       }
 
-      <div className="wrapper w-full flexV items-start max-w-7xl pt-14 pb-6    
+      <div className="wrapper w-full flexV items-start lg:max-w-7xl pt-14 pb-6    
                       sm:flex-row sm:items-end
                       md:flex md:justify-around===
                       lg:items-end=== lg:flex=== 
                       ">
 
         <div className='section1 w-full md:w-1/2 flexV start relative pl-2 lg:pl-10 h-fit mt-[6rem] ml-2'>
-          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-10 -top-[50%] sm:-top-[35%] md:-top-[70%]'>
-            <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" />
+          <Link to='/' className='absLOGO w-[250px] animate-slidedown group flex start max-w-[150px] absolute mx-auto left-0 right-0= md:left-0 md:ml-8 -top-[50%] sm:-top-[35%] md:-top-[70%]'>
+            <Logo />
+            {/* <img className='full object-contain px-4 scale-[75%]= group-hover:scale-[80%]= duration-500' src={abslogoblack} alt="abslogo" /> */}
           </Link>
 
           <div id="contacts" className="md:flexV grid grid-cols-2 sm:grid-cols-1 start gap-4 pr-4 md:gap-4 w-full">
@@ -106,7 +107,7 @@ const Footer = () => {
 
       </div>
 
-      <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full max-w-7xl mt-6 lg:pb-4 pb-16'>
+      <div className='border-y relative flex flex-col lg:flex-row justify-evenly items-center w-full lg:max-w-7xl mt-6 lg:pb-4 pb-16'>
         <p className='whitespace-nowrap lg:w-1/2 w-full relative text-center lg:text-left lg:pl-10 fit mx-auto md:opacity-70 p-6 md:hover:opacity-100 text-sm  text-blakk'>© Copyright 2024, ABS2024 #YoonWi</p>
         <div className='socialNetworks lg:w-1/2 w-full lg:start center lg:pl-10 relative flex gap-2 self-center !text-black '>
           {social?.map((item, index) => (

@@ -1,113 +1,6 @@
 
 export const website = "abs2024.com"
 
-// export const workData = [
-//   { 
-//     client: 'Nakala',
-//     page: "nakala",
-//     title: "Nak'ala",
-//     descr: "360 Branding for milk brand",
-//     heroVideo: nakala_heroVideo,
-//     heroPhoto: nakala_heroPhoto,
-//     imageCSS:'hidden',   
-//     videoCSS:"",
-//     link:'nakala',
-//     category: ["Food & Beverages"],
-//     services: [
-//       {name: "Branding", url:'branddesign'},
-//       {name: "3D", url:'branddesign'},
-//       {name: "Media Production", url:''},
-//     ],
-//     caseStudy:"yes",
-//     artwork: 'logo_nakala.png',
-//     artworkSrc: '',
-//     date: {
-//       dd: 3 , 
-//       mm: 'Avr',
-//       yy: 2022 
-//     },
-//     location: 'Senegal',
-//     mapLink: 'n/a',
-//     budget: 1300000,
-//   },
-
-//   { 
-//     client: 'Amossa Interior',
-//     page: "amossa",
-//     title: 'Amossa',
-//     descr: "Rebranding and brand strategy of an interior design firm",
-//     heroVideo: amossa_heroVideo,
-//     videoCSS:"",
-//     heroPhoto: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//     imageCSS:'hidden',
-//     link:'amossa',
-//     category: ["Interior design"],
-//     services: [
-//       {name: "Branding", url:'branddesign'},
-//       {name: "Media Production", url:''},
-//     ],
-//     caseStudy:"yes",
-//     artwork: 'logo_nakala.png',
-//     artworkSrc: '',
-//     date: {
-//       dd: 3 , 
-//       mm: 'Avr',
-//       yy: 2022 
-//     },
-//     location: 'Senegal',
-//     mapLink: 'n/a',
-//     budget: 1300000,
-//   },
-
-//   { 
-//     client: 'TeewTickets',
-//     page: "teewtickets",
-//     title: "TeewTickets",
-//     descr: "Digital ticketing service",
-//     heroVideo: 'https://www.pexels.com/video/from-above-footage-a-woman-wearing-a-wide-brimmed-hat-sitting-on-a-daybed-by-the-pool-area-3015487/',
-//     videoCSS:"hidden",
-//     heroPhoto: 'https://www.pexels.com/photo/gray-dining-table-under-pendant-lamps-3356416/',
-//     imageCSS: "flex" ,   
-//     link:'teewtickets',
-//     category: ["Food & Beverages"],
-//     services: [
-//       {name: "Branding", url:'branddesign'},
-//       {name: "3D", url:'branddesign'},
-//       {name: "Media Production", url:''},
-//     ],
-//     caseStudy:"yes",
-//     artwork: 'logo_nakala.png',
-//     artworkSrc: '',
-//     date: {
-//       dd: 3 , 
-//       mm: 'Avr',
-//       yy: 2022 
-//     },
-//     location: 'Senegal',
-//     mapLink: 'n/a',
-//     budget: 1200000,
-//   },
-
-// ] 
-
-// export const team = [
-//   {
-//     name: {first:"Daouda", last:"Diallo"},
-//     position: "Founder & Director",
-//     nickname: "Mr.Exclusive",
-//     handle: [{instagram: "mr.xclv", }],
-//     image:"https://res.cloudinary.com/lawwd/image/upload/v1657459657/.MRX/EX_LAWWD__yjdlmt.jpg",
-//   },
-//   {
-//     name: {first:"Abdoulaye", last:"Diop"},
-//     position: "",
-//     nickname: "Mr.Exclusive",
-//     handle: [{instagram: "mr.xclv", }],
-//     image:"https://images.pexels.com/photos/3796620/pexels-photo-3796620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//   }
-
-// ]
-
 
 export const headers = [
   { name: 'son of senegal', 
@@ -327,7 +220,7 @@ export const contributions = [
     added:"", 
     link:"#" ,
     position:"left-[15%] top-[45%]",
-    duration: 3
+    duration: 2
   },
   { title: "industries",  
     before: "+",
@@ -351,7 +244,7 @@ export const contributions = [
     added:"", 
     link:"#" ,
     position:"left-[30%] top-[25%]",
-    duration: 3
+    duration: 2
   },
 
 ]
@@ -359,6 +252,7 @@ export const contributions = [
 export const portfolioData = [
   { title: "Mosque Mawa Sylla",  
     descr: '',
+    cover: '/default.jpg',
     before: "",
     link:"mawa-sylla-mosque" ,
     position:"left-[15%] top-[45%]",
@@ -367,6 +261,7 @@ export const portfolioData = [
   },
   { title: "Mausole Serigne Fallou Macke",  
     descr: '',
+    cover: '',
     before: "+",
     link:"" ,
     position:"left-[60%] top-[50%]",
@@ -375,6 +270,7 @@ export const portfolioData = [
   },
   { title: "",  
     descr: '',
+    cover: '',
     before: "+",
     link:"" ,
     position:"left-[25%] top-[70%]",
@@ -383,6 +279,7 @@ export const portfolioData = [
   },
   { title: "",  
     descr: '',
+    cover: '',
     before: "",
     link:"" ,
     position:"left-[30%] top-[25%]",

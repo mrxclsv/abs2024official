@@ -13,6 +13,7 @@ export { default as SplitDiv } from '../components/SplitDiv'
 export { default as TextLayout } from '../components/TextLayout'
 export { default as Stat} from '../components/Stat'
 export { default as Contact} from '../components/Contact'
+export { default as Logo } from '../components/Logo'
 
 export { default as Hero } from '../components/Hero'
 export { default as Slide } from '../components/Slide'
