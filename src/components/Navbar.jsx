@@ -24,7 +24,7 @@ const Navbar = ({ navTrigger, menu, setMenu, toggleMenu, currentHour }) => {
   
   return (
 
-    <header className={`fixed shadow-lg shadow-gray-400/5 top-0 sideZero w-[100dvw] z-[300] flex center 
+    <header id="navbar" className={`fixed shadow-lg shadow-gray-400/5 top-0 sideZero w-[100dvw] z-[300] flex center 
                         h-[75px] bg-white  `}>
 
       <div className='flex relative w-full max-w-7xl items-center justify-between'>

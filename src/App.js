@@ -53,6 +53,7 @@ function App() {
   }
 
 
+
   useEffect(() => {
     window.addEventListener('scroll', toggleScroll);
     return () => {
@@ -69,6 +70,12 @@ function App() {
       behavior: 'smooth'
     });
   }
+
+  const navbar = document.getElementById('navbar')
+  
+  
+
+
 
 
 

@@ -257,7 +257,7 @@ export const portfolioData = [
     link:"mawa-sylla-mosque" ,
     position:"left-[15%] top-[45%]",
     color: 'bg-yellow-900',
-    duration: 3
+    duration: 3,
   },
   { title: "Mausole Serigne Fallou Macke",  
     descr: '',
@@ -266,7 +266,7 @@ export const portfolioData = [
     link:"" ,
     position:"left-[60%] top-[50%]",
     color: 'bg-primary',
-    duration: 3
+    duration: 3,
   },
   { title: "",  
     descr: '',
@@ -275,7 +275,7 @@ export const portfolioData = [
     link:"" ,
     position:"left-[25%] top-[70%]",
     color: 'bg-primary',
-    duration: 5
+    duration: 5,
   },
   { title: "",  
     descr: '',
@@ -284,7 +284,7 @@ export const portfolioData = [
     link:"" ,
     position:"left-[30%] top-[25%]",
     color: 'bg-red-400',
-    duration: 3
+    duration: 3,
   },
 
 ]
