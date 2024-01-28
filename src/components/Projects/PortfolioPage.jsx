@@ -58,19 +58,23 @@ const PortfolioPage = () => {
                 </div>
 
 
-                <div className='projectInfo flex center relative w-full lg:w-1/2  h-full text-white mix-blend-difference animate-slideup'>
-                  <div className='infoWrapper full flexV text-left start px-2 py-6 max-w-2xl '>
-                    <h4 className='titleHeader w-full text-xl font-[500]'>{item.title}</h4>
-                    <h4 className='!h4 my-3 tracking-wide leading-[250%]'>{item.descr || `This is a description for project ${item.title}. Kindly find and edit it in data.js at const portfolioData.descr`}</h4>
-                    <h4 className='w-full text-left opacity-70 relative'><i className='ri-map-pin-line mr-1' />{item.location || 'This location, Senegal'}
-                      <span className='absolute right-0 top-0 muted '>{item.year || "2023"}
+                <div className='projectInfo flex center lg:start px-6 relative w-full lg:w-1/2  h-full text-white mix-blend-difference animate-slideup'>
+                  <div className='infoWrapper full flexV text-left start px-2 py-6 max-w-[400px] mx-auto self-start w-full '>
+                    <h4 className='title_medium w-fit text-xl py-2 font-[500]'>{item.title}</h4>
+                    {/* <p className='font-[200] my-3 tracking-wide leading-[200%] '>{item.descr || `This is a description for project ${item.title}. Kindly find and edit it in data.js at const portfolioData.descr`}</p> */}
+                    <p className='w-full text-left opacity-70= relative'><i className='ri-map-pin-line mr-1' />{item.location || 'This location, Senegal'}
+                      <span className='absolute right-0 top-0 muted= '>{item.year || "2023"}
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div id="ProjectContent" className='w-full h-[30vh] flexV start bg-gradient-to-b= from-gray-100= to-white='>
+              <div id="ProjectContent" className='w-full h-[30vh] py-10 flexV start bg-gradient-to-b= from-gray-100= to-white='>
+                <div className='flexV start mx-auto max-w-7xl paddingX'>
+                  <p className='my-3 tracking-wide leading-[200%] text-left px-10 '>{item.descr || `This is a description for project ${item.title}. Kindly find and edit it in data.js at const portfolioData.descr`}</p>
+                </div>
+
                 {/* {content.mausole} */}
               </div>
             </div>
