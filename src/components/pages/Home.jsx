@@ -192,7 +192,7 @@ const Home = () => {
 
               <div id="contributionsData" className='flexV lg:w-1/2 center relative start pl-0 lg:pl-0'>
 
-                <div className='sectionTITLE relative flexV w-full mb-8'>
+                <div className='sectionTITLE relative flexV w-full mb-8 px-4'>
 
                   <div className='translate-x-4 lg:translate-x-10 w-16 z-[3] translate-y- lg:translate-y-8 rounded h-[3px] bg-blakk' />
                   <TextLayout title="Homme Social 2023"  /* &#127942; */
@@ -207,7 +207,7 @@ const Home = () => {
                   />
                 </div>
                 <div className='flex w-full start'>
-                  <div className='contributions grid grid-cols-2 w-full center gap-x-0 gap-y-10 py-6 text-black justify-around='>
+                  <div className='contributions grid grid-cols-2 w-full center gap-x-0 gap-y-10 py-6 text-black justify-around= px-2'>
                     {contributions?.map((item, index) => (
                       <Stat key={index}
                         title={item.title}
@@ -230,7 +230,8 @@ const Home = () => {
 
           <div className='px-6 flex relative w-full center'>
             <Link id="GoToPortfolio" to='/portfolio'
-              className='bg-black/60 lg:hover:bg-black/90 active:bg-black transition text-white paddingX bottom-2 py-3 z-[2] mb-20 mx-10 lg:max-w-[200px] w-full rounded-lg'
+            className='bg-black text-white text-sm px-3 mx-2 w-full lg:w-fit lg:min-w-[200px] self-center py-4 rounded-lg mb-20 mt-8'
+              // className='bg-black/60 lg:hover:bg-black/90 active:bg-black transition text-white paddingX bottom-2 py-3 z-[2] mb-20 mx-10 lg:max-w-[200px] w-full rounded-lg'
             >
               See portfolio
             </Link>

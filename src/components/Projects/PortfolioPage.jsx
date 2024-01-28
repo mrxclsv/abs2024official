@@ -20,7 +20,7 @@ const PortfolioPage = () => {
   }, [])
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
   }, [location])
 
   // const location = useLocation()
@@ -32,9 +32,13 @@ const PortfolioPage = () => {
       .includes(portfolioId)))
 
 
+
   return (
 
     <section className='w-full bg-white flexV min-h-[100vh] start relative text-white pt-[75px]'>
+
+      {/* <div className={`h-10 flex absolute  bg-red-400 left-0 right-0 h- mx-auto z-[10] top-[20vh] my-auto `} /> */}
+
       <div className='animate-slideup flexV start full'>
 
         {/* PULLED DATA */}
@@ -53,8 +57,9 @@ const PortfolioPage = () => {
                   <img src={item.cover} className='full object-cover relative ' alt={item.title} />
                 </div>
 
-                <div className='projectInfo flex center relative w-full lg:w-1/2 h-full text-white mix-blend-difference animate-slideup'>
-                  <div className='infoWrapper full flexV text-left start p-6'>
+
+                <div className='projectInfo flex center relative w-full lg:w-[calc(1280px_/_2)]  h-full text-white mix-blend-difference animate-slideup'>
+                  <div className='infoWrapper full flexV text-left start p-6 w-[calc(1280px_/_4)]'>
                     <h4 className='w-full text-xl font-[500]'>{item.title}</h4>
                     <h4 className='my-3'>{item.descr || `This is a description for project ${item.title}. Kindly find and edit it in data.js at const portfolioData.descr`}</h4>
                     <h4 className='w-full text-left opacity-70 relative'><i className='ri-map-pin-line mr-1' />{item.location || 'This location, Senegal'}
